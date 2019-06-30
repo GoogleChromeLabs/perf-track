@@ -1,4 +1,9 @@
-<svg viewBox="0 0 733 550" width="150" height="110">
+<script>
+	export let width = 150;
+	export let height = 110;
+</script>
+
+<svg viewBox="0 0 733 550" width="{width}" height="{height}">
   <defs>
     <clipPath id="a">
       <path d="M0 400h550V0H0z"/>

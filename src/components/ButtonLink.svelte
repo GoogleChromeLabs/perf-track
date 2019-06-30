@@ -32,11 +32,11 @@
     transition: box-shadow 200ms ease-out;
     width: 150px;
     font-size: 16px;
+    cursor: pointer;
   }
   
   a:hover {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
   }
 </style>
 

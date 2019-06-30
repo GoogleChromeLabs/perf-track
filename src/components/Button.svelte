@@ -30,11 +30,11 @@
     transition: box-shadow 200ms ease-out;
     width: 150px;
     font-size: 18px;
+    cursor: pointer;
   }
   
   button:hover {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
   }
 </style>
 

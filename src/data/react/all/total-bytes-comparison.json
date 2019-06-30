@@ -1,0 +1,40 @@
+{
+  "labels": [
+    "All sites",
+    "Alexa Top 10,000",
+    "*.google.com sites",
+    "Sites with React"
+  ],
+  "datasets": [
+    {
+      "label": "< 200KB",
+      "data": [6.63, 17.09, 10.97, 0.15],
+      "backgroundColor": "#34a853"
+    },
+    {
+      "label": "200KB - 400KB",
+      "data": [6.29, 13.66, 15.48, 0.88],
+      "backgroundColor": "#93c47d"
+    },
+    {
+      "label": "400KB - 600KB",
+      "data": [6.51, 9.85, 30.97, 2.89],
+      "backgroundColor": "#fbbc04"
+    },
+    {
+      "label": "600KB - 800KB",
+      "data": [6.57, 10.39, 5.16, 3.15],
+      "backgroundColor": "#ff6d01"
+    },
+    {
+      "label": "800KB - 1MB",
+      "data": [6.23, 8.12, 3.23, 3.10],
+      "backgroundColor": "#ea4335"
+    },
+    {
+      "label": "> 1MB",
+      "data": [67.76, 40.90, 34.19, 89.84],
+      "backgroundColor": "#980000"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
   import Chart from 'chart.js/dist/Chart.js'
+  
+  export let data;
 
   let canvas;
   let ctx;
@@ -10,21 +12,25 @@
     
     new Chart(ctx, {
       type: "doughnut",
-      data: {
-        labels: ["React + jQuery", "React + Angular", "React + Vue"],
-        datasets: [{
-          backgroundColor: ["#ffcd56", "#ff6384","#4BC0C0"],
-          data: [40, 20, 60]
-        }]
-      },
+      data,
       options: {
         legend: {
             position: 'right',
             labels: {
               fontSize: 14
             }
-        }
-     }
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              const bucket = data.labels[tooltipItem.index];
+              const dataset = data.datasets[tooltipItem.datasetIndex];
+              const currentValue = dataset.data[tooltipItem.index];
+              return `${bucket}: ${currentValue}%`;
+            },
+          }
+        },
+     },
     });
 	});
 </script>

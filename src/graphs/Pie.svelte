@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
   import Chart from 'chart.js/dist/Chart.js'
 
+  export let data;
+
   let canvas;
   let ctx;
 
@@ -11,10 +13,10 @@
     new Chart(ctx, {
       type: "pie",
       data: {
-        labels: ["Pass", "Fail"],
+        labels: ["Pass (50 - 100)", "Fail (0 - 50)"],
         datasets: [{
           backgroundColor: ["#27ae60", "#e74c3c"],
-          data: [80, 20]
+          data
         }]
       },
       options: {
@@ -23,7 +25,17 @@
             labels: {
               fontSize: 14
             }
+        },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            const bucket = data.labels[tooltipItem.index];
+            const dataset = data.datasets[tooltipItem.datasetIndex];
+            const currentValue = dataset.data[tooltipItem.index];
+            return `${bucket}: ${currentValue}%`;
+          },
         }
+      },
      }
     });
 	});
