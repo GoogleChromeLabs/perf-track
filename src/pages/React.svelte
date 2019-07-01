@@ -1,8 +1,11 @@
 <script>
+  import { link } from "svelte-routing";
+
   import StackedBar from "../graphs/StackedBar.svelte";
   import Doughnut from "../graphs/Doughnut.svelte";
   import Pie from "../graphs/Pie.svelte";
 
+  import Logo from "../components/icons/Logo.svelte";
   import AccessibilityIcon from "../components/icons/Accessibility.svelte";
   import ImageIcon from "../components/icons/Image.svelte";
   import TimerIcon from "../components/icons/Timer.svelte";
@@ -19,10 +22,70 @@
   import JSBytesComparison from "../data/react/all/js-bytes-comparison";
 
   let primaryColor = '#36A2EB';
+
+  let headerOptions = [
+    'All React sites',
+    'React sites without jQuery',
+    'React and Next.js sites'
+  ];
+
+  let selectedOption = headerOptions[0];
 </script>
 
 <style>
-    .container {
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #FF6384;
+    margin-bottom: 20px;
+    height: 80px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.49);
+    z-index: 3;
+  }
+
+  .header .logo {
+    margin-right: 10px;
+    transition: all .2s ease-in-out;
+  }
+
+  .header .logo:hover {
+    margin-right: 10px;
+    transform: scale(1.1);
+  }
+
+  .header .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    max-width: 100%;
+  }
+
+  .header .toggles {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .header .toggle input {
+    margin: 0 10px 0.25em 0;
+  }
+
+  .container {
     max-width: 800px;
     margin: 150px auto;
   }
@@ -127,7 +190,25 @@
 </style>
 
 <div class="container">
-  <FrameworkHeader number="10318" />
+ 
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <a href="/" use:link class="logo">
+        <Logo width="80" height="80"/>
+      </a>
+      <div class="toggles">
+        {#each headerOptions as option}
+          <label class="toggle">
+            <input type=radio bind:group={selectedOption} value={option}>
+            {option}
+          </label>
+        {/each}
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
   <div class="heading">
     <h2>General</h2>
     <ImageIcon color="#fff" />

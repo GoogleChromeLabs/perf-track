@@ -1,10 +1,20 @@
 <script>
   import { link } from "svelte-routing";
+  import { createEventDispatcher } from 'svelte';
 
   import Logo from "./icons/Logo.svelte";
 
   export let color = '#000';
-  export let number;
+  export let options;
+  let selectedOption = options[0];
+
+  const dispatch = createEventDispatcher();
+
+	function toggleOption() {
+		dispatch('toggle', {
+			option: selectedOption
+		});
+	}
 </script>
 
 <style>
@@ -66,20 +76,12 @@
       <Logo width="80" height="80"/>
     </a>
     <div class="toggles">
-      <div class="toggle">
-        <input type="radio" id="huey" name="drone" value="huey" checked>
-        <label for="huey">All Angular sites</label>
-      </div>
-
-      <div class="toggle">
-        <input type="radio" id="dewey" name="drone" value="dewey">
-        <label for="dewey">Angular sites without jQuery</label>
-      </div>
-
-      <div class="toggle">
-        <input type="radio" id="dewey" name="drone" value="dewey">
-        <label for="dewey">Angular sites with no other framework</label>
-      </div>
+      {#each options as option}
+        <label class="toggle">
+          <input type=radio bind:group={selectedOption} value={option} on:click={toggleOption}>
+          {option}
+        </label>
+      {/each}
     </div>
   </div>
 </div>
