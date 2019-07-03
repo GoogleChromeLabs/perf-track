@@ -21,14 +21,9 @@
   import TotalBytesComparison from "../data/react/all/total-bytes-comparison";
   import JSBytesComparison from "../data/react/all/js-bytes-comparison";
 
+  import { headerOptions, data } from "../page-data/react.js"
+
   let primaryColor = '#36A2EB';
-
-  let headerOptions = [
-    'All React sites',
-    'React sites without jQuery',
-    'React and Next.js sites'
-  ];
-
   let selectedOption = headerOptions[0];
 </script>
 
@@ -190,7 +185,7 @@
 </style>
 
 <div class="container">
- 
+  
   <!-- Header -->
   <div class="header">
     <div class="container">
@@ -217,51 +212,51 @@
   <section>
     <div class="section-title">
       <h3>Total bytes (percentiles)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].totalBytesPercentile.numOrigins} origins</p>
     </div>
 
     <div>
       <ul class="row">
         <li>
           Median:
-          <strong>2369 KB</strong>
+          <strong>{data[selectedOption].totalBytesPercentile.data[0]} KB</strong>
         </li>
         <li>
           75th percentile:
-          <strong>3637 KB</strong>
+          <strong>{data[selectedOption].totalBytesPercentile.data[1]} KB</strong>
         </li>
         <li>
           90th percentile:
-          <strong>5653 KB</strong>
+          <strong>{data[selectedOption].totalBytesPercentile.data[2]} KB</strong>
         </li>
       </ul>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:95a2eb884e7a4e93ad3667a6c1461dbb" />
+        background={primaryColor}
+        href="{data[selectedOption].totalBytesPercentile.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Total bytes (breakdown)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
     </div>
 
     <div>
       <p>Percentage of sites that ship a range of total bytes:</p>
 
       <div class="graph">
-        <Doughnut data={TotalBytesBreakdown} />
+        <Doughnut data={data[selectedOption].totalBytesBreakdown.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:767d94fa2f6a4d3bb275a6d849ba734f" />
+        background={primaryColor}
+        href="{data[selectedOption].totalBytesBreakdown.query}" />
     </div>
   </section>
 
@@ -274,7 +269,7 @@
       <p>Comparison of total bytes shipped versus other site groups:</p>
 
       <div class="graph">
-        <StackedBar data={TotalBytesComparison} />
+        <StackedBar data={data[selectedOption].totalBytesComparison.data} />
       </div>
 
       <div class="icon-row">
@@ -299,8 +294,8 @@
         <div class="icon-row-item">
           <QueryIcon
             background={primaryColor}
-            href="https://bigquery.cloud.google.com/savedquery/1086077897885:767d94fa2f6a4d3bb275a6d849ba734f" />
-          <p>192,126 origins</p>
+            href="{data[selectedOption].totalBytesBreakdown.query}" />
+          <p>{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
         </div>
       </div>
     </div>
@@ -314,51 +309,51 @@
   <section>
     <div class="section-title">
       <h3>JavaScript bytes (percentiles)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].jsBytesPercentile.numOrigins} origins</p>
     </div>
 
     <div>
       <ul class="row">
         <li>
           Median:
-          <strong>1083 KB</strong>
+          <strong>{data[selectedOption].jsBytesPercentile.data[0]} KB</strong>
         </li>
         <li>
           75th percentile:
-          <strong>1544 KB</strong>
+          <strong>{data[selectedOption].jsBytesPercentile.data[1]} KB</strong>
         </li>
         <li>
           90th percentile:
-          <strong>2031 KB</strong>
+          <strong>{data[selectedOption].jsBytesPercentile.data[2]} KB</strong>
         </li>
       </ul>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:1b58038b96584a43b9c7e8464825f496" />
+        background={primaryColor}
+        href="{data[selectedOption].jsBytesPercentile.data[0]}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>JavaScript bytes (breakdown)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
     </div>
 
     <div>
       <p>Percentage of sites that ship a range of JS bytes:</p>
 
       <div class="graph">
-        <Doughnut data={JSBytesBreakdown} />
+        <Doughnut data={data[selectedOption].jsBytesBreakdown.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:71d6a9d20cc74d14ae5dbbf162223adc" />
+        background={primaryColor}
+        href="{data[selectedOption].jsBytesBreakdown.query}" />
     </div>
   </section>
 
@@ -371,34 +366,36 @@
       <p>Comparison of JS bytes shipped versus other site groups:</p>
 
       <div class="graph">
-        <StackedBar data={JSBytesComparison} />
+        <StackedBar data={data[selectedOption].jsBytesComparison.data} />
       </div>
+
       <div class="icon-row">
         <div class="icon-row-item">
           <QueryIcon
-            background="{primaryColor}"
+            background={primaryColor}
             href="https://bigquery.cloud.google.com/savedquery/1086077897885:32734a3bae8b487a909c70ee644d58db" />
           <p>4,541,194 origins</p>
         </div>
         <div class="icon-row-item">
           <QueryIcon
-            background="{primaryColor}"
+            background={primaryColor}
             href="https://bigquery.cloud.google.com/savedquery/1086077897885:1a90b6f7529740f5acb26470120fe134" />
           <p>452,672 origins</p>
         </div>
         <div class="icon-row-item">
           <QueryIcon
-            background="{primaryColor}"
+            background={primaryColor}
             href="https://bigquery.cloud.google.com/savedquery/1086077897885:d4b4ea6c07a34468a7454fb9f5187c39" />
           <p>155 origins</p>
         </div>
         <div class="icon-row-item">
           <QueryIcon
-          background="{primaryColor}"
-          href="https://bigquery.cloud.google.com/savedquery/1086077897885:71d6a9d20cc74d14ae5dbbf162223adc" />
-          <p>192,126 origins</p>
+            background={primaryColor}
+            href="{data[selectedOption].jsBytesBreakdown.query}" />
+          <p>{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
         </div>
       </div>
+      <div class="icon-row" />
     </div>
   </section>
 
@@ -410,58 +407,58 @@
   <section>
     <div class="section-title">
       <h3>Image bytes (percentiles)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].imgBytesPercentile.numOrigins} origins</p>
     </div>
 
     <div>
       <ul class="row">
         <li>
           Median:
-          <strong>680 KB</strong>
+          <strong>{data[selectedOption].imgBytesPercentile.data[0]} KB</strong>
         </li>
         <li>
           75th percentile:
-          <strong>1661 KB</strong>
+          <strong>{data[selectedOption].imgBytesPercentile.data[1]} KB</strong>
         </li>
         <li>
           90th percentile:
-          <strong>3501 KB</strong>
+          <strong>{data[selectedOption].imgBytesPercentile.data[2]} KB</strong>
         </li>
       </ul>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:097921edcc9e430688046e3566c83c0b" />
+        background={primaryColor}
+        href="{data[selectedOption].imgBytesPercentile.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Image bytes (breakdown)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].imgBytesBreakdown.numOrigins} origins</p>
     </div>
 
     <div>
       <p>Percentage of sites that ship a range of image bytes:</p>
 
       <div class="graph">
-        <Doughnut data={ImgBytesBreakdown} />
+        <Doughnut data={data[selectedOption].imgBytesBreakdown.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:a90557c7547b4f8ca561ab5b79a578ff" />
+        background={primaryColor}
+        href="{data[selectedOption].imgBytesBreakdown.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Origins that use optimized images</h3>
-      <p class="number">191,385 origins</p>
+      <p class="number">{data[selectedOption].optimizedImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -475,21 +472,21 @@
       </p>
 
       <div class="graph">
-        <Pie data={[77, 23]} />
+        <Pie data={data[selectedOption].optimizedImgOrigins.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:d538ef8448cd4fe1b3a5fb6f419b2fa3" />
+        background={primaryColor}
+        href="{data[selectedOption].optimizedImgOrigins.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Origins that use responsive images</h3>
-      <p class="number">191,644 origins</p>
+      <p class="number">{data[selectedOption].responsiveImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -503,21 +500,21 @@
       </p>
 
       <div class="graph">
-        <Pie data={[74, 26]} />
+        <Pie data={data[selectedOption].responsiveImgOrigins.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:6e89c9558d3b407fae7ca9c88ef462b9" />
+        background={primaryColor}
+        href="{data[selectedOption].responsiveImgOrigins.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Origins that use next gen images</h3>
-      <p class="number">191,385 origins</p>
+      <p class="number">{data[selectedOption].nextGenImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -531,21 +528,21 @@
       </p>
 
       <div class="graph">
-        <Pie data={[47, 53]} />
+        <Pie data={data[selectedOption].nextGenImgOrigins.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:13f2f88a4070464394093c653f94a241" />
+        background={primaryColor}
+        href="{data[selectedOption].nextGenImgOrigins.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Origins that defer offscreen images</h3>
-      <p class="number">191,644 origins</p>
+      <p class="number">{data[selectedOption].offscreenImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -559,14 +556,14 @@
       </p>
 
       <div class="graph">
-        <Pie data={[57, 43]} />
+        <Pie data={data[selectedOption].offscreenImgOrigins.data} />
       </div>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:f3af266bf78141a7a3603d9f78c0e2c5" />
+        background={primaryColor}
+        href="{data[selectedOption].offscreenImgOrigins.query}" />
     </div>
   </section>
 
@@ -578,79 +575,82 @@
   <section>
     <div class="section-title">
       <h3>First Contentful Paint (FCP)</h3>
-      <p class="number">64,167 origins</p>
+      <p class="number">{data[selectedOption].firstContentfulPaint.numOrigins} origins</p>
     </div>
 
     <p>All runs on 3G and mobile</p>
 
     <div class="metric-chart-container">
       <MetricChart
-        fast="15"
-        average="31"
-        slow="54"
-        fastTooltip="15% of loads for these origins have a fast (&#60; 1 s) FCP."
-        averageTooltip="31% of loads for these origins have an average (1 s ~ 2.5 s) FCP."
-        slowTooltip="54% of loads for these origins have a slow (&#62; 2.5 s) FCP." />
+        fast="{data[selectedOption].firstContentfulPaint.data[0]}"
+        average="{data[selectedOption].firstContentfulPaint.data[1]}"
+        slow="{data[selectedOption].firstContentfulPaint.data[2]}"
+        fastTooltip="{data[selectedOption].firstContentfulPaint.data[0]}% of loads for these origins have a fast (< 1 s) FCP."
+        averageTooltip="{data[selectedOption].firstContentfulPaint.data[1]}% of loads for these origins have an average (1 s ~
+        2.5 s) FCP."
+        slowTooltip="{data[selectedOption].firstContentfulPaint.data[2]}% of loads for these origins have a slow (> 2.5 s) FCP." />
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:e078daeab8ec4d8ba4a9ddd4fe59d036" />
+        background={primaryColor}
+        href="{data[selectedOption].firstContentfulPaint.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>First Input Delay (FID)</h3>
-      <p class="number">38,248 origins</p>
+      <p class="number">{data[selectedOption].firstInputDelay.numOrigins} origins</p>
     </div>
 
     <p>All runs on 3G and mobile</p>
 
     <div class="metric-chart-container">
       <MetricChart
-        fast="75"
-        average="16"
-        slow="9"
-        fastTooltip="75% of loads for these origins have a fast (< 50 ms) FID."
-        averageTooltip="16% of loads for these origins have an average (50 ms ~ 250 ms) FID."
-        slowTooltip="9% of loads for these origins have a slow (&#62; 250 ms) FID." />
+        fast="{data[selectedOption].firstInputDelay.data[0]}"
+        average="{data[selectedOption].firstInputDelay.data[1]}"
+        slow="{data[selectedOption].firstInputDelay.data[2]}"
+        fastTooltip="{data[selectedOption].firstInputDelay.data[0]}% of loads for these origins have a fast (< 50 ms) FID."
+        averageTooltip="{data[selectedOption].firstInputDelay.data[1]}% of loads for these origins have an average (50 ms ~
+        250 ms) FID."
+        slowTooltip="{data[selectedOption].firstInputDelay.data[2]}% of loads for these origins have a slow (> 250 ms) FID." />
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:bc0bc7823ded4431a6d34f3c90944274" />
+        background={primaryColor}
+        href="{data[selectedOption].firstInputDelay.query}" />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>Time to Interactive (TTI)</h3>
-      <p class="number">192,126 origins</p>
+      <p class="number">{data[selectedOption].timeToInteractive.numOrigins} origins</p>
     </div>
+
     <div>
       <ul class="row">
         <li>
           Median:
-          <strong>21.7s</strong>
+          <strong>{data[selectedOption].timeToInteractive.data[0]}s</strong>
         </li>
         <li>
           75th percentile:
-          <strong>31.0s</strong>
+          <strong>{data[selectedOption].timeToInteractive.data[1]}s</strong>
         </li>
         <li>
           90th percentile:
-          <strong>51.5s</strong>
+          <strong>{data[selectedOption].timeToInteractive.data[2]}s</strong>
         </li>
       </ul>
     </div>
 
     <div class="icon-container">
       <QueryIcon
-        background="{primaryColor}"
-        href="https://bigquery.cloud.google.com/savedquery/1086077897885:6e4aba840666471789709922be0324a4" />
+        background={primaryColor}
+        href="{data[selectedOption].timeToInteractive.query}" />
     </div>
   </section>
 
@@ -663,3 +663,4 @@
     <h3>Coming soon to a theatre near you</h3>
   </section> -->
 </div>
+

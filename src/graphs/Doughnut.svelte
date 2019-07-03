@@ -1,16 +1,24 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, beforeUpdate } from 'svelte';
   import Chart from 'chart.js/dist/Chart.js'
   
   export let data;
 
   let canvas;
   let ctx;
+  let doughnutChart;
+
+  beforeUpdate(() => {
+    if (doughnutChart) {
+      doughnutChart.data = data;
+      doughnutChart.update();
+    }
+  });
 
   onMount(() => {
     const ctx = canvas.getContext('2d');
     
-    new Chart(ctx, {
+    doughnutChart = new Chart(ctx, {
       type: "doughnut",
       data,
       options: {

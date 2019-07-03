@@ -1,16 +1,24 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, beforeUpdate } from 'svelte';
   import Chart from 'chart.js/dist/Chart.js'
 
   export let data;
 
   let canvas;
   let ctx;
+  let PieChart;
+
+  beforeUpdate(() => {
+    if (PieChart) {
+      PieChart.data.datasets[0].data = data;
+      PieChart.update();
+    }
+  });
 
   onMount(() => {
     const ctx = canvas.getContext('2d');
     
-    new Chart(ctx, {
+    PieChart = new Chart(ctx, {
       type: "pie",
       data: {
         labels: ["Pass (50 - 100)", "Fail (0 - 50)"],

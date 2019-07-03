@@ -49,9 +49,9 @@
 <div class="container">
   <div class="title">
     <Logo />
-    <h1>fPerf</h1>
+    <h1>perf track</h1>
   </div>
-  <p>Tracking <span class="highlight">f</span>ramework <span class="highlight">perf</span>ormance at scale</p>
+  <p>Tracking framework performance at scale</p>
   <div class="button-container">
     <ButtonLink red text="Angular" to="angular" />
     <ButtonLink blue text="React" to="react" />

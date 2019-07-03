@@ -1,16 +1,24 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, beforeUpdate } from 'svelte';
   import Chart from 'chart.js/dist/Chart.js'
 
   export let data;
 
   let canvas;
   let ctx;
+  let StackedBarChart;
+
+  beforeUpdate(() => {
+    if (StackedBarChart) {
+      StackedBarChart.data = data;
+      StackedBarChart.update();
+    }
+  });
   
   onMount(() => {
     const ctx = canvas.getContext('2d');
     
-    new Chart(ctx, {
+    StackedBarChart = new Chart(ctx, {
       type: "bar",
       data,
       options: {
