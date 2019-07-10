@@ -14,13 +14,6 @@
   import QueryIcon from "../components/QueryIcon.svelte";
   import MetricChart from "../components/MetricChart.svelte";
 
-  // data
-  import TotalBytesBreakdown from "../data/react/all/total-bytes-breakdown";
-  import JSBytesBreakdown from "../data/react/all/js-bytes-breakdown";
-  import ImgBytesBreakdown from "../data/react/all/img-bytes-breakdown";
-  import TotalBytesComparison from "../data/react/all/total-bytes-comparison";
-  import JSBytesComparison from "../data/react/all/js-bytes-comparison";
-
   import { headerOptions, data } from "../page-data/react.js"
 
   let primaryColor = '#36A2EB';
