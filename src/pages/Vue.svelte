@@ -99,6 +99,26 @@
     font-family: Caveat, sans-serif;
   }
 
+  .origins-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .origins-header .number {
+    color: #ff6384;
+    margin: 0;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Caveat, sans-serif;
+  }
+
+  .origins-header .details {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
   .heading {
     display: flex;
     align-items: center;
@@ -196,6 +216,19 @@
     </div>
   </div>
 
+  <section>
+    <div class="origins-header">
+      <p class="number">{data[selectedOption].totalNumOrigins.value} total origins detected</p>
+      <p class="details">For <strong>{selectedOption}</strong>. Every query below will reach a subset of this dataset.</p>
+    </div>
+
+    <div class="icon-container">
+      <QueryIcon
+        background={primaryColor}
+        href="{data[selectedOption].totalNumOrigins.query}" />
+    </div>
+  </section>
+
   <!-- Content -->
   <div class="heading">
     <h2>General</h2>
@@ -205,7 +238,7 @@
   <section>
     <div class="section-title">
       <h3>Total bytes (percentiles)</h3>
-      <p class="number">{data[selectedOption].totalBytesPercentile.numOrigins} origins</p>
+      <p>{data[selectedOption].totalBytesPercentile.numOrigins} origins</p>
     </div>
 
     <div>
@@ -235,7 +268,7 @@
   <section>
     <div class="section-title">
       <h3>Total bytes (breakdown)</h3>
-      <p class="number">{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
+      <p>{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
     </div>
 
     <div>
@@ -302,7 +335,7 @@
   <section>
     <div class="section-title">
       <h3>JavaScript bytes (percentiles)</h3>
-      <p class="number">{data[selectedOption].jsBytesPercentile.numOrigins} origins</p>
+      <p>{data[selectedOption].jsBytesPercentile.numOrigins} origins</p>
     </div>
 
     <div>
@@ -332,7 +365,7 @@
   <section>
     <div class="section-title">
       <h3>JavaScript bytes (breakdown)</h3>
-      <p class="number">{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
+      <p>{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
     </div>
 
     <div>
@@ -400,7 +433,7 @@
   <section>
     <div class="section-title">
       <h3>Image bytes (percentiles)</h3>
-      <p class="number">{data[selectedOption].imgBytesPercentile.numOrigins} origins</p>
+      <p>{data[selectedOption].imgBytesPercentile.numOrigins} origins</p>
     </div>
 
     <div>
@@ -430,7 +463,7 @@
   <section>
     <div class="section-title">
       <h3>Image bytes (breakdown)</h3>
-      <p class="number">{data[selectedOption].imgBytesBreakdown.numOrigins} origins</p>
+      <p>{data[selectedOption].imgBytesBreakdown.numOrigins} origins</p>
     </div>
 
     <div>
@@ -451,7 +484,7 @@
   <section>
     <div class="section-title">
       <h3>Origins that use optimized images</h3>
-      <p class="number">{data[selectedOption].optimizedImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].optimizedImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -479,7 +512,7 @@
   <section>
     <div class="section-title">
       <h3>Origins that use responsive images</h3>
-      <p class="number">{data[selectedOption].responsiveImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].responsiveImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -507,7 +540,7 @@
   <section>
     <div class="section-title">
       <h3>Origins that use next gen images</h3>
-      <p class="number">{data[selectedOption].nextGenImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].nextGenImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -535,7 +568,7 @@
   <section>
     <div class="section-title">
       <h3>Origins that defer offscreen images</h3>
-      <p class="number">{data[selectedOption].offscreenImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].offscreenImgOrigins.numOrigins} origins</p>
     </div>
 
     <div>
@@ -568,7 +601,7 @@
   <section>
     <div class="section-title">
       <h3>First Contentful Paint (FCP)</h3>
-      <p class="number">{data[selectedOption].firstContentfulPaint.numOrigins} origins</p>
+      <p>{data[selectedOption].firstContentfulPaint.numOrigins} origins</p>
     </div>
 
     <p>All runs on 3G and mobile</p>
@@ -594,7 +627,7 @@
   <section>
     <div class="section-title">
       <h3>First Input Delay (FID)</h3>
-      <p class="number">{data[selectedOption].firstInputDelay.numOrigins} origins</p>
+      <p>{data[selectedOption].firstInputDelay.numOrigins} origins</p>
     </div>
 
     <p>All runs on 3G and mobile</p>
@@ -620,7 +653,7 @@
   <section>
     <div class="section-title">
       <h3>Time to Interactive (TTI)</h3>
-      <p class="number">{data[selectedOption].timeToInteractive.numOrigins} origins</p>
+      <p>{data[selectedOption].timeToInteractive.numOrigins} origins</p>
     </div>
 
     <div>

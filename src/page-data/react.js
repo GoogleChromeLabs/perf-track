@@ -19,11 +19,15 @@ import JSBytesComparisonNext from "../data/react/next/js-bytes-comparison";
 export const headerOptions = [
   'All React sites',
   'React sites without jQuery',
-  'React and Next.js sites'
+  'React sites with Next.js'
 ];
 
 export const data = {
   [headerOptions[0]]: {
+    'totalNumOrigins': {
+      value: 192126,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:b95de8970e3247088e54c0720f6e9d32'
+    },
     'totalBytesPercentile': {
       numOrigins: 192126,
       data: [2369, 3637, 5653],
@@ -100,6 +104,10 @@ export const data = {
     }
   },
   [headerOptions[1]]: {
+    'totalNumOrigins': {
+      value: 82625,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:4d73a090d720405991b2dfe94dbb85e5'
+    },
     'totalBytesPercentile': {
       numOrigins: 82625,
       data: [2290, 3267, 4568],
@@ -175,6 +183,10 @@ export const data = {
     }
   },
   [headerOptions[2]]: {
+    'totalNumOrigins': {
+      value: 3413,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:57070dfd9c0b47149c91087a1bde9b87'
+    },
     'totalBytesPercentile': {
       numOrigins: 3413,
       data: [2339, 3671, 5209],

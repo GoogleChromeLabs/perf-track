@@ -19,11 +19,15 @@ import JSBytesComparisonNuxt from "../data/vue/nuxt/js-bytes-comparison";
 export const headerOptions = [
   'All Vue sites',
   'Vue sites without jQuery',
-  'Vue and Nuxt.js sites'
+  'Vue sites with Nuxt.js'
 ];
 
 export const data = {
   [headerOptions[0]]: {
+    'totalNumOrigins': {
+      value: 52658,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:29425912db4d4b209459b25f05c4beee'
+    },
     'totalBytesPercentile': {
       numOrigins: 52658,
       data: [2639, 4553, 7253],
@@ -100,6 +104,10 @@ export const data = {
     }
   },
   [headerOptions[1]]: {
+    'totalNumOrigins': {
+      value: 11218,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:440969b7f5a14b82bcdc314ad8c344d8'
+    },
     'totalBytesPercentile': {
       numOrigins: 11218,
       data: [1782, 3405, 5858],
@@ -175,6 +183,10 @@ export const data = {
     }
   },
   [headerOptions[2]]: {
+    'totalNumOrigins': {
+      value: 2710,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:38b99f185aca412f8cc76b03b8d8040f'
+    },
     'totalBytesPercentile': {
       numOrigins: 2710,
       data: [2050, 3931, 6964],

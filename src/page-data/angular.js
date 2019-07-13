@@ -17,6 +17,10 @@ export const headerOptions = [
 
 export const data = {
   [headerOptions[0]]: {
+    'totalNumOrigins': {
+      value: 10318,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:aeb3825c52234ab7b5cc84791f5fba93'
+    },
     'totalBytesPercentile': {
       numOrigins: 10318,
       data: [2022, 3558, 5844],
@@ -93,6 +97,10 @@ export const data = {
     }
   },
   [headerOptions[1]]: {
+    'totalNumOrigins': {
+      value: 5239,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:98d2472911834e2082cc1eb3de28bf87'
+    },
     'totalBytesPercentile': {
       numOrigins: 5239,
       data: [1737, 2970, 4797],
