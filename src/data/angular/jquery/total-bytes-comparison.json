@@ -3,7 +3,7 @@
     "All sites",
     "Alexa Top 10,000",
     "*.google.com sites",
-    "Sites with Angular"
+    "Angular (no jQuery)"
   ],
   "datasets": [
     {
