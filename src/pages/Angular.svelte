@@ -14,7 +14,7 @@
   import QueryIcon from "../components/QueryIcon.svelte";
   import MetricChart from "../components/MetricChart.svelte";
 
-  import { headerOptions, data } from "../page-data/angular.js"
+  import { headerOptions, data } from "../page-data/angular.js";
 
   let primaryColor = "#ff6384";
   let selectedOption = headerOptions[0];
@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #FF6384;
+    border-bottom: 2px solid #ff6384;
     margin-bottom: 20px;
     height: 80px;
     background: #fff;
@@ -39,7 +39,7 @@
 
   .header .logo {
     margin-right: 10px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .header .logo:hover {
@@ -60,7 +60,7 @@
     display: flex;
     align-items: center;
   }
-  
+
   .header .toggle {
     margin-right: 30px;
     display: flex;
@@ -198,17 +198,17 @@
 </style>
 
 <div class="container">
-  
+
   <!-- Header -->
   <div class="header">
     <div class="container">
       <a href="/" use:link class="logo">
-        <Logo width="80" height="80"/>
+        <Logo width="80" height="80" />
       </a>
       <div class="toggles">
         {#each headerOptions as option}
           <label class="toggle">
-            <input type=radio bind:group={selectedOption} value={option}>
+            <input type="radio" bind:group={selectedOption} value={option} />
             {option}
           </label>
         {/each}
@@ -218,14 +218,20 @@
 
   <section>
     <div class="origins-header">
-      <p class="number">{data[selectedOption].totalNumOrigins.value} total origins detected</p>
-      <p class="details">For <strong>{selectedOption}</strong>. Every query below will reach a subset of this dataset.</p>
+      <p class="number">
+        {data[selectedOption].totalNumOrigins.value} total origins detected
+      </p>
+      <p class="details">
+        For
+        <strong>{selectedOption}</strong>
+        . Every query below reaches a subset of this dataset.
+      </p>
     </div>
 
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].totalNumOrigins.query}" />
+        href={data[selectedOption].totalNumOrigins.query} />
     </div>
   </section>
 
@@ -245,15 +251,21 @@
       <ul class="row">
         <li>
           Median:
-          <strong>{data[selectedOption].totalBytesPercentile.data[0]} KB</strong>
+          <strong>
+            {data[selectedOption].totalBytesPercentile.data[0]} KB
+          </strong>
         </li>
         <li>
           75th percentile:
-          <strong>{data[selectedOption].totalBytesPercentile.data[1]} KB</strong>
+          <strong>
+            {data[selectedOption].totalBytesPercentile.data[1]} KB
+          </strong>
         </li>
         <li>
           90th percentile:
-          <strong>{data[selectedOption].totalBytesPercentile.data[2]} KB</strong>
+          <strong>
+            {data[selectedOption].totalBytesPercentile.data[2]} KB
+          </strong>
         </li>
       </ul>
     </div>
@@ -261,7 +273,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].totalBytesPercentile.query}" />
+        href={data[selectedOption].totalBytesPercentile.query} />
     </div>
   </section>
 
@@ -282,7 +294,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].totalBytesBreakdown.query}" />
+        href={data[selectedOption].totalBytesBreakdown.query} />
     </div>
   </section>
 
@@ -320,10 +332,40 @@
         <div class="icon-row-item">
           <QueryIcon
             background={primaryColor}
-            href="{data[selectedOption].totalBytesBreakdown.query}" />
+            href={data[selectedOption].totalBytesBreakdown.query} />
           <p>{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h3>Compressed requests</h3>
+      <p>{data[selectedOption].compressedRequests.numOrigins} origins</p>
+    </div>
+
+    <div>
+      <p>Percentage of compressed requests</p>
+
+      <p>
+        <strong>
+          Total number of requests = {data[selectedOption].compressedRequests.numRequests}
+        </strong>
+      </p>
+
+      <div class="graph">
+        <Pie
+          colors={["#fbbc04", "#34a853", "#e74c3c"]}
+          labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
+          data={[data[selectedOption].compressedRequests.gzipCompressedPercent, data[selectedOption].compressedRequests.brotliCompressedPercent, 100 - data[selectedOption].compressedRequests.gzipCompressedPercent + data[selectedOption].compressedRequests.brotliCompressedPercent]} />
+      </div>
+    </div>
+
+    <div class="icon-container">
+      <QueryIcon
+        background={primaryColor}
+        href={data[selectedOption].compressedRequests.query} />
     </div>
   </section>
 
@@ -358,7 +400,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].jsBytesPercentile.data[0]}" />
+        href={data[selectedOption].jsBytesPercentile.data[0]} />
     </div>
   </section>
 
@@ -379,7 +421,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].jsBytesBreakdown.query}" />
+        href={data[selectedOption].jsBytesBreakdown.query} />
     </div>
   </section>
 
@@ -417,7 +459,7 @@
         <div class="icon-row-item">
           <QueryIcon
             background={primaryColor}
-            href="{data[selectedOption].jsBytesBreakdown.query}" />
+            href={data[selectedOption].jsBytesBreakdown.query} />
           <p>{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
         </div>
       </div>
@@ -456,7 +498,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].imgBytesPercentile.query}" />
+        href={data[selectedOption].imgBytesPercentile.query} />
     </div>
   </section>
 
@@ -477,7 +519,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].imgBytesBreakdown.query}" />
+        href={data[selectedOption].imgBytesBreakdown.query} />
     </div>
   </section>
 
@@ -505,7 +547,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].optimizedImgOrigins.query}" />
+        href={data[selectedOption].optimizedImgOrigins.query} />
     </div>
   </section>
 
@@ -533,7 +575,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].responsiveImgOrigins.query}" />
+        href={data[selectedOption].responsiveImgOrigins.query} />
     </div>
   </section>
 
@@ -561,7 +603,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].nextGenImgOrigins.query}" />
+        href={data[selectedOption].nextGenImgOrigins.query} />
     </div>
   </section>
 
@@ -589,7 +631,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].offscreenImgOrigins.query}" />
+        href={data[selectedOption].offscreenImgOrigins.query} />
     </div>
   </section>
 
@@ -608,19 +650,21 @@
 
     <div class="metric-chart-container">
       <MetricChart
-        fast="{data[selectedOption].firstContentfulPaint.data[0]}"
-        average="{data[selectedOption].firstContentfulPaint.data[1]}"
-        slow="{data[selectedOption].firstContentfulPaint.data[2]}"
-        fastTooltip="{data[selectedOption].firstContentfulPaint.data[0]}% of loads for these origins have a fast (< 1 s) FCP."
-        averageTooltip="{data[selectedOption].firstContentfulPaint.data[1]}% of loads for these origins have an average (1 s ~
-        2.5 s) FCP."
-        slowTooltip="{data[selectedOption].firstContentfulPaint.data[2]}% of loads for these origins have a slow (> 2.5 s) FCP." />
+        fast={data[selectedOption].firstContentfulPaint.data[0]}
+        average={data[selectedOption].firstContentfulPaint.data[1]}
+        slow={data[selectedOption].firstContentfulPaint.data[2]}
+        fastTooltip="{data[selectedOption].firstContentfulPaint.data[0]}% of
+        loads for these origins have a fast (< 1 s) FCP."
+        averageTooltip="{data[selectedOption].firstContentfulPaint.data[1]}% of
+        loads for these origins have an average (1 s ~ 2.5 s) FCP."
+        slowTooltip="{data[selectedOption].firstContentfulPaint.data[2]}% of
+        loads for these origins have a slow (> 2.5 s) FCP." />
     </div>
 
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].firstContentfulPaint.query}" />
+        href={data[selectedOption].firstContentfulPaint.query} />
     </div>
   </section>
 
@@ -634,19 +678,21 @@
 
     <div class="metric-chart-container">
       <MetricChart
-        fast="{data[selectedOption].firstInputDelay.data[0]}"
-        average="{data[selectedOption].firstInputDelay.data[1]}"
-        slow="{data[selectedOption].firstInputDelay.data[2]}"
-        fastTooltip="{data[selectedOption].firstInputDelay.data[0]}% of loads for these origins have a fast (< 50 ms) FID."
-        averageTooltip="{data[selectedOption].firstInputDelay.data[1]}% of loads for these origins have an average (50 ms ~
-        250 ms) FID."
-        slowTooltip="{data[selectedOption].firstInputDelay.data[2]}% of loads for these origins have a slow (> 250 ms) FID." />
+        fast={data[selectedOption].firstInputDelay.data[0]}
+        average={data[selectedOption].firstInputDelay.data[1]}
+        slow={data[selectedOption].firstInputDelay.data[2]}
+        fastTooltip="{data[selectedOption].firstInputDelay.data[0]}% of loads
+        for these origins have a fast (< 50 ms) FID."
+        averageTooltip="{data[selectedOption].firstInputDelay.data[1]}% of loads
+        for these origins have an average (50 ms ~ 250 ms) FID."
+        slowTooltip="{data[selectedOption].firstInputDelay.data[2]}% of loads
+        for these origins have a slow (> 250 ms) FID." />
     </div>
 
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].firstInputDelay.query}" />
+        href={data[selectedOption].firstInputDelay.query} />
     </div>
   </section>
 
@@ -676,7 +722,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].timeToInteractive.query}" />
+        href={data[selectedOption].timeToInteractive.query} />
     </div>
   </section>
 

@@ -219,7 +219,7 @@
   <section>
     <div class="origins-header">
       <p class="number">{data[selectedOption].totalNumOrigins.value} total origins detected</p>
-      <p class="details">For <strong>{selectedOption}</strong>. Every query below will reach a subset of this dataset.</p>
+      <p class="details">For <strong>{selectedOption}</strong>. Every query below reaches a subset of this dataset.</p>
     </div>
 
     <div class="icon-container">
@@ -324,6 +324,36 @@
           <p>{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h3>Compressed requests</h3>
+      <p>{data[selectedOption].compressedRequests.numOrigins} origins</p>
+    </div>
+
+    <div>
+      <p>Percentage of compressed requests</p>
+
+      <p>
+        <strong>
+          Total number of requests = {data[selectedOption].compressedRequests.numRequests}
+        </strong>
+      </p>
+
+      <div class="graph">
+        <Pie
+          colors={["#fbbc04", "#34a853", "#e74c3c"]}
+          labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
+          data={[data[selectedOption].compressedRequests.gzipCompressedPercent, data[selectedOption].compressedRequests.brotliCompressedPercent, 100 - data[selectedOption].compressedRequests.gzipCompressedPercent + data[selectedOption].compressedRequests.brotliCompressedPercent]} />
+      </div>
+    </div>
+
+    <div class="icon-container">
+      <QueryIcon
+        background={primaryColor}
+        href={data[selectedOption].compressedRequests.query} />
     </div>
   </section>
 

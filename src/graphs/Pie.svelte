@@ -3,6 +3,8 @@
   import Chart from 'chart.js/dist/Chart.js'
 
   export let data;
+  export let labels = ["Pass (50 - 100)", "Fail (0 - 50)"];
+  export let colors = ["#27ae60", "#e74c3c"];
 
   let canvas;
   let ctx;
@@ -21,9 +23,9 @@
     PieChart = new Chart(ctx, {
       type: "pie",
       data: {
-        labels: ["Pass (50 - 100)", "Fail (0 - 50)"],
+        labels,
         datasets: [{
-          backgroundColor: ["#27ae60", "#e74c3c"],
+          backgroundColor: colors,
           data
         }]
       },

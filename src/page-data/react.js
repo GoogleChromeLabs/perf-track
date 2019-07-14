@@ -41,6 +41,13 @@ export const data = {
     'totalBytesComparison': {
       data: TotalBytesComparison
     },
+    'compressedRequests': {
+      numOrigins: 152956,
+      numRequests: 2621508,
+      gzipCompressedPercent: 69,
+      brotliCompressedPercent: 6,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:2a6736c9abee43ad8ae9d1ea6a15adfd'
+    },
     'jsBytesPercentile': {
       numOrigins: 192126,
       data: [1083, 1544, 2031],
@@ -121,6 +128,13 @@ export const data = {
     'totalBytesComparison': {
       data: TotalBytesComparisonNoJquery
     },
+    'compressedRequests': {
+      numOrigins: 63666,
+      numRequests: 514468,
+      gzipCompressedPercent: 59,
+      brotliCompressedPercent: 8,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:460377ab25434c4faece6955a7bc4c2a'
+    },
     'jsBytesPercentile': {
       numOrigins: 82625,
       data: [1229, 1848, 2325],
@@ -199,6 +213,13 @@ export const data = {
     },
     'totalBytesComparison': {
       data: TotalBytesComparisonNext
+    },
+    'compressedRequests': {
+      numOrigins: 1728,
+      numRequests: 23332,
+      gzipCompressedPercent: 53,
+      brotliCompressedPercent: 8,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:baae7a9a9b004f74ba420fc6ce5970fc'
     },
     'jsBytesPercentile': {
       numOrigins: 3413,

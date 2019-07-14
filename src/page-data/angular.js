@@ -34,6 +34,13 @@ export const data = {
     'totalBytesComparison': {
       data: TotalBytesComparison
     },
+    'compressedRequests': {
+      numOrigins: 7163,
+      numRequests: 100864,
+      gzipCompressedPercent: 63,
+      brotliCompressedPercent: 4,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:1bc845f284c14ceca3e9d21f6c959fce'
+    },
     'jsBytesPercentile': {
       numOrigins: 10318,
       data: [929, 1422, 2083],
@@ -113,6 +120,13 @@ export const data = {
     },
     'totalBytesComparison': {
       data: TotalBytesComparisonNoJquery
+    },
+    'compressedRequests': {
+      numOrigins: 3463,
+      numRequests: 38337,
+      gzipCompressedPercent: 59,
+      brotliCompressedPercent: 4,
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:50caf2eede7a4604ab5d0d0b9478fc95'
     },
     'jsBytesPercentile': {
       numOrigins: 5239,
