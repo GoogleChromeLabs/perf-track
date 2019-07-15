@@ -1,8 +1,8 @@
-import TotalBytesBreakdown from "../data/react/all/total-bytes-breakdown";
-import JSBytesBreakdown from "../data/react/all/js-bytes-breakdown";
-import ImgBytesBreakdown from "../data/react/all/img-bytes-breakdown";
-import TotalBytesComparison from "../data/react/all/total-bytes-comparison";
-import JSBytesComparison from "../data/react/all/js-bytes-comparison";
+import TotalBytesBreakdown from "../data/vue/all/total-bytes-breakdown";
+import JSBytesBreakdown from "../data/vue/all/js-bytes-breakdown";
+import ImgBytesBreakdown from "../data/vue/all/img-bytes-breakdown";
+import TotalBytesComparison from "../data/vue/all/total-bytes-comparison";
+import JSBytesComparison from "../data/vue/all/js-bytes-comparison";
 
 import TotalBytesBreakdownNoJquery from "../data/vue/jquery/total-bytes-breakdown";
 import JSBytesBreakdownNoJquery from "../data/vue/jquery/js-bytes-breakdown";

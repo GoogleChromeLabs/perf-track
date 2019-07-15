@@ -1,6 +1,9 @@
 <script>
+  import { link } from "svelte-routing";
+
   export let background = '#ff5382'
   export let href = ''
+  export let routeLink = false;
 </script>
 
 <style>
@@ -26,6 +29,13 @@
   }
 </style>
 
-<a class="container" href={href} style="background-color: {background}">
-  <p>?</p>
-</a>
+
+{#if routeLink}
+	<a class="container" href="{href}" to="{href}" use:link style="background-color: {background}">
+    <p>?</p>
+  </a>
+{:else}
+	<a class="container" href={href} style="background-color: {background}">
+    <p>?</p>
+  </a>
+{/if}

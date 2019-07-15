@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #ff6384;
+    border-bottom: 2px solid #00c7c4;
     margin-bottom: 20px;
     height: 80px;
     background: #fff;
@@ -107,7 +107,7 @@
   }
 
   .origins-header .number {
-    color: #ff6384;
+    color: #00c7c4;
     margin: 0;
     font-size: 60px;
     font-weight: bold;
@@ -195,9 +195,22 @@
   .metric-chart-container {
     margin-top: 60px;
   }
+
+  .faq-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
 </style>
 
 <div class="container">
+  <!-- FAQ button -->
+  <div class="faq-button">
+    <QueryIcon
+      href="about"
+      routeLink
+      background='#6c4cd5'/>
+  </div>
 
   <!-- Header -->
   <div class="header">

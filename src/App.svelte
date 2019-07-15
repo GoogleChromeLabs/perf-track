@@ -5,6 +5,7 @@
   import Angular from "./pages/Angular.svelte";
   import React from "./pages/React.svelte";
   import Vue from "./pages/Vue.svelte";
+  import About from "./pages/About.svelte";
 </script>
 
 <style>
@@ -22,6 +23,7 @@
     <Route path="angular" component="{Angular}" />
     <Route path="react" component="{React}" />
     <Route path="vue" component="{Vue}" />
+    <Route path="about" component="{About}" />
     <Route path="/" component="{Home}" />
   </div>
 </Router>

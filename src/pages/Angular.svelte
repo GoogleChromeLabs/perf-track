@@ -13,6 +13,7 @@
   import FrameworkHeader from "../components/FrameworkHeader.svelte";
   import QueryIcon from "../components/QueryIcon.svelte";
   import MetricChart from "../components/MetricChart.svelte";
+  import ButtonLink from "../components/ButtonLink.svelte";
 
   import { headerOptions, data } from "../page-data/angular.js";
 
@@ -195,9 +196,22 @@
   .metric-chart-container {
     margin-top: 60px;
   }
+
+  .faq-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
 </style>
 
 <div class="container">
+  <!-- FAQ button -->
+  <div class="faq-button">
+    <QueryIcon
+      href="about"
+      routeLink
+      background='#6c4cd5'/>
+  </div>
 
   <!-- Header -->
   <div class="header">

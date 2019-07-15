@@ -1,6 +1,7 @@
 <script>
   import Logo from "../components/icons/Logo.svelte";
   import ButtonLink from "../components/ButtonLink.svelte";
+  import QueryIcon from "../components/QueryIcon.svelte";
 </script>
 
 <style>
@@ -33,29 +34,37 @@
     color: #333538;
   }
 
-  p .highlight {
-    color: #6c4cd5;
-    font-weight: bold;
-  }
-
   .button-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px 0;
   }
+
+  .faq-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
 </style>
 
 <div class="container">
+  <div class="faq-button">
+    <QueryIcon
+      href="about"
+      routeLink
+      background='#6c4cd5'/>
+  </div>
+
   <div class="title">
     <Logo />
     <h1>perf track</h1>
   </div>
   <p>Tracking framework performance at scale</p>
   <div class="button-container">
-    <ButtonLink red text="Angular" to="angular" />
-    <ButtonLink blue text="React" to="react" />
-    <ButtonLink green text="Vue" to="vue" />
+    <ButtonLink background="#FF6384" text="Angular" to="angular" />
+    <ButtonLink background="#36A2EB" text="React" to="react" />
+    <ButtonLink background="#4BC0C0" text="Vue" to="vue" />
   </div>
 </div>
 

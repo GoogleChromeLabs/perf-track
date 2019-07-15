@@ -2,20 +2,10 @@
   import { link } from "svelte-routing";
 
   export let text = 'Button';
-  export let red = false;
-  export let blue = false;
-  export let green = false;
   export let to = "";
 
-  let background = '#6c4cd5'
-  
-  if (red) {
-    background = '#FF6384';
-  } else if (blue) {
-    background = '#36A2EB';
-  } else if (green) {
-    background = '#4BC0C0';
-  }
+  export let background = '#6c4cd5';
+  export let width = 150;
 </script>
 
 <style>
@@ -30,7 +20,6 @@
     font-weight: 600;
     text-decoration: none;
     transition: box-shadow 200ms ease-out;
-    width: 150px;
     font-size: 16px;
     cursor: pointer;
   }
@@ -40,6 +29,6 @@
   }
 </style>
 
-<a href="{to}" use:link style="background-color: {background}" to="{to}">
+<a href="{to}" use:link style="background-color: {background}; width: {width}px" to="{to}">
   {text}
  </a>
