@@ -1,4 +1,6 @@
 .DS_Store
 node_modules
-public
+public/*
+!public/index.html
+!public/favicon.png
 stats.html
