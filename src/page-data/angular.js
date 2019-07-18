@@ -86,12 +86,12 @@ export const data = {
       data: [80, 20],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:d189aa7889314850940a21a07f839299'
     },
-    'firstContentfulPaint': {
+    'firstContentfulPaintCrux': {
       numOrigins: 4993,
       data: [15, 29, 56],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:5e2ba9a3296544aca6c662c4dc4af046'
     },
-    'firstInputDelay': {
+    'firstInputDelayCrux': {
       numOrigins: 3666,
       data: [77, 15, 8],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:cd0f61c39a9c4ae78fc4330344a386c4'
@@ -173,12 +173,12 @@ export const data = {
       data: [84, 16],
       query: "https://bigquery.cloud.google.com/savedquery/1086077897885:f99019bfd48349788f30d2797c6f7a87"
     },
-    'firstContentfulPaint': {
+    'firstContentfulPaintCrux': {
       numOrigins: 2382,
       data: [16, 29, 55],
       query: "https://bigquery.cloud.google.com/savedquery/7475840913:6a1caae5a7904594bf268975de713c8b"
     },
-    'firstInputDelay': {
+    'firstInputDelayCrux': {
       numOrigins: 1707,
       data: [79, 14, 7],
       query: "https://bigquery.cloud.google.com/savedquery/7475840913:c166d8d8fa0343efaa4ea20b6b3ba55b"

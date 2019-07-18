@@ -93,12 +93,12 @@ export const data = {
       data: [54, 46],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:be38e760c67c4e99ab7e43a648690b45'
     },
-    'firstContentfulPaint': {
+    'firstContentfulPaintCrux': {
       numOrigins: 22265,
       data: [22, 35, 43],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:f4b043ff03f641fbb50f1f04ff7da120'
     },
-    'firstInputDelay': {
+    'firstInputDelayCrux': {
       numOrigins: 14095,
       data: [79, 14, 7],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:7d748d4dc05e4f0a95e4573b6d670d13'
@@ -180,12 +180,12 @@ export const data = {
       data: [75, 25],
       query: "https://bigquery.cloud.google.com/savedquery/1086077897885:50e9e9544c26415697ba6d3b320b07ea"
     },
-    'firstContentfulPaint': {
+    'firstContentfulPaintCrux': {
       numOrigins: 4936,
       data: [21, 33, 46],
       query: "https://bigquery.cloud.google.com/savedquery/1086077897885:ed139c0183d4437198ce78bc3d335d0c"
     },
-    'firstInputDelay': {
+    'firstInputDelayCrux': {
       numOrigins: 3339,
       data: [81, 12, 7],
       query: "https://bigquery.cloud.google.com/savedquery/1086077897885:b72b7fa1c0db4b5f98c5f0a7ec00d602"
@@ -266,12 +266,12 @@ export const data = {
       data: [70, 30],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:3774c9bed78241c493e2917424ebd62d'
     },
-    'firstContentfulPaint': {
+    'firstContentfulPaintCrux': {
       numOrigins: 1201,
       data: [15, 33, 52],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:7a211590edee4a2c871ca0ce86c772d7'
     },
-    'firstInputDelay': {
+    'firstInputDelayCrux': {
       numOrigins: 828,
       data: [75, 15, 10],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:c835a2caf16c423ca6f411952cf0d967'

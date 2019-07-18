@@ -655,62 +655,6 @@
 
   <section>
     <div class="section-title">
-      <h3>First Contentful Paint (FCP)</h3>
-      <p>{data[selectedOption].firstContentfulPaint.numOrigins} origins</p>
-    </div>
-
-    <p>All runs on 3G and mobile</p>
-
-    <div class="metric-chart-container">
-      <MetricChart
-        fast={data[selectedOption].firstContentfulPaint.data[0]}
-        average={data[selectedOption].firstContentfulPaint.data[1]}
-        slow={data[selectedOption].firstContentfulPaint.data[2]}
-        fastTooltip="{data[selectedOption].firstContentfulPaint.data[0]}% of
-        loads for these origins have a fast (< 1 s) FCP."
-        averageTooltip="{data[selectedOption].firstContentfulPaint.data[1]}% of
-        loads for these origins have an average (1 s ~ 2.5 s) FCP."
-        slowTooltip="{data[selectedOption].firstContentfulPaint.data[2]}% of
-        loads for these origins have a slow (> 2.5 s) FCP." />
-    </div>
-
-    <div class="icon-container">
-      <QueryIcon
-        background={primaryColor}
-        href={data[selectedOption].firstContentfulPaint.query} />
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">
-      <h3>First Input Delay (FID)</h3>
-      <p>{data[selectedOption].firstInputDelay.numOrigins} origins</p>
-    </div>
-
-    <p>All runs on 3G and mobile</p>
-
-    <div class="metric-chart-container">
-      <MetricChart
-        fast={data[selectedOption].firstInputDelay.data[0]}
-        average={data[selectedOption].firstInputDelay.data[1]}
-        slow={data[selectedOption].firstInputDelay.data[2]}
-        fastTooltip="{data[selectedOption].firstInputDelay.data[0]}% of loads
-        for these origins have a fast (< 50 ms) FID."
-        averageTooltip="{data[selectedOption].firstInputDelay.data[1]}% of loads
-        for these origins have an average (50 ms ~ 250 ms) FID."
-        slowTooltip="{data[selectedOption].firstInputDelay.data[2]}% of loads
-        for these origins have a slow (> 250 ms) FID." />
-    </div>
-
-    <div class="icon-container">
-      <QueryIcon
-        background={primaryColor}
-        href={data[selectedOption].firstInputDelay.query} />
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">
       <h3>Time to Interactive (TTI)</h3>
       <p>{data[selectedOption].timeToInteractive.numOrigins} origins</p>
     </div>
@@ -738,6 +682,62 @@
       <QueryIcon
         background={primaryColor}
         href={data[selectedOption].timeToInteractive.query} />
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h3>First Contentful Paint (FCP)</h3>
+      <p>{data[selectedOption].firstContentfulPaintCrux.numOrigins} origins</p>
+    </div>
+
+    <p>All runs on 3G and mobile</p>
+
+    <div class="metric-chart-container">
+      <MetricChart
+        fast={data[selectedOption].firstContentfulPaintCrux.data[0]}
+        average={data[selectedOption].firstContentfulPaintCrux.data[1]}
+        slow={data[selectedOption].firstContentfulPaintCrux.data[2]}
+        fastTooltip="{data[selectedOption].firstContentfulPaintCrux.data[0]}% of
+        loads for these origins have a fast (< 1 s) FCP."
+        averageTooltip="{data[selectedOption].firstContentfulPaintCrux.data[1]}% of
+        loads for these origins have an average (1 s ~ 2.5 s) FCP."
+        slowTooltip="{data[selectedOption].firstContentfulPaintCrux.data[2]}% of
+        loads for these origins have a slow (> 2.5 s) FCP." />
+    </div>
+
+    <div class="icon-container">
+      <QueryIcon
+        background={primaryColor}
+        href={data[selectedOption].firstContentfulPaintCrux.query} />
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h3>First Input Delay (FID)</h3>
+      <p>{data[selectedOption].firstInputDelayCrux.numOrigins} origins</p>
+    </div>
+
+    <p>All runs on 3G and mobile</p>
+
+    <div class="metric-chart-container">
+      <MetricChart
+        fast={data[selectedOption].firstInputDelayCrux.data[0]}
+        average={data[selectedOption].firstInputDelayCrux.data[1]}
+        slow={data[selectedOption].firstInputDelayCrux.data[2]}
+        fastTooltip="{data[selectedOption].firstInputDelayCrux.data[0]}% of loads
+        for these origins have a fast (< 50 ms) FID."
+        averageTooltip="{data[selectedOption].firstInputDelayCrux.data[1]}% of loads
+        for these origins have an average (50 ms ~ 250 ms) FID."
+        slowTooltip="{data[selectedOption].firstInputDelayCrux.data[2]}% of loads
+        for these origins have a slow (> 250 ms) FID." />
+    </div>
+
+    <div class="icon-container">
+      <QueryIcon
+        background={primaryColor}
+        href={data[selectedOption].firstInputDelayCrux.query} />
     </div>
   </section>
 

@@ -102,6 +102,17 @@
   </section>
 
   <section>
+    <h2>What dataset is all this data from?</h2>
+
+    <p>
+      Every query on the site uses the
+      <strong>2019_05_01_mobile</strong>
+      dataset. Every query used in this site are from this mobile dataset -
+      there are none included here for desktop.
+    </p>
+  </section>
+
+  <section>
     <h2>How are JavaScript frameworks/libraries detected on a site?</h2>
 
     <p>
@@ -112,16 +123,6 @@
       </a>
       extension. This extension is integrated into Lighthouse which means it can
       be queried directly through any HTTPArchive run.
-    </p>
-  </section>
-
-  <section>
-    <h2>What dataset is all this data from?</h2>
-
-    <p>
-      Every query on the site uses the
-      <strong>2019_05_01_mobile</strong>
-      dataset.
     </p>
   </section>
 
