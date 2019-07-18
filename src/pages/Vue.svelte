@@ -413,7 +413,7 @@
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href={data[selectedOption].jsBytesPercentile.data[0]} />
+        href={data[selectedOption].jsBytesPercentile.query} />
     </div>
   </section>
 
@@ -726,7 +726,7 @@
           <strong>{data[selectedOption].timeToInteractive.data[1]}s</strong>
         </li>
         <li>
-          90th percentile:
+          95th percentile:
           <strong>{data[selectedOption].timeToInteractive.data[2]}s</strong>
         </li>
       </ul>
