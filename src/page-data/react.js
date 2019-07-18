@@ -106,7 +106,7 @@ export const data = {
     },
     'timeToInteractive': {
       numOrigins: 192126,
-      data: [21.7, 31.9, 51.5],
+      data: [18.0, 25.7, 35.8],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:6e4aba840666471789709922be0324a4'
     }
   },
@@ -192,7 +192,7 @@ export const data = {
     },
     'timeToInteractive': {
       numOrigins: 82625,
-      data: [17.7, 26.6, 45.0],
+      data: [16.3, 23.7, 33.1],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:3d4c0bc7e31f4eb9828d7335926cadb4'
     }
   },
@@ -278,7 +278,7 @@ export const data = {
     },
     'timeToInteractive': {
       numOrigins: 3413,
-      data: [20.6, 25.8, 41.0],
+      data: [12.9, 18.6, 25.8],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:d7ae4a69cd6b4948a38305c024f80b6c'
     }
   }

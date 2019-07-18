@@ -699,6 +699,8 @@
       <p>{data[selectedOption].timeToInteractive.numOrigins} origins</p>
     </div>
 
+    <p>Measured via Lighthouse's <a href="https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/interactive.js">Interactive</a> audit.</p>
+
     <div>
       <ul class="row">
         <li>
