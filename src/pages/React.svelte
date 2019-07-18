@@ -675,7 +675,7 @@
 
   <section>
     <div class="section-title">
-      <h3>First Contentful Paint (FCP)</h3>
+      <h3>First Contentful Paint (FCP) - CrUX</h3>
       <p>{data[selectedOption].firstContentfulPaintCrux.numOrigins} origins</p>
     </div>
 
@@ -701,7 +701,7 @@
 
   <section>
     <div class="section-title">
-      <h3>First Input Delay (FID)</h3>
+      <h3>First Input Delay (FID) - CrUX</h3>
       <p>{data[selectedOption].firstInputDelayCrux.numOrigins} origins</p>
     </div>
 
