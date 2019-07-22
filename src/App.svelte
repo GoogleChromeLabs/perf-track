@@ -6,6 +6,7 @@
   import React from "./pages/React.svelte";
   import Vue from "./pages/Vue.svelte";
   import About from "./pages/About.svelte";
+  import Polymer from "./pages/Polymer.svelte";
 </script>
 
 <style>
@@ -23,6 +24,7 @@
     <Route path="angular" component="{Angular}" />
     <Route path="react" component="{React}" />
     <Route path="vue" component="{Vue}" />
+    <Route path="polymer" component="{Polymer}" />
     <Route path="about" component="{About}" />
     <Route path="/" component="{Home}" />
   </div>

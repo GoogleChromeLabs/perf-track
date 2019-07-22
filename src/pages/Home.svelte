@@ -65,6 +65,7 @@
     <ButtonLink background="#FF6384" text="Angular" to="angular" />
     <ButtonLink background="#36A2EB" text="React" to="react" />
     <ButtonLink background="#4BC0C0" text="Vue" to="vue" />
+    <ButtonLink background="#FF4470" text="Polymer" to="polymer" />
   </div>
 </div>
 
