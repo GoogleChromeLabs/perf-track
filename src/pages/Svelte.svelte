@@ -119,6 +119,12 @@
     margin-top: 20px;
   }
 
+  .origins-header .more-details {
+    font-size: 16px;
+    margin-top: 20px;
+    font-style: italic;
+  }
+
   .heading {
     display: flex;
     align-items: center;
@@ -168,30 +174,6 @@
     margin-top: 20px;
   }
 
-  .icon-row {
-    display: flex;
-    justify-content: space-around;
-    max-width: 500px;
-    align-items: center;
-    margin: 0 55px 0;
-  }
-
-  .icon-row-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50px;
-    text-align: center;
-  }
-
-  .icon-row-item p {
-    font-family: Caveat, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ff3500;
-    margin: 15px 0 0;
-  }
-
   .metric-chart-container {
     margin-top: 60px;
   }
@@ -238,6 +220,17 @@
         For
         <strong>{selectedOption}</strong>
         . Every query below reaches a subset of this dataset.
+      </p>
+
+      <p class="more-details">
+        Note: Each query detects Svelte on a site looking for any class values that begin with
+        `svelte-`. This is subject to <strong>false positives</strong> (sites that include `svelte-` to
+        the beginning of any class value) and <strong>false negatives</strong> (sites that use Svelte but forego it's
+        current styling implementation).
+      </p>
+
+      <p class="more-details">
+        Until a better detection mechanism is used, it is important to realize that these <strong>results may not be accurate</strong>.
       </p>
     </div>
 
