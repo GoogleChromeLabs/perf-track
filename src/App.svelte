@@ -27,6 +27,7 @@
     <Route path="vue" component="{Vue}" />
     <Route path="polymer" component="{Polymer}" />
     <Route path="gatsby" component="{Gatsby}" />
+    <Route path="svelte" component="{Svelte}" />
     <Route path="about" component="{About}" />
     <Route path="/" component="{Home}" />
   </div>
