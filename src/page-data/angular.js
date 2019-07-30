@@ -101,6 +101,11 @@ export const data = {
       numOrigins: 10318,
       data: [13.2, 19.8, 29.7],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:94304b3a169a49c8954fc5cfb1635a75'
+    },
+    'firstContentfulPaint': {
+      numOrigins: 10318,
+      data: [4.9, 7.42, 10.49],
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:9494e17b620b495b92bc6bb8927238f2'
     }
   },
   [headerOptions[1]]: {
@@ -187,6 +192,11 @@ export const data = {
       numOrigins: 5239,
       data: [11.7, 17.4, 24.9],
       query: "https://bigquery.cloud.google.com/savedquery/1086077897885:1606b1f5258e4d1e8f134202014ad919"
+    },
+    'firstContentfulPaint': {
+      numOrigins: 5239,
+      data: [4.67, 7.11, 10.38],
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:28a0a256446c4784943d3c9aacebb7bf'
     }
   }
 }

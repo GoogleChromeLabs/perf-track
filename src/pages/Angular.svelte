@@ -656,6 +656,38 @@
 
   <section>
     <div class="section-title">
+      <h3>First Contentful Paint (FCP)</h3>
+      <p>{data[selectedOption].firstContentfulPaint.numOrigins} origins</p>
+    </div>
+
+    <p>Measured via Lighthouse's <a href="https://web.dev/first-contentful-paint#how-lighthouse-determines-your-fcp-score">First Contentful Paint</a> audit.</p>
+
+    <div>
+      <ul class="row">
+        <li>
+          Median:
+          <strong>{data[selectedOption].firstContentfulPaint.data[0]}s</strong>
+        </li>
+        <li>
+          75th percentile:
+          <strong>{data[selectedOption].firstContentfulPaint.data[1]}s</strong>
+        </li>
+        <li>
+          90th percentile:
+          <strong>{data[selectedOption].firstContentfulPaint.data[2]}s</strong>
+        </li>
+      </ul>
+    </div>
+
+    <div class="icon-container">
+      <QueryIcon
+        background={primaryColor}
+        href="{data[selectedOption].firstContentfulPaint.query}" />
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
       <h3>Time to Interactive (TTI)</h3>
       <p>{data[selectedOption].timeToInteractive.numOrigins} origins</p>
     </div>
@@ -673,7 +705,7 @@
           <strong>{data[selectedOption].timeToInteractive.data[1]}s</strong>
         </li>
         <li>
-          95th percentile:
+          90th percentile:
           <strong>{data[selectedOption].timeToInteractive.data[2]}s</strong>
         </li>
       </ul>

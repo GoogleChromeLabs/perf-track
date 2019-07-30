@@ -108,6 +108,11 @@ export const data = {
       numOrigins: 52658,
       data: [16.3, 25.5, 37.6],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:247ca0aa0b374fbab6873544f685f36c'
+    },
+    'firstContentfulPaint': {
+      numOrigins: 52658,
+      data: [3.89, 5.31, 7.34],
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:8465cba61dfd456c94836047e4ed20c6'
     }
   },
   [headerOptions[1]]: {
@@ -194,6 +199,11 @@ export const data = {
       numOrigins: 11218,
       data: [9.9, 16.2, 25.2],
       query: "https://bigquery.cloud.google.com/savedquery/1086077897885:c738e488a599408f9b0c5776a86eb72b"
+    },
+    'firstContentfulPaint': {
+      numOrigins: 11218,
+      data: [3.7, 5.59, 7.77],
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:7ccb4b8373f9457b9c783583ee3db8bc'
     }
   },
   [headerOptions[2]]: {
@@ -280,6 +290,11 @@ export const data = {
       numOrigins: 2710,
       data: [11.2, 18.4, 30.1],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:45794c0c1d3e4f7db0f2aaf098cd5467'
+    },
+    'firstContentfulPaint': {
+      numOrigins: 2710,
+      data: [3.45, 5.13, 6.83],
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:9f1d582c2e864eb09c4ca5de1fbd3f36'
     }
   }
 }

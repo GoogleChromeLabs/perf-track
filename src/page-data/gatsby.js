@@ -88,12 +88,16 @@ export const data = {
       numOrigins: 379,
       data: [80, 14, 6],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:78de6798fe8d4f37bc37485af138b375'
-      
     },
     'timeToInteractive': {
       numOrigins: 1739,
       data: [7.9, 14.0, 22.3],
       query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:3d58a61a5f4f472abfa4a5b0f775ead0'
+    },
+    'firstContentfulPaint': {
+      numOrigins: 1739,
+      data: [2.35, 3.3, 4.56],
+      query: 'https://bigquery.cloud.google.com/savedquery/1086077897885:512afa643b1a456db32b989a5c6c3361'
     }
   }
 }
