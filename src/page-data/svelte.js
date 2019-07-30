@@ -1,8 +1,6 @@
 import TotalBytesBreakdown from "../data/svelte/all/total-bytes-breakdown";
 import JSBytesBreakdown from "../data/svelte/all/js-bytes-breakdown";
 import ImgBytesBreakdown from "../data/svelte/all/img-bytes-breakdown";
-import TotalBytesComparison from "../data/svelte/all/total-bytes-comparison";
-import JSBytesComparison from "../data/svelte/all/js-bytes-comparison";
 
 export const headerOptions = [
   'All Svelte sites',

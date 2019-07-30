@@ -67,6 +67,7 @@
     <ButtonLink background="#4BC0C0" text="Vue" to="vue" />
     <ButtonLink background="#FF4470" text="Polymer" to="polymer" />
     <ButtonLink background="#662e9b" text="Gatsby" to="gatsby" />
+    <ButtonLink background="#ff3500" text="Svelte" to="svelte" />
   </div>
 </div>
 

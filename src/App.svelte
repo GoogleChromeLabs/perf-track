@@ -8,6 +8,7 @@
   import About from "./pages/About.svelte";
   import Polymer from "./pages/Polymer.svelte";
   import Gatsby from "./pages/Gatsby.svelte";
+  import Svelte from "./pages/Svelte.svelte";
 </script>
 
 <style>

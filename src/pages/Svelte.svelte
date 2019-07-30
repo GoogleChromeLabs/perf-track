@@ -14,7 +14,7 @@
   import QueryIcon from "../components/QueryIcon.svelte";
   import MetricChart from "../components/MetricChart.svelte";
 
-  import { headerOptions, data } from "../page-data/gatsby.js";
+  import { headerOptions, data } from "../page-data/svelte.js";
 
   let primaryColor = "#ff3500";
   let selectedOption = headerOptions[0];
