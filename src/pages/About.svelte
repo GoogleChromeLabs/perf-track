@@ -170,7 +170,7 @@
 
     <p>
       Reach out to Houssein (
-      <strong>houssein@</strong>
+      <strong>hdjirdeh</strong>
       )!
     </p>
   </section>
@@ -182,7 +182,7 @@
 
     <p>
       Reach out to Houssein (
-      <strong>houssein@</strong>
+      <strong>hdjirdeh</strong>
       )! He'll work with you to try and include that query for all the
       frameworks in this app.
     </p>
