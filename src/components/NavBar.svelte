@@ -14,7 +14,7 @@
     padding-left: 125px;
     border-bottom: 1px solid #ccc;
   }
-  
+
   :global(nav .link, nav .link:visited) {
     font-weight: 500;
     font-size: 22px;
