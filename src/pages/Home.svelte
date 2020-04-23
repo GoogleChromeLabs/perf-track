@@ -83,5 +83,9 @@ limitations under the License. -->
     <ButtonLink background="#662e9b" text="Gatsby" to="gatsby" />
     <ButtonLink background="#ff3500" text="Svelte" to="svelte" />
   </div>
+  <p>Performance Metric Comparison</p>
+  <div class="button-container">
+    <ButtonLink background="#ff3500" text="Compare" to="comparison" />
+  </div>
 </div>
 

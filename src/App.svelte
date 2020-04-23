@@ -23,6 +23,7 @@ limitations under the License. -->
   import Polymer from "./pages/Polymer.svelte";
   import Gatsby from "./pages/Gatsby.svelte";
   import Svelte from "./pages/Svelte.svelte";
+  import Comparison from "./pages/Comparison.svelte";
 </script>
 
 <style>
@@ -45,6 +46,7 @@ limitations under the License. -->
     <Route path="svelte" component="{Svelte}" />
     <Route path="about" component="{About}" />
     <Route path="/" component="{Home}" />
+    <Route path="comparison" component="{Comparison}" />
   </div>
 </Router>
 
