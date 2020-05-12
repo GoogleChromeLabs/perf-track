@@ -15,6 +15,8 @@ limitations under the License. -->
 <script>
   import { Router, Route } from "svelte-routing";
   import NavBar from "./components/NavBar.svelte";
+  import Footer from "./components/Footer.svelte";
+
   import Home from "./pages/Home.svelte";
   import Angular from "./pages/Angular.svelte";
   import React from "./pages/React.svelte";
@@ -28,11 +30,51 @@ limitations under the License. -->
 
 <style>
 	:global(body) {
-		font-family: 'Nunito', avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    font: 400 1.6rem / 1.6 Montserrat, sans-serif;
+    padding: 0;
 	}
+
+  :global(html) {
+		font-size: 59.5%;
+	}
+
+  :global(.row) {
+		max-width: 114rem;
+    width: 100%;
+    margin: 0px auto;
+	}
+
+  :global(h1) {
+		font-size: 6rem;
+    margin-bottom: 0;
+	}
+
+  :global(h2) {
+		font-size: 2.5rem;
+	}
+
+  :global(h1, h2) {
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  :global(h3, h4) {
+    line-height: 1.2;
+  }
 
   .container {
     height: 100%;
+  }
+
+  @media (max-width: 620px) {
+    :global(h1) {
+      font-size: 5rem;
+    }
+
+    :global(h2) {
+      font-size: 2rem;
+    }
   }
 </style>
 
@@ -48,5 +90,6 @@ limitations under the License. -->
     <Route path="/" component="{Home}" />
     <Route path="comparison" component="{Comparison}" />
   </div>
+  <Footer></Footer>
 </Router>
 

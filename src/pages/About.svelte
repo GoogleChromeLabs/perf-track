@@ -27,7 +27,6 @@ limitations under the License. -->
   import FrameworkHeader from "../components/FrameworkHeader.svelte";
   import QueryIcon from "../components/QueryIcon.svelte";
   import MetricChart from "../components/MetricChart.svelte";
-  import ButtonLink from "../components/ButtonLink.svelte";
 
   import { headerOptions, data } from "../page-data/angular.js";
 

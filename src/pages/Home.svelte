@@ -14,78 +14,92 @@ limitations under the License. -->
 
 <script>
   import Logo from "../components/icons/Logo.svelte";
-  import ButtonLink from "../components/ButtonLink.svelte";
+  import ButtonRoute from "../components/ButtonRoute.svelte";
   import QueryIcon from "../components/QueryIcon.svelte";
 </script>
 
 <style>
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: #F7F7F7;
     height: 100%;
-  }
-
-  .title {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
-	h1 {
-    font-size: 65px;
-    font-weight: 600;
-    margin: 0;
-    color: #6c4cd5;
-	}
-
-  p {
-    font-size: 1.3rem;
-    font-weight: 400;
-    font-weight: 500;
-    margin: 10px 0 0;
-    color: #333538;
+  header {
+    display: flex;
+    padding-bottom: 4rem;
   }
 
-  .button-container {
+  header h1 {
+    font-weight: 600;
+  }
+
+  .frameworks {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0;
+    padding-top: 5rem;
   }
 
-  .faq-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+  .divider {
+    border: 2px solid #dddddd;
+  }
+
+  @media (max-width: 1240px) {
+    header {
+      flex-direction: column;
+    }
+    
+    .title {
+      text-align: center;
+    }
+
+    .frameworks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center; 
+      grid-row-gap: 5rem;
+      grid-column-gap: 2rem;
+    }
+
+    .divider {
+      width: 600px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .frameworks {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 3rem;
+    }
+
+    .divider {
+      width: 300px;
+    }
   }
 </style>
 
 <div class="container">
-  <div class="faq-button">
-    <QueryIcon
-      href="about"
-      routeLink
-      background='#6c4cd5'/>
-  </div>
-
-  <div class="title">
-    <Logo />
-    <h1>perf track</h1>
-  </div>
-  <p>Tracking framework performance at scale</p>
-  <div class="button-container">
-    <ButtonLink background="#FF6384" text="Angular" to="angular" />
-    <ButtonLink background="#36A2EB" text="React" to="react" />
-    <ButtonLink background="#4BC0C0" text="Vue" to="vue" />
-    <ButtonLink background="#FF4470" text="Polymer" to="polymer" />
-    <ButtonLink background="#662e9b" text="Gatsby" to="gatsby" />
-    <ButtonLink background="#ff3500" text="Svelte" to="svelte" />
-  </div>
-  <p>Performance Metric Comparison</p>
-  <div class="button-container">
-    <ButtonLink background="#ff3500" text="Compare" to="comparison" />
+  <div class="row">
+    <header>
+      <div class="title">
+        <h1>
+          Perf Track
+        </h1>
+        <h2>
+          Tracking framework performance at scale
+        </h2>
+      </div>
+    </header>
+    <hr class ="divider"/>
+    <div class="frameworks">
+      <ButtonRoute img="https://angular.io/assets/images/logos/angular/angular.png" text="Angular" to="angular" borderColor="#FF6384"/>
+      <ButtonRoute img="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" text="React" to="react" borderColor="#36A2EB"/>
+      <ButtonRoute img="https://opencollective-production.s3-us-west-1.amazonaws.com/ca272d00-958a-11e7-990a-e919fb36989b.png" text="Vue" to="vue" borderColor="#4BC0C0"/>
+      <ButtonRoute img="https://cdn.worldvectorlogo.com/logos/polymer.svg" text="Polymer" to="polymer" borderColor="#FF4470"/>
+      <ButtonRoute img="https://preactjs.com/assets/app-icon.png" text="Preact" to="preact" borderColor="#6f31bf"/>
+      <ButtonRoute img="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png" text="Svelte" to="svelte" borderColor="#ff3500"/>
+    </div>
   </div>
 </div>
-
