@@ -16,6 +16,7 @@ limitations under the License. -->
   import { link } from "svelte-routing";
 
   import CardLayout from "../components/CardLayout.svelte";
+  import Dropdown from "../components/Dropdown.svelte";
 
   import { headerOptions, data } from "../page-data/angular.js";
 
@@ -25,12 +26,27 @@ limitations under the License. -->
 
 <style>
 .container {
-  padding: 5rem 5rem 0;
+  padding: 5rem;
   height: calc(100% - 8rem);
   box-sizing: border-box;
+}
+
+.dropdown-container {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-container img {
+  max-height: 30px;
+  margin-right: 10px;
 }
 </style>
 
 <div class="container">
+  <div class="dropdown-container">
+    <img src="images/react-logo.png"/>
+    <Dropdown/>
+  </div>
   <CardLayout></CardLayout>
 </div>
