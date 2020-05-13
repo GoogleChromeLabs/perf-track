@@ -32,6 +32,7 @@ limitations under the License. -->
 	:global(body) {
     font: 400 1.6rem / 1.6 Montserrat, sans-serif;
     padding: 0;
+    background: #F7F7F7;
 	}
 
   :global(html) {

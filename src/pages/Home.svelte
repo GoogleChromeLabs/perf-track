@@ -20,7 +20,6 @@ limitations under the License. -->
 
 <style>
   .container {
-    background: #F7F7F7;
     height: 100%;
     display: flex;
     align-items: center;
@@ -69,9 +68,14 @@ limitations under the License. -->
   }
 
   @media (max-width: 620px) {
+    header {
+      padding: 0 2rem 2rem;
+    }
+
     .frameworks {
       grid-template-columns: repeat(2, 1fr);
       grid-row-gap: 3rem;
+      padding-top: 2rem;
     }
 
     .divider {

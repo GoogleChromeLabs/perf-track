@@ -20,9 +20,28 @@
     min-width: 12rem;
   }
   
-  div:hover {
+  /* div:hover {
     box-shadow: 0 1px 10px var(--border-color);
     transform: scale(1.03);
+  } */
+
+  .scale-bg {
+    position: relative;
+  }
+  .scale-bg::after {
+    background-color: var(--border-color);
+    border-radius: 2rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 250ms;
+  }
+  .scale-bg:hover::after {
+    transform: scale(1.05);
   }
 
   a {
@@ -60,7 +79,7 @@
   }
 </style>
 
-<div style="--border-color:{borderColor}">
+<div class="scale-bg" style="--border-color:{borderColor}">
   <a href="{to}" use:link to="{to}">
     <img src={img} alt={to}>
   </a>

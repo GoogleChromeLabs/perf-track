@@ -43,6 +43,12 @@
   span:hover:nth-child(6) {
     color: #ff3500;
   }
+
+  @media (max-width: 620px) {
+    div {
+      height: 50px;
+    }
+  }
 </style>
 
 <div>
