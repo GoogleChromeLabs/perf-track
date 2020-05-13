@@ -1,12 +1,13 @@
 <script>  
   export let heading = '';
   export let style = '';
+  export let centerHeading = false;
 </script>
 
 <style>
   section {
     background: #fff;
-    padding: 2rem;
+    padding: 2rem 3rem;
   }
 
   .icon {
@@ -21,12 +22,20 @@
     margin-top: 0;
     font-size: 2rem;
   }
-  
+
+  .center {
+    flex-direction: column;
+  }
+
+  .center .icon {
+    margin: 0 0 5px;
+  }
 </style>
 
 <section style={style}>
-  <h2 class="title">
-  <span class="icon"><slot name="icon" /></span>
-  {heading}
+  <h2 class="title {centerHeading && 'center'}">
+    <span class="icon"><slot name="icon" /></span>
+    {heading}
   </h2>
+  <slot></slot>
  </section>
