@@ -4,7 +4,7 @@
   export let blue = false;
   export let green = false;
 
-  let background = '#6c4cd5'
+  let background = '#fff'
   
   if (red) {
     background = '#FF6384';

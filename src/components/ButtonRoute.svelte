@@ -18,12 +18,8 @@
     cursor: pointer;
     transition: all .1s ease-in-out;
     min-width: 12rem;
+    min-height: 9rem;
   }
-  
-  /* div:hover {
-    box-shadow: 0 1px 10px var(--border-color);
-    transform: scale(1.03);
-  } */
 
   .scale-bg {
     position: relative;
@@ -51,8 +47,8 @@
   }
   
   img {
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 80px;
+    max-height: 80px;
   }
 
   @media (max-width: 1240px) {
@@ -63,7 +59,7 @@
 
     div {
       min-width: 10rem;
-      max-width: 15rem;
+      min-height: 9rem;
     }
   }
 
@@ -75,6 +71,7 @@
 
     div {
       min-width: 7rem;
+      min-height: 6rem;
     }
   }
 </style>

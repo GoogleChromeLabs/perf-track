@@ -98,12 +98,12 @@ limitations under the License. -->
     </header>
     <hr class ="divider"/>
     <div class="frameworks">
-      <ButtonRoute img="https://angular.io/assets/images/logos/angular/angular.png" text="Angular" to="angular" borderColor="#FF6384"/>
-      <ButtonRoute img="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" text="React" to="react" borderColor="#36A2EB"/>
-      <ButtonRoute img="https://opencollective-production.s3-us-west-1.amazonaws.com/ca272d00-958a-11e7-990a-e919fb36989b.png" text="Vue" to="vue" borderColor="#4BC0C0"/>
-      <ButtonRoute img="https://cdn.worldvectorlogo.com/logos/polymer.svg" text="Polymer" to="polymer" borderColor="#FF4470"/>
-      <ButtonRoute img="https://preactjs.com/assets/app-icon.png" text="Preact" to="preact" borderColor="#6f31bf"/>
-      <ButtonRoute img="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png" text="Svelte" to="svelte" borderColor="#ff3500"/>
+      <ButtonRoute img="images/angular-logo.png" text="Angular" to="angular" borderColor="#FF6384"/>
+      <ButtonRoute img="images/react-logo.png" text="React" to="react" borderColor="#36A2EB"/>
+      <ButtonRoute img="images/vue-logo.png" text="Vue" to="vue" borderColor="#4BC0C0"/>
+      <ButtonRoute img="images/polymer-logo.png" text="Polymer" to="polymer" borderColor="#FF4470"/>
+      <ButtonRoute img="images/preact-logo.png" text="Preact" to="preact" borderColor="#6f31bf"/>
+      <ButtonRoute img="images/svelte-logo.png" text="Svelte" to="svelte" borderColor="#ff3500"/>
     </div>
   </div>
 </div>
