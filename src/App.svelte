@@ -32,7 +32,7 @@ limitations under the License. -->
 	:global(body) {
     font: 400 1.6rem / 1.6 Montserrat, sans-serif;
     padding: 0;
-    background: #F7F7F7;
+    background: #f0f0f0;
 	}
 
   :global(html) {
@@ -64,10 +64,6 @@ limitations under the License. -->
     line-height: 1.2;
   }
 
-  .container {
-    height: 100%;
-  }
-
   @media (max-width: 620px) {
     :global(h1) {
       font-size: 5rem;
@@ -80,17 +76,15 @@ limitations under the License. -->
 </style>
 
 <Router>
-  <div class="container">
-    <Route path="angular" component="{Angular}" />
-    <Route path="react" component="{React}" />
-    <Route path="vue" component="{Vue}" />
-    <Route path="polymer" component="{Polymer}" />
-    <Route path="gatsby" component="{Gatsby}" />
-    <Route path="svelte" component="{Svelte}" />
-    <Route path="about" component="{About}" />
-    <Route path="/" component="{Home}" />
-    <Route path="comparison" component="{Comparison}" />
-  </div>
+  <Route path="angular" component="{Angular}" />
+  <Route path="react" component="{React}" />
+  <Route path="vue" component="{Vue}" />
+  <Route path="polymer" component="{Polymer}" />
+  <Route path="gatsby" component="{Gatsby}" />
+  <Route path="svelte" component="{Svelte}" />
+  <Route path="about" component="{About}" />
+  <Route path="/" component="{Home}" />
+  <Route path="comparison" component="{Comparison}" />
   <Footer></Footer>
 </Router>
 
