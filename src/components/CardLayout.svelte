@@ -29,30 +29,16 @@
 
   .number-container {
     display: flex;
+    align-items: center;
+    height: calc(100% - 7rem);
     justify-content: center;
     margin: 1rem 0;
   }
 
   .number-container p {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 600;
     margin: 0;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
-  }
-
-  li {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  li span {
-    font-weight: 600;
   }
 </style>
 
@@ -66,15 +52,6 @@
     </span>
     <div class="number-container">
       <p>140,000</p>
-    </div>
-
-    <div class="number-container-list">
-      <ul>
-        <li>
-          Percentage of all URLs
-          <span>20%</span>
-        </li>
-      </ul>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">

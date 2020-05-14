@@ -22,6 +22,20 @@ limitations under the License. -->
 
   let primaryColor = "#ff6384";
   let selectedOption = headerOptions[0];
+
+  let frameworkCategories = [
+    { id: 1, text: `All React sites` },
+    { id: 2, text: `Only React sites built with Next.js` },
+    { id: 3, text: `Only React sites built with Gatsby` },
+    { id: 4, text: `Only React sites built with Create React App` }
+  ];
+
+  let versions = [
+    { id: 1, text: `All versions` },
+    { id: 2, text: `v6.8` },
+    { id: 3, text: `v6.7` },
+    { id: 4, text: `v6.6` }
+	];
 </script>
 
 <style>
@@ -32,21 +46,27 @@ limitations under the License. -->
 }
 
 .dropdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 6rem;
   margin-bottom: 2rem;
+}
+
+/* .framework-dropdown {
   display: flex;
   align-items: center;
 }
 
-.dropdown-container img {
-  max-height: 30px;
-  margin-left: 10px;
-}
+.version-dropdown {
+  margin-top: 1rem;
+} */
 </style>
 
 <div class="container">
   <div class="dropdown-container">
-    <Dropdown/>
-    <img src="images/react-logo.png"/>
+    <Dropdown data={frameworkCategories} label="Category:" img="images/react-logo.png"/>
+    <Dropdown data={versions} label="Version:"/>
   </div>
   <CardLayout></CardLayout>
 </div>
