@@ -8,6 +8,8 @@
   section {
     background: #fff;
     padding: 2rem 3rem;
+    border: 3px solid #dedede;
+    border-radius: 10px;
   }
 
   .icon {

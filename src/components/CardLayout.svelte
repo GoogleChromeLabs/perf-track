@@ -1,4 +1,4 @@
-<script>  
+<script>
   import Card from "./Card.svelte";
 
   import UsageIcon from "../components/icons/Usage.svelte";
@@ -7,11 +7,16 @@
   import ImageIcon from "../components/icons/Image.svelte";
   import WeightIcon from "../components/icons/Weight.svelte";
   import GaugeIcon from "../components/icons/Gauge.svelte";
+
+  import Chart from "../components/Chart.svelte";
+
+  import { data } from "../page-data/angular.js";
 </script>
 
 <style>
   .container {
     display: grid;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     height: 100%;
@@ -25,36 +30,39 @@
   .number-container {
     display: flex;
     justify-content: center;
-    margin: 2rem 0 4rem;
+    margin: 1rem 0;
   }
 
   .number-container p {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 600;
     margin: 0;
   }
 
-  .number-container-list ul {
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .number-container-list li {
+  li {
     display: flex;
     justify-content: space-between;
   }
 
-  .number-container-list li span {
+  li span {
     font-weight: 600;
   }
 </style>
 
 <div class="container">
-  <Card heading="Number of URLs" centerHeading style="grid-column: 1;  grid-row: 1 / 4;">
+  <Card
+    heading="Number of URLs"
+    centerHeading
+    style="grid-column: 1; grid-row: 1;">
     <span class="icon" slot="icon">
-      <UsageIcon/>
+      <UsageIcon />
     </span>
     <div class="number-container">
       <p>140,000</p>
@@ -69,34 +77,45 @@
       </ul>
     </div>
   </Card>
-  <Card heading="Core Web Vitals" style="grid-column: 2 / 5;  grid-row: 1 / 4;">
+  <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">
     <span class="icon" slot="icon">
-      <LightningIcon/>
+      <LightningIcon />
     </span>
   </Card>
-  <Card heading="Compressed requests" style="grid-column: 1;  grid-row: 4 / 6;">
+  <Card heading="Compressed requests" style="grid-column: 1; grid-row: 2;">
     <span class="icon" slot="icon">
-      <CompressIcon/>
+      <CompressIcon />
     </span>
+    <Chart
+      graph="pie"
+      colors={['#fbbc04', '#34a853', '#e74c3c']}
+      labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
+      data={[data['All Angular sites'].compressedRequests.gzipCompressedPercent, data['All Angular sites'].compressedRequests.brotliCompressedPercent, 100 - data['All Angular sites'].compressedRequests.gzipCompressedPercent + data['All Angular sites'].compressedRequests.brotliCompressedPercent]}
+      containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
-  <Card heading="Other Web Vitals" style="grid-column: 2 / 5;  grid-row: 4 / 6;">
+  <Card heading="Total Bytes" style="grid-column: 1; grid-row: 3;">
     <span class="icon" slot="icon">
-      <GaugeIcon/>
+      <WeightIcon />
     </span>
+    <Chart
+      graph="doughnut"
+      data={data['All Angular sites'].totalBytesBreakdown.data}
+      containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
-  <Card heading="Total Bytes" style="grid-column: 1; grid-row: 6 / 8;">
-    <span class="icon" slot="icon">
-      <WeightIcon/>
-    </span>
+  <Card heading="JavaScript Bytes" style="grid-column: 2; grid-row: 3;">
+    <span class="icon" slot="icon">{'{ }'}</span>
+    <Chart
+      graph="doughnut"
+      data={data['All Angular sites'].totalBytesBreakdown.data}
+      containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
-  <Card heading="JavaScript Bytes" style="grid-column: 2 / 3; grid-row: 6 / 8;">
+  <Card heading="Image Bytes" style="grid-column: 3; grid-row: 3;">
     <span class="icon" slot="icon">
-      {"{ }"}
+      <ImageIcon />
     </span>
-  </Card>
-  <Card heading="Image Bytes" style="grid-column: 3 / 5; grid-row: 6 / 8;">
-    <span class="icon" slot="icon">
-      <ImageIcon/>
-    </span>
+    <Chart
+      graph="doughnut"
+      data={data['All Angular sites'].totalBytesBreakdown.data}
+      containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
 </div>

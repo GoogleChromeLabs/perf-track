@@ -30,11 +30,9 @@
         }]
       },
       options: {
+        maintainAspectRatio: false,
         legend: {
-            position: 'right',
-            labels: {
-              fontSize: 14
-            }
+          display: false,
         },
       tooltips: {
         callbacks: {

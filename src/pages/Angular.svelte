@@ -39,14 +39,14 @@ limitations under the License. -->
 
 .dropdown-container img {
   max-height: 30px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 </style>
 
 <div class="container">
   <div class="dropdown-container">
-    <img src="images/react-logo.png"/>
     <Dropdown/>
+    <img src="images/react-logo.png"/>
   </div>
   <CardLayout></CardLayout>
 </div>

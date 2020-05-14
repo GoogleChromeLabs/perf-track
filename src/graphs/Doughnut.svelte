@@ -3,7 +3,8 @@
   import Chart from 'chart.js/dist/Chart.js'
   
   export let data;
-
+  export let width = 400;
+  
   let canvas;
   let ctx;
   let doughnutChart;
@@ -22,11 +23,9 @@
       type: "doughnut",
       data,
       options: {
+        maintainAspectRatio: false,
         legend: {
-            position: 'right',
-            labels: {
-              fontSize: 14
-            }
+          display: false,
         },
         tooltips: {
           callbacks: {
@@ -43,4 +42,4 @@
 	});
 </script>
 
-<canvas class="graph" bind:this={canvas} />
+<canvas class="graph" width={width} bind:this={canvas} />
