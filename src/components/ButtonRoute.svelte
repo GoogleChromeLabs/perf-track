@@ -1,13 +1,25 @@
 <script>
-  import { link } from "svelte-routing";
+  import { Link } from "svelte-routing";
 
   export let to = "";
   export let img = "";
+  export let mini = false;
   export let borderColor = '#6c4cd5';
+
+  function getProps({ location, href, isPartiallyCurrent, isCurrent }) {
+    const isActive = href === "/" ? isCurrent : isPartiallyCurrent || isCurrent;
+
+    if (isActive) {
+      return { class: `button-route ${mini ? 'mini' : ''} active`, style: `--border-color:${borderColor}` };
+    } else {
+      return { class: `button-route ${mini ? 'mini' : '' } scale-bg`, style: `--border-color:${borderColor}`  };
+    }
+  }
+  
 </script>
 
 <style>
-	div {
+	:global(.button-route) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,10 +33,21 @@
     min-height: 9rem;
   }
 
-  .scale-bg {
+  :global(.button-route.mini) {
+    min-width: 6rem;
+    min-height: 5rem;
+    margin-left: 2rem;
+  }
+
+  :global(.button-route.mini img) {
+    max-width: 45px;
+    max-height: 45px;
+  }
+
+  :global(.scale-bg) {
     position: relative;
   }
-  .scale-bg::after {
+  :global(.scale-bg::after) {
     background-color: var(--border-color);
     border-radius: 2rem;
     content: "";
@@ -36,48 +59,64 @@
     z-index: -1;
     transition: transform 250ms;
   }
-  .scale-bg:hover::after {
+
+  :global(.scale-bg:hover::after) {
     transform: scale(1.05);
   }
+  
+ :global(.active) {
+    position: relative;
+  }
+  :global(.active::after) {
+    background-color: var(--border-color);
+    border-radius: 2rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scale(1.1);
+  }
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  :global(.active:hover::after) {
+    /* transform: scale(1.1); */
   }
   
-  img {
+
+  :global(.button-route img) {
     max-width: 80px;
     max-height: 80px;
   }
 
   @media (max-width: 1240px) {
-    img {
+    :global(.button-route img) {
       max-width: 70px;
       max-height: 70px;
     }
 
-    div {
+    :global(.button-route) {
       min-width: 10rem;
       min-height: 9rem;
     }
   }
 
   @media (max-width: 620px) {
-    img {
+    :global(.button-route img) {
       max-width: 50px;
       max-height: 50px;
     }
 
-    div {
+    :global(.button-route) {
       min-width: 7rem;
       min-height: 6rem;
     }
   }
 </style>
 
-<div class="scale-bg" style="--border-color:{borderColor}">
-  <a href="{to}" use:link to="{to}">
+<!-- <div class="button-route scale-bg {mini && "mini"}" style="--border-color:{borderColor}"> -->
+  <Link to="{to}" getProps="{getProps}">
     <img src={img} alt={to}>
-  </a>
-</div>
+  </Link>
+<!-- </div> -->

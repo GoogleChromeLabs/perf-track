@@ -4,14 +4,11 @@
 
 <style>
 	div {
-    position: fixed;
-    bottom: 0;
-    height: 8rem;
+    padding: 2rem 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5rem;
     box-sizing: border-box;
   }
 

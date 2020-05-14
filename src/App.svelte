@@ -15,7 +15,6 @@ limitations under the License. -->
 <script>
   import { Router, Route } from "svelte-routing";
   import NavBar from "./components/NavBar.svelte";
-  import Footer from "./components/Footer.svelte";
 
   import Home from "./pages/Home.svelte";
   import Angular from "./pages/Angular.svelte";
@@ -85,6 +84,5 @@ limitations under the License. -->
   <Route path="about" component="{About}" />
   <Route path="/" component="{Home}" />
   <Route path="comparison" component="{Comparison}" />
-  <Footer></Footer>
 </Router>
 
