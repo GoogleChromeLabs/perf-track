@@ -21,7 +21,7 @@ limitations under the License. -->
   import { data } from "../page-data/angular.js";
 
   let categories = [
-    { id: 1, text: `All Angular sites` },
+    { id: 1, text: 'Angular' },
   ];
 </script>
 
@@ -36,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout {categories} {data} />
+  <PageLayout framework="Angular" {categories} {data} />
   <Footer />
 </div>

@@ -21,8 +21,8 @@ limitations under the License. -->
   import { data } from "../page-data/polymer.js";
 
   let categories = [
-    { id: 1, text: 'All Polymer sites' },
-    { id: 2, text: 'All Lit sites' },
+    { id: 1, text: 'Polymer' },
+    { id: 2, text: 'Lit' },
   ];
 </script>
 
@@ -37,6 +37,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout {categories} {data} />
+  <PageLayout framework="Polymer" {categories} {data} />
   <Footer />
 </div>

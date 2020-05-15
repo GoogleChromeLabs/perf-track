@@ -33,9 +33,9 @@ import TotalBytesComparisonNext from "../data/react/next/total-bytes-comparison"
 import JSBytesComparisonNext from "../data/react/next/js-bytes-comparison";
 
 export const headerOptions = [
-  'All React sites',
-  'Only React sites built with Next.js',
-  'Only React sites built with Gatsby'
+  'React',
+  'Next.js',
+  'Gatsby'
 ];
 
 export const data = {

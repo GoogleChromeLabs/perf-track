@@ -20,6 +20,7 @@ limitations under the License. -->
   import ButtonRoute from "../ButtonRoute.svelte";
 
   export let data;
+  export let framework;
   export let categories;
   export let versions;
 </script>
@@ -50,7 +51,7 @@ limitations under the License. -->
 
 <div class="header">
   <div class="dropdown-container">
-    <Dropdown data={categories} label="Category:" img="images/react-logo.png" />
+    <Dropdown {framework} data={categories} label="Category:" img />
     {#if versions}
       <span class="spacer" />
       <Dropdown data={versions} label="Version:" />
@@ -58,12 +59,12 @@ limitations under the License. -->
   </div>
 
   <div class="button-routes">
-    <ButtonRoute mini name="angular" />
-    <ButtonRoute mini name="react" />
-    <ButtonRoute mini name="vue" />
-    <ButtonRoute mini name="polymer" />
-    <ButtonRoute mini name="preact" />
-    <ButtonRoute mini name="svelte" />
+    <ButtonRoute mini name="Angular" />
+    <ButtonRoute mini name="React" />
+    <ButtonRoute mini name="Vue" />
+    <ButtonRoute mini name="Polymer" />
+    <ButtonRoute mini name="Preact" />
+    <ButtonRoute mini name="Svelte" />
   </div>
 </div>
 <CardLayout {data} category={categories[0]} />

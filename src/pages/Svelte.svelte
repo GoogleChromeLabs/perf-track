@@ -21,7 +21,8 @@ limitations under the License. -->
   import { data } from "../page-data/svelte.js";
 
   let categories = [
-    { id: 1, text: `All Svelte sites` },
+    { id: 1, text: 'Svelte' },
+    { id: 2, text: 'Sapper' },
   ];
 </script>
 
@@ -36,6 +37,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout {categories} {data} />
+  <PageLayout framework="Svelte" {categories} {data} />
   <Footer />
 </div>

@@ -27,8 +27,7 @@ import TotalBytesComparisonNoJquery from "../data/angular/jquery/total-bytes-com
 import JSBytesComparisonNoJquery from "../data/angular/jquery/js-bytes-comparison";
 
 export const headerOptions = [
-  'All Angular sites',
-  'Angular sites without jQuery'
+  'Angular',
 ];
 
 export const data = {

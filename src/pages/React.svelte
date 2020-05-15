@@ -21,9 +21,10 @@ limitations under the License. -->
   import { data } from "../page-data/react.js";
 
   let categories = [
-    { id: 1, text: `All React sites` },
-    { id: 2, text: `Only React sites built with Next.js` },
-    { id: 3, text: `Only React sites built with Gatsby` }
+    { id: 1, text: 'React' },
+    { id: 2, text: 'Next.js' },
+    { id: 3, text: 'Gatsby' },
+    { id: 4, text: 'Create React App' }
   ];
 </script>
 
@@ -38,6 +39,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout {categories} {data} />
+  <PageLayout framework="React"  {categories} {data} />
   <Footer />
 </div>

@@ -33,9 +33,8 @@ import TotalBytesComparisonNuxt from "../data/vue/nuxt/total-bytes-comparison";
 import JSBytesComparisonNuxt from "../data/vue/nuxt/js-bytes-comparison";
 
 export const headerOptions = [
-  'All Vue sites',
-  'Vue sites without jQuery',
-  'Vue sites with Nuxt.js'
+  'Vue',
+  'Nuxt.js'
 ];
 
 export const data = {

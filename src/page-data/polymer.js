@@ -21,7 +21,7 @@ import TotalBytesComparison from "../data/polymer/all/total-bytes-comparison";
 import JSBytesComparison from "../data/polymer/all/js-bytes-comparison";
 
 export const headerOptions = [
-  'All Polymer sites',
+  'Polymer',
 ];
 
 export const data = {

@@ -98,12 +98,12 @@ limitations under the License. -->
     </header>
     <hr class ="divider"/>
     <div class="frameworks">
-      <ButtonRoute name="angular" />
-      <ButtonRoute name="react" />
-      <ButtonRoute name="vue" />
-      <ButtonRoute name="polymer" />
-      <ButtonRoute name="preact" />
-      <ButtonRoute name="svelte" />
+      <ButtonRoute name="Angular" />
+      <ButtonRoute name="React" />
+      <ButtonRoute name="Vue" />
+      <ButtonRoute name="Polymer" />
+      <ButtonRoute name="Preact" />
+      <ButtonRoute name="Svelte" />
     </div>
   </div>
 </div>

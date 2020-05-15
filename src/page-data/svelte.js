@@ -19,7 +19,8 @@ import JSBytesBreakdown from "../data/svelte/all/js-bytes-breakdown";
 import ImgBytesBreakdown from "../data/svelte/all/img-bytes-breakdown";
 
 export const headerOptions = [
-  'All Svelte sites',
+  'Svelte',
+  'Sapper'
 ];
 
 export const data = {
