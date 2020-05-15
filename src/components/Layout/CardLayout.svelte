@@ -31,8 +31,9 @@
 
   .number-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: calc(100% - 7rem);
+    height: calc(100% - 4rem);
     justify-content: center;
   }
 
@@ -40,12 +41,13 @@
     font-size: 7rem;
     font-weight: 600;
     margin: 0;
+    line-height: 1.2; 
   }
 </style>
 
 <div class="container">
   <Card
-    heading="Total number of URLs"
+    heading="Number of URLs"
     centerHeading
     style="grid-column: 1; grid-row: 1;">
     <span class="icon" slot="icon">
@@ -53,6 +55,7 @@
     </span>
     <div class="number-container">
       <p>{data[category.text].totalNumOrigins.value.toLocaleString()}</p>
+      <span>(8.6% of all URLs)</span>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">

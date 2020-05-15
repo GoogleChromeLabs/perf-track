@@ -22,10 +22,6 @@
     justify-content: space-between;
   }
 
-  .heading.center {
-    justify-content: center;
-  }
-
   .heading .number {
     font-size: 2rem;
   }
@@ -38,19 +34,11 @@
     margin-top: 0;
     font-size: 2rem;
   }
-
-  .title.center {
-    flex-direction: column;
-  }
-
-  .center .icon {
-    margin: 0 0 5px;
-  }
 </style>
 
 <section style={style}>
-  <h2 class="heading {centerHeading && 'center'}">
-    <div class="title {centerHeading && 'center'}">
+  <h2 class="heading">
+    <div class="title">
       <span class="icon"><slot name="icon" /></span>
       {heading}
     </div>
