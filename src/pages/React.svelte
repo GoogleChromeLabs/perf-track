@@ -25,13 +25,6 @@ limitations under the License. -->
     { id: 2, text: `Only React sites built with Next.js` },
     { id: 3, text: `Only React sites built with Gatsby` }
   ];
-
-  let versions = [
-    { id: 1, text: `All versions` },
-    { id: 2, text: `v6.8` },
-    { id: 3, text: `v6.7` },
-    { id: 4, text: `v6.6` }
-  ];
 </script>
 
 <style>
@@ -45,6 +38,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout {categories} {versions} {data} />
+  <PageLayout {categories} {data} />
   <Footer />
 </div>

@@ -28,6 +28,7 @@ limitations under the License. -->
   .header {
     margin-bottom: 2rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -35,7 +36,10 @@ limitations under the License. -->
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 6.5rem;
+  }
+
+  .dropdown-container .spacer {
+    margin-top: 2rem;
   }
 
   .button-routes {
@@ -47,46 +51,19 @@ limitations under the License. -->
 <div class="header">
   <div class="dropdown-container">
     <Dropdown data={categories} label="Category:" img="images/react-logo.png" />
-    <Dropdown data={versions} label="Version:" />
+    {#if versions}
+      <span class="spacer" />
+      <Dropdown data={versions} label="Version:" />
+    {/if}
   </div>
 
   <div class="button-routes">
-    <ButtonRoute
-      mini
-      img="images/angular-logo.png"
-      text="Angular"
-      to="angular"
-      borderColor="#FF6384" />
-    <ButtonRoute
-      mini
-      img="images/react-logo.png"
-      text="React"
-      to="react"
-      borderColor="#36A2EB" />
-    <ButtonRoute
-      mini
-      img="images/vue-logo.png"
-      text="Vue"
-      to="vue"
-      borderColor="#4BC0C0" />
-    <ButtonRoute
-      mini
-      img="images/polymer-logo.png"
-      text="Polymer"
-      to="polymer"
-      borderColor="#FF4470" />
-    <ButtonRoute
-      mini
-      img="images/preact-logo.png"
-      text="Preact"
-      to="preact"
-      borderColor="#6f31bf" />
-    <ButtonRoute
-      mini
-      img="images/svelte-logo.png"
-      text="Svelte"
-      to="svelte"
-      borderColor="#ff3500" />
+    <ButtonRoute mini name="angular" />
+    <ButtonRoute mini name="react" />
+    <ButtonRoute mini name="vue" />
+    <ButtonRoute mini name="polymer" />
+    <ButtonRoute mini name="preact" />
+    <ButtonRoute mini name="svelte" />
   </div>
 </div>
-<CardLayout {data} category={categories[0]}/>
+<CardLayout {data} category={categories[0]} />

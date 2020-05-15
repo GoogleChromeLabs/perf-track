@@ -1,21 +1,21 @@
 <script>
   import { Link } from "svelte-routing";
 
-  export let to = "";
-  export let img = "";
   export let mini = false;
-  export let borderColor = '#6c4cd5';
+  export let name;
+
+  import frameworkInfo from "../utils/framework-info.json";
+  const { imgSrc, route, color } = frameworkInfo[name];
 
   function getProps({ location, href, isPartiallyCurrent, isCurrent }) {
     const isActive = href === "/" ? isCurrent : isPartiallyCurrent || isCurrent;
 
     if (isActive) {
-      return { class: `button-route ${mini ? 'mini' : ''} active`, style: `--border-color:${borderColor}` };
+      return { class: `button-route ${mini ? 'mini' : ''} active`, style: `--border-color:${color}` };
     } else {
-      return { class: `button-route ${mini ? 'mini' : '' } scale-bg`, style: `--border-color:${borderColor}`  };
+      return { class: `button-route ${mini ? 'mini' : '' } scale-bg`, style: `--border-color:${color}`  };
     }
   }
-  
 </script>
 
 <style>
@@ -30,12 +30,12 @@
     cursor: pointer;
     transition: all .1s ease-in-out;
     min-width: 12rem;
-    min-height: 9rem;
+    min-height: 11rem;
   }
 
   :global(.button-route.mini) {
-    min-width: 6rem;
-    min-height: 5rem;
+    min-width: 8rem;
+    min-height: 7rem;
     margin-left: 2rem;
   }
 
@@ -80,11 +80,6 @@
     transform: scale(1.1);
   }
 
-  :global(.active:hover::after) {
-    /* transform: scale(1.1); */
-  }
-  
-
   :global(.button-route img) {
     max-width: 80px;
     max-height: 80px;
@@ -115,8 +110,6 @@
   }
 </style>
 
-<!-- <div class="button-route scale-bg {mini && "mini"}" style="--border-color:{borderColor}"> -->
-  <Link to="{to}" getProps="{getProps}">
-    <img src={img} alt={to}>
-  </Link>
-<!-- </div> -->
+<Link to="{route}" getProps="{getProps}">
+  <img src={imgSrc} alt="{name} logo">
+</Link>

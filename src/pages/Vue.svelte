@@ -21,12 +21,8 @@ limitations under the License. -->
   import { data } from "../page-data/vue.js";
 
   let categories = [
-    { id: 1, text: `All Vue sites` },
-  ];
-
-  let versions = [
-    { id: 1, text: `All versions` },
-    { id: 2, text: `v9.3` },
+    { id: 1, text: 'All Vue sites' },
+    { id: 2, text: 'Only Vue sites built with Nuxt.js' },
   ];
 </script>
 
@@ -41,6 +37,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout {categories} {versions} {data} />
+  <PageLayout {categories} {data} />
   <Footer />
 </div>

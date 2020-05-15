@@ -1,0 +1,67 @@
+{
+  "angular": {
+    "name": "Angular",
+    "color": "#FF6384",
+    "imgSrc": "images/angular-logo.png",
+    "route": "angular",
+    "variations": []
+  },
+  "react": {
+    "name": "React",
+    "color": "#36A2EB",
+    "imgSrc": "images/react-logo.png",
+    "route": "react",
+    "variations": [
+      {
+        "name": "Next.js",
+        "imgSrc": "images/next-logo.png"
+      },
+      {
+        "name": "Gatsby",
+        "imgSrc": "images/gatsby-logo.png"
+      }
+    ]
+  },
+  "vue": {
+    "name": "Vue",
+    "color": "#4BC0C0",
+    "imgSrc": "images/vue-logo.png",
+    "route": "vue",
+    "variations": [
+      {
+        "name": "Nuxt.js",
+        "imgSrc": "images/nuxt-logo.png"
+      }
+    ]
+  },
+  "polymer": {
+    "name": "Polymer",
+    "color": "#FF4470",
+    "imgSrc": "images/polymer-logo.png",
+    "route": "polymer",
+    "variations": [
+      {
+        "name": "Lit",
+        "imgSrc": "images/lit-logo.png"
+      }
+    ]
+  },
+  "preact": {
+    "name": "Preact",
+    "color": "#6f31bf",
+    "imgSrc": "images/preact-logo.png",
+    "route": "preact"
+  },
+  "svelte": {
+    "name": "Svelte",
+    "color": "#ff3500",
+    "imgSrc": "images/svelte-logo.png",
+    "route": "svelte",
+    "variations": [
+      {
+        "name": "Sapper",
+        "imgSrc": "images/sapper-logo.png"
+      }
+    ]
+  }
+}

@@ -98,12 +98,12 @@ limitations under the License. -->
     </header>
     <hr class ="divider"/>
     <div class="frameworks">
-      <ButtonRoute img="images/angular-logo.png" text="Angular" to="angular" borderColor="#FF6384"/>
-      <ButtonRoute img="images/react-logo.png" text="React" to="react" borderColor="#36A2EB"/>
-      <ButtonRoute img="images/vue-logo.png" text="Vue" to="vue" borderColor="#4BC0C0"/>
-      <ButtonRoute img="images/polymer-logo.png" text="Polymer" to="polymer" borderColor="#FF4470"/>
-      <ButtonRoute img="images/preact-logo.png" text="Preact" to="preact" borderColor="#6f31bf"/>
-      <ButtonRoute img="images/svelte-logo.png" text="Svelte" to="svelte" borderColor="#ff3500"/>
+      <ButtonRoute name="angular" />
+      <ButtonRoute name="react" />
+      <ButtonRoute name="vue" />
+      <ButtonRoute name="polymer" />
+      <ButtonRoute name="preact" />
+      <ButtonRoute name="svelte" />
     </div>
   </div>
 </div>
