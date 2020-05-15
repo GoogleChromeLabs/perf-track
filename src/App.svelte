@@ -28,6 +28,12 @@ limitations under the License. -->
 </script>
 
 <style>
+  :global(*, *::after, *::before) {
+     box-sizing: border-box; 
+     padding:0;
+     margin: 0;
+  }
+
 	:global(body) {
     font: 400 1.6rem / 1.6 Montserrat, sans-serif;
     padding: 0;

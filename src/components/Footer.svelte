@@ -27,11 +27,11 @@
     font-weight: 600;
   }
 
-  @media (max-width: 620px) {
+  /* @media (max-width: 620px) {
     div {
       height: 5rem;
     }
-  }
+  } */
 </style>
 
 <div>

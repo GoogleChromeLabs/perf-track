@@ -32,7 +32,6 @@
     align-items: center;
     height: calc(100% - 7rem);
     justify-content: center;
-    margin: 1rem 0;
   }
 
   .number-container p {
