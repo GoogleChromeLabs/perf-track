@@ -11,13 +11,14 @@
 <style>
 	.metric-chart {
     display: flex;
-    padding-bottom: 16px;
     font-weight: 600;
   }
 
   .bar {
     display: inline-block;
-    line-height: 30px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 1.5rem;
     text-align: center;
     color: #fff;
     border-radius: 15px 0 0 15px;
@@ -60,7 +61,7 @@
 
   .bar::after {
     width: 15px;
-    height: 30px;
+    height: 20px;
     position: absolute;
     right: 15px;
     content: '';
@@ -68,7 +69,7 @@
 
   .bar::after {
     width: 15px;
-    height: 30px;
+    height: 20px;
     position: absolute;
     right: 15px;
     content: '';
@@ -76,7 +77,7 @@
 
   .bar::after {
     width: 15px;
-    height: 30px;
+    height: 20px;
     position: absolute;
     right: -15px;
     content: '';
@@ -101,10 +102,7 @@
 
   .average {
     background: #ffa400;
-    width: 15px;
-    height: 30px;
     color: #000;
-    z-index: 1;
   }
 
   .average .tooltip {
@@ -123,7 +121,6 @@
   .slow {
     background: #ff4e42;
     border-radius: 12px;
-    z-index: 2;
   }
 
   .slow .tooltip {

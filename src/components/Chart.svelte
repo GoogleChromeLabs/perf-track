@@ -88,47 +88,71 @@
     {/if}
   </div>
   <ul class="legend">
-    <li>
-      <div class="info">
-        <span class="square green" />
-        Less than 200KB
-      </div>
-      <span class="value">20%</span>
-    </li>
-    <li>
-      <div class="info">
-        <span class="square light-green" />
-        200 - 400 KB
-      </div>
-      <span class="value">20%</span>
-    </li>
-    <li>
-      <div class="info">
-        <span class="square yellow" />
-        400 - 600 KB
-      </div>
-      <span class="value">20%</span>
-    </li>
-    <li>
-      <div class="info">
-        <span class="square orange" />
-        600 - 800 KB
-      </div>
-      <span class="value">20%</span>
-    </li>
-    <li>
-      <div class="info">
-        <span class="square red" />
-        800 - 1000 KB
-      </div>
-      <span class="value">20%</span>
-    </li>
-    <li>
-      <div class="info">
-        <span class="square brown" />
-        Greater than 1MB
-      </div>
-      <span class="value">20%</span>
-    </li>
+    {#if graph === 'doughnut'}
+      <li>
+        <div class="info">
+          <span class="square green" />
+          Less than 200KB
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square light-green" />
+          200 - 400 KB
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square yellow" />
+          400 - 600 KB
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square orange" />
+          600 - 800 KB
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square red" />
+          800 - 1000 KB
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square brown" />
+          Greater than 1MB
+        </div>
+        <span class="value">20%</span>
+      </li>
+    {:else if graph === 'pie'}
+     <li>
+        <div class="info">
+          <span class="square yellow" />
+          Gzip compressed
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square green" />
+          Brotli compressed
+        </div>
+        <span class="value">20%</span>
+      </li>
+      <li>
+        <div class="info">
+          <span class="square red" />
+          Not compressed
+        </div>
+        <span class="value">20%</span>
+      </li>
+    {/if}
   </ul>
 </div>

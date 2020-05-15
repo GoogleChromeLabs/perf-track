@@ -1,6 +1,8 @@
 <script>
   import Card from "../Card.svelte";
   import Chart from "../Chart.svelte";
+  
+  import MetricChartLayout from "./MetricChartLayout.svelte";
 
   import UsageIcon from "../icons/Usage.svelte";
   import LightningIcon from "../icons/Lightning.svelte";
@@ -43,7 +45,7 @@
 
 <div class="container">
   <Card
-    heading="Number of URLs"
+    heading="Total number of URLs"
     centerHeading
     style="grid-column: 1; grid-row: 1;">
     <span class="icon" slot="icon">
@@ -57,10 +59,23 @@
     <span class="icon" slot="icon">
       <LightningIcon />
     </span>
+    <span slot="number">
+      5000 urls
+    </span>
+    <MetricChartLayout 
+      fcpData={data[category.text].firstContentfulPaintCrux.data} 
+      lcpData={data[category.text].firstContentfulPaintCrux.data} 
+      fidData={data[category.text].firstContentfulPaintCrux.data} 
+      clsData={data[category.text].firstContentfulPaintCrux.data} 
+      ttfbData={data[category.text].firstContentfulPaintCrux.data} 
+    />
   </Card>
   <Card heading="Compressed requests" style="grid-column: 1; grid-row: 2;">
     <span class="icon" slot="icon">
       <CompressIcon />
+    </span>
+    <span slot="number">
+      {data[category.text].compressedRequests.numOrigins.toLocaleString()} urls
     </span>
     <Chart
       graph="pie"
@@ -73,25 +88,34 @@
     <span class="icon" slot="icon">
       <WeightIcon />
     </span>
+    <span slot="number">
+      {data[category.text].totalBytesBreakdown.numOrigins.toLocaleString()} urls
+    </span>
     <Chart
       graph="doughnut"
       data={data[category.text].totalBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="JavaScript Bytes" style="grid-column: 2; grid-row: 3;">
+    <span slot="number">
+      {data[category.text].jsBytesBreakdown.numOrigins.toLocaleString()} urls
+    </span>
     <span class="icon" slot="icon">{'{ }'}</span>
     <Chart
       graph="doughnut"
-      data={data[category.text].totalBytesBreakdown.data}
+      data={data[category.text].jsBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Image Bytes" style="grid-column: 3; grid-row: 3;">
     <span class="icon" slot="icon">
       <ImageIcon />
     </span>
+     <span slot="number">
+      {data[category.text].imgBytesBreakdown.numOrigins.toLocaleString()} urls
+    </span>
     <Chart
       graph="doughnut"
-      data={data[category.text].totalBytesBreakdown.data}
+      data={data[category.text].imgBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
 </div>

@@ -16,6 +16,20 @@
     margin-right: 10px;
   }
 
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .heading.center {
+    justify-content: center;
+  }
+
+  .heading .number {
+    font-size: 2rem;
+  }
+
 	.title {
     display: flex;
     align-items: center;
@@ -25,7 +39,7 @@
     font-size: 2rem;
   }
 
-  .center {
+  .title.center {
     flex-direction: column;
   }
 
@@ -35,9 +49,12 @@
 </style>
 
 <section style={style}>
-  <h2 class="title {centerHeading && 'center'}">
-    <span class="icon"><slot name="icon" /></span>
-    {heading}
+  <h2 class="heading {centerHeading && 'center'}">
+    <div class="title {centerHeading && 'center'}">
+      <span class="icon"><slot name="icon" /></span>
+      {heading}
+    </div>
+    <span class="number"><slot name="number" /></span>
   </h2>
   <slot></slot>
  </section>
