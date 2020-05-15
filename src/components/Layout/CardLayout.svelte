@@ -1,16 +1,16 @@
 <script>
-  import Card from "./Card.svelte";
+  import Card from "../Card.svelte";
+  import Chart from "../Chart.svelte";
 
-  import UsageIcon from "../components/icons/Usage.svelte";
-  import LightningIcon from "../components/icons/Lightning.svelte";
-  import CompressIcon from "../components/icons/Compress.svelte";
-  import ImageIcon from "../components/icons/Image.svelte";
-  import WeightIcon from "../components/icons/Weight.svelte";
-  import GaugeIcon from "../components/icons/Gauge.svelte";
+  import UsageIcon from "../icons/Usage.svelte";
+  import LightningIcon from "../icons/Lightning.svelte";
+  import CompressIcon from "../icons/Compress.svelte";
+  import ImageIcon from "../icons/Image.svelte";
+  import WeightIcon from "../icons/Weight.svelte";
+  import GaugeIcon from "../icons/Gauge.svelte";
 
-  import Chart from "../components/Chart.svelte";
-
-  import { data } from "../page-data/angular.js";
+  export let data;
+  export let category;
 </script>
 
 <style>
@@ -50,7 +50,7 @@
       <UsageIcon />
     </span>
     <div class="number-container">
-      <p>140,000</p>
+      <p>{data[category.text].totalNumOrigins.value.toLocaleString()}</p>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">
@@ -66,7 +66,7 @@
       graph="pie"
       colors={['#fbbc04', '#34a853', '#e74c3c']}
       labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
-      data={[data['All Angular sites'].compressedRequests.gzipCompressedPercent, data['All Angular sites'].compressedRequests.brotliCompressedPercent, 100 - data['All Angular sites'].compressedRequests.gzipCompressedPercent + data['All Angular sites'].compressedRequests.brotliCompressedPercent]}
+      data={[data[category.text].compressedRequests.gzipCompressedPercent, data[category.text].compressedRequests.brotliCompressedPercent, 100 - data[category.text].compressedRequests.gzipCompressedPercent + data[category.text].compressedRequests.brotliCompressedPercent]}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Total Bytes" style="grid-column: 1; grid-row: 3;">
@@ -75,14 +75,14 @@
     </span>
     <Chart
       graph="doughnut"
-      data={data['All Angular sites'].totalBytesBreakdown.data}
+      data={data[category.text].totalBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="JavaScript Bytes" style="grid-column: 2; grid-row: 3;">
     <span class="icon" slot="icon">{'{ }'}</span>
     <Chart
       graph="doughnut"
-      data={data['All Angular sites'].totalBytesBreakdown.data}
+      data={data[category.text].totalBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Image Bytes" style="grid-column: 3; grid-row: 3;">
@@ -91,7 +91,7 @@
     </span>
     <Chart
       graph="doughnut"
-      data={data['All Angular sites'].totalBytesBreakdown.data}
+      data={data[category.text].totalBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
 </div>

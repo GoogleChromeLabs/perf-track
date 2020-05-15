@@ -34,8 +34,8 @@ import JSBytesComparisonNext from "../data/react/next/js-bytes-comparison";
 
 export const headerOptions = [
   'All React sites',
-  'React sites without jQuery',
-  'React sites with Next.js'
+  'Only React sites built with Next.js',
+  'Only React sites built with Gatsby'
 ];
 
 export const data = {
