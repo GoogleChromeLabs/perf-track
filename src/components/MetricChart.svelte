@@ -84,51 +84,51 @@
   } 
 
   .fast {
-    background-color: #0cce6b;
+    background-color: #00ac47;
   }
 
   .fast::after {
-    background: #0cce6b;
+    background: #00ac47;
   }
 
   .fast .tooltip {
-    background: #0cce6b;
+    background: #00ac47;
   }
 
 
   .fast .tooltip::after {
-    border-color: transparent transparent #0cce6b transparent;
+    border-color: transparent transparent #00ac47 transparent;
   }
 
   .average {
-    background: #ffa400;
+    background: #ffba00;
     color: #000;
   }
 
   .average .tooltip {
-    background: #ffa400;
+    background: #ffba00;
     color: #000;
   }
 
   .average .tooltip::after {
-    border-color: transparent transparent #ffa400 transparent;
+    border-color: transparent transparent #ffba00 transparent;
   }
 
   .average::after {
-    background: #ffa400;
+    background: #ffba00;
   }
 
   .slow {
-    background: #ff4e42;
+    background: #fa3a2f;
     border-radius: 12px;
   }
 
   .slow .tooltip {
-    background: #ff4e42;
+    background: #fa3a2f;
   }
 
   .slow .tooltip::after {
-    border-color: transparent transparent #ff4e42 transparent;
+    border-color: transparent transparent #fa3a2f transparent;
   }
 </style>
 

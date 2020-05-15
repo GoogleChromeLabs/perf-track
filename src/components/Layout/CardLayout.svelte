@@ -59,15 +59,12 @@
     <span class="icon" slot="icon">
       <LightningIcon />
     </span>
-    <span slot="number">
-      5000 urls
-    </span>
     <MetricChartLayout 
-      fcpData={data[category.text].firstContentfulPaintCrux.data} 
-      lcpData={data[category.text].firstContentfulPaintCrux.data} 
-      fidData={data[category.text].firstContentfulPaintCrux.data} 
-      clsData={data[category.text].firstContentfulPaintCrux.data} 
-      ttfbData={data[category.text].firstContentfulPaintCrux.data} 
+      fcp={data[category.text].firstContentfulPaintCrux} 
+      lcp={data[category.text].firstContentfulPaintCrux} 
+      fid={data[category.text].firstInputDelayCrux} 
+      cls={data[category.text].firstContentfulPaintCrux} 
+      ttfb={data[category.text].firstContentfulPaintCrux} 
     />
   </Card>
   <Card heading="Compressed requests" style="grid-column: 1; grid-row: 2;">

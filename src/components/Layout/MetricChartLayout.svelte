@@ -1,18 +1,18 @@
 <script>
   import MetricChart from "../MetricChart.svelte";
 
-  export let fcpData;
-  export let lcpData;
-  export let fidData;
-  export let clsData;
-  export let ttfbData;
+  export let fcp;
+  export let lcp;
+  export let fid;
+  export let cls;
+  export let ttfb;
 
-  let data = [
-    { name: "First Contentful Paint", data: fcpData },
-    { name: "Largest Contentful Paint", data: lcpData },
-    { name: "Cumulative Layout Shift", data: clsData },
-    { name: "First Input Delay", data: fidData },
-    { name: "Time To First Byte", data: ttfbData }
+  let allData = [
+    { name: "First Contentful Paint", data: fcp.data, num: fcp.numOrigins },
+    { name: "Largest Contentful Paint", data: lcp.data, num: lcp.numOrigins },
+    { name: "Cumulative Layout Shift", data: cls.data, num: cls.numOrigins },
+    { name: "First Input Delay", data: fid.data, num: fid.numOrigins },
+    { name: "Time To First Byte", data: ttfb.data, num: ttfb.numOrigins }
   ];
 </script>
 
@@ -47,23 +47,32 @@
   .container > hr:last-child {
     display: none;
   }
+
+  .number {
+    font-size: 1.4rem;
+  }
 </style>
 
 <div class="container">
-  {#each data as metric}
-    <div class="metric">
-      <h3>{metric.name}:</h3>
-      <div class="bars-container">
-        <MetricChart
-          fast={metric.data[0]}
-          average={metric.data[1]}
-          slow={metric.data[2]}
-          fastTooltip="{metric.data[0]}% of loads for these origins have a fast
-          (< 1 s) FCP."
-          averageTooltip="{metric.data[1]}% of loads for these origins have an
-          average (1 s ~ 2.5 s) FCP."
-          slowTooltip="{metric.data[2]}% of loads for these origins have a slow
-          (> 2.5 s) FCP." />
+  {#each allData as metric}
+    <div>
+      <div class="metric">
+        <h3>{metric.name}:</h3>
+        <div class="bars-container">
+          <MetricChart
+            fast={metric.data[0]}
+            average={metric.data[1]}
+            slow={metric.data[2]}
+            fastTooltip="{metric.data[0]}% of loads for these origins have a fast
+            (< 1 s) FCP."
+            averageTooltip="{metric.data[1]}% of loads for these origins have an
+            average (1 s ~ 2.5 s) FCP."
+            slowTooltip="{metric.data[2]}% of loads for these origins have a slow
+            (> 2.5 s) FCP." />
+        </div>
+      </div>
+      <div class="number">
+        ({metric.num.toLocaleString()} urls)
       </div>
     </div>
     <hr />
