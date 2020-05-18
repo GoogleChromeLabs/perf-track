@@ -7,32 +7,32 @@
   ],
   "datasets": [
     {
-      "label": "< 200KB",
+      "label": "< 200 KB",
       "data": [30.79, 38.36, 50.97, 11.07],
       "backgroundColor": "#34a853"
     },
     {
-      "label": "200KB - 400KB",
+      "label": "200 KB - 400 KB",
       "data": [24.67, 20.96, 30.32, 24.06],
       "backgroundColor": "#93c47d"
     },
     {
-      "label": "400KB - 600KB",
+      "label": "400 KB - 600 KB",
       "data": [16.83, 12.37, 8.39, 18.50],
       "backgroundColor": "#fbbc04"
     },
     {
-      "label": "600KB - 800KB",
+      "label": "600 KB - 800 KB",
       "data": [11.06, 13.31, 5.81, 13.54],
       "backgroundColor": "#ff6d01"
     },
     {
-      "label": "800KB - 1MB",
+      "label": "800 KB - 1MB",
       "data": [6.41, 5.22, 1.94, 11.73],
       "backgroundColor": "#ea4335"
     },
     {
-      "label": "> 1MB",
+      "label": "> 1 MB",
       "data": [10.25, 9.77, 2.58, 21.10],
       "backgroundColor": "#980000"
     }

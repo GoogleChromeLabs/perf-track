@@ -5,6 +5,8 @@
 
   import Doughnut from "../graphs/Doughnut.svelte";
   import Pie from "../graphs/Pie.svelte";
+
+  const { datasets, labels } = data;
 </script>
 
 <style>
@@ -84,74 +86,41 @@
     {#if graph === 'doughnut'}
       <Doughnut data={data} />
     {:else if graph === 'pie'}
-      <Pie data={data} />
+      <Pie data={data} labels={["Gzip", "Brotli", "None"]} colors={["#fbbc04", "#34a853", "#ea4335"]}/>
     {/if}
   </div>
   <ul class="legend">
     {#if graph === 'doughnut'}
-      <li>
-        <div class="info">
-          <span class="square green" />
-          Less than 200KB
-        </div>
-        <span class="value">20%</span>
-      </li>
-      <li>
-        <div class="info">
-          <span class="square light-green" />
-          200 - 400 KB
-        </div>
-        <span class="value">20%</span>
-      </li>
-      <li>
-        <div class="info">
-          <span class="square yellow" />
-          400 - 600 KB
-        </div>
-        <span class="value">20%</span>
-      </li>
-      <li>
-        <div class="info">
-          <span class="square orange" />
-          600 - 800 KB
-        </div>
-        <span class="value">20%</span>
-      </li>
-      <li>
-        <div class="info">
-          <span class="square red" />
-          800 - 1000 KB
-        </div>
-        <span class="value">20%</span>
-      </li>
-      <li>
-        <div class="info">
-          <span class="square brown" />
-          Greater than 1MB
-        </div>
-        <span class="value">20%</span>
-      </li>
+      {#each datasets[0].data as value, i}
+        <li>
+          <div class="info">
+            <span class="square" style="background-color: {datasets[0].backgroundColor[i]}" />
+            {labels[i]}
+          </div>
+          <span class="value">{Math.round(value)}%</span>
+        </li>
+      {/each}
     {:else if graph === 'pie'}
      <li>
         <div class="info">
           <span class="square yellow" />
           Gzip compressed
         </div>
-        <span class="value">20%</span>
+        <span class="value">{data[0]}%</span>
       </li>
       <li>
         <div class="info">
           <span class="square green" />
           Brotli compressed
         </div>
-        <span class="value">20%</span>
+        <span class="value">{data[1]}%</span>
       </li>
       <li>
         <div class="info">
           <span class="square red" />
           Not compressed
         </div>
-        <span class="value">20%</span>
+        <span class="value">{data[2]}%</span>
       </li>
     {/if}
   </ul>

@@ -8,11 +8,11 @@
   export let ttfb;
 
   let allData = [
-    { name: "First Contentful Paint", data: fcp.data, num: fcp.numOrigins },
-    { name: "Largest Contentful Paint", data: lcp.data, num: lcp.numOrigins },
-    { name: "Cumulative Layout Shift", data: cls.data, num: cls.numOrigins },
-    { name: "First Input Delay", data: fid.data, num: fid.numOrigins },
-    { name: "Time To First Byte", data: ttfb.data, num: ttfb.numOrigins }
+    { name: "First Contentful Paint", shortName: 'FCP', data: fcp.data, num: fcp.numOrigins, fastThreshold: '2 s', poorThreshold: '4 s' },
+    { name: "Largest Contentful Paint", shortName: 'LCP', data: lcp.data, num: lcp.numOrigins, fastThreshold: '2.5 s', poorThreshold: '4 s' },
+    { name: "Cumulative Layout Shift", shortName: 'CLS', data: cls.data, num: cls.numOrigins, fastThreshold: '0.1', poorThreshold: '0.25' },
+    { name: "First Input Delay", shortName: 'FID', data: fid.data, num: fid.numOrigins, fastThreshold: '100 ms', poorThreshold: '300 ms' },
+    { name: "Time To First Byte", shortName: 'TTFB', data: ttfb.data, num: ttfb.numOrigins, fastThreshold: '100 ms', poorThreshold: '500 ms' },
   ];
 </script>
 
@@ -63,12 +63,9 @@
             fast={metric.data[0]}
             average={metric.data[1]}
             slow={metric.data[2]}
-            fastTooltip="{metric.data[0]}% of loads for these origins have a fast
-            (< 1 s) FCP."
-            averageTooltip="{metric.data[1]}% of loads for these origins have an
-            average (1 s ~ 2.5 s) FCP."
-            slowTooltip="{metric.data[2]}% of loads for these origins have a slow
-            (> 2.5 s) FCP." />
+            fastTooltip="{metric.data[0]}% of all page loads have a fast { metric.shortName } (< {metric.fastThreshold})."
+            averageTooltip="{metric.data[0]}% of all page loads have a { metric.shortName } that needs improvement ({metric.fastThreshold} - {metric.poorThreshold})."
+            slowTooltip="{metric.data[0]}% of all page loads have a poor { metric.shortName } (> {metric.poorThreshold})."/>
         </div>
       </div>
       <div class="number">

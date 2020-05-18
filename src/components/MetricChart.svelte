@@ -33,8 +33,7 @@
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 10px;
     position: absolute;
@@ -43,6 +42,12 @@
     top: 140%;
     left: 50%; 
     margin-left: -110px;
+    display: block;
+    opacity: 100%;
+  }
+  
+  .bar .tooltip::before {
+    display: none;
   }
 
   .bar .tooltip::after {
@@ -94,7 +99,6 @@
   .fast .tooltip {
     background: #00ac47;
   }
-
 
   .fast .tooltip::after {
     border-color: transparent transparent #00ac47 transparent;
