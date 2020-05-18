@@ -98,6 +98,7 @@
 
   .fast .tooltip {
     background: #00ac47;
+    border: 2px solid #ffffff;
   }
 
   .fast .tooltip::after {
@@ -112,6 +113,7 @@
   .average .tooltip {
     background: #ffba00;
     color: #000;
+    border: 2px solid #000;
   }
 
   .average .tooltip::after {
@@ -129,6 +131,7 @@
 
   .slow .tooltip {
     background: #fa3a2f;
+    border: 2px solid #ffffff;
   }
 
   .slow .tooltip::after {

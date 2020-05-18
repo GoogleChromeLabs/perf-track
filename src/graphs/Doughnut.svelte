@@ -30,10 +30,9 @@
         tooltips: {
           callbacks: {
             label: function(tooltipItem, data) {
-              const bucket = data.labels[tooltipItem.index];
               const dataset = data.datasets[tooltipItem.datasetIndex];
               const currentValue = dataset.data[tooltipItem.index];
-              return `${bucket}: ${currentValue}%`;
+              return ` ${currentValue}%`;
             },
           }
         },

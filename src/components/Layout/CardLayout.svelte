@@ -1,7 +1,7 @@
 <script>
   import Card from "../Card.svelte";
   import Chart from "../Chart.svelte";
-  
+
   import MetricChartLayout from "./MetricChartLayout.svelte";
 
   import UsageIcon from "../icons/Usage.svelte";
@@ -12,7 +12,7 @@
   import GaugeIcon from "../icons/Gauge.svelte";
 
   export let data;
-  export let category;
+  export let framework;
 </script>
 
 <style>
@@ -47,15 +47,15 @@
 
 <div class="container">
   <Card
-    heading="Number of URLs"
+    heading="Total sample size"
     centerHeading
     style="grid-column: 1; grid-row: 1;">
     <span class="icon" slot="icon">
       <UsageIcon />
     </span>
     <div class="number-container">
-      <p>{data[category.text].totalNumOrigins.value.toLocaleString()}</p>
-      <span>(8.6% of all URLs)</span>
+      <p>{data[framework].sampleSize.framework.toLocaleString()}</p>
+      <span>{((data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100).toFixed(1)}% of all URLs</span>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">
@@ -63,11 +63,11 @@
       <LightningIcon />
     </span>
     <MetricChartLayout 
-      fcp={data[category.text].firstContentfulPaintCrux} 
-      lcp={data[category.text].firstContentfulPaintCrux} 
-      fid={data[category.text].firstInputDelayCrux} 
-      cls={data[category.text].firstContentfulPaintCrux} 
-      ttfb={data[category.text].firstContentfulPaintCrux} 
+      fcp={data[framework].fcpCrux} 
+      lcp={data[framework].lcpCrux} 
+      fid={data[framework].fidCrux} 
+      cls={data[framework].clsCrux} 
+      ttfb={data[framework].ttfbCrux} 
     />
   </Card>
   <Card heading="Compressed requests" style="grid-column: 1; grid-row: 2;">
@@ -75,13 +75,13 @@
       <CompressIcon />
     </span>
     <span slot="number">
-      {data[category.text].compressedRequests.numOrigins.toLocaleString()} urls
+      {data[framework].compressedRequests.numUrls.toLocaleString()} urls
     </span>
     <Chart
       graph="pie"
       colors={['#fbbc04', '#34a853', '#e74c3c']}
       labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
-      data={[data[category.text].compressedRequests.gzipCompressedPercent, data[category.text].compressedRequests.brotliCompressedPercent, 100 - data[category.text].compressedRequests.gzipCompressedPercent + data[category.text].compressedRequests.brotliCompressedPercent]}
+      data={[data[framework].compressedRequests.gzipCompressedPercent, data[framework].compressedRequests.brotliCompressedPercent, 100 - data[framework].compressedRequests.gzipCompressedPercent + data[framework].compressedRequests.brotliCompressedPercent]}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Total Bytes" style="grid-column: 1; grid-row: 3;">
@@ -89,21 +89,21 @@
       <WeightIcon />
     </span>
     <span slot="number">
-      {data[category.text].totalBytesBreakdown.numOrigins.toLocaleString()} urls
+      {data[framework].totalBytesBreakdown.numUrls.toLocaleString()} urls
     </span>
     <Chart
       graph="doughnut"
-      data={data[category.text].totalBytesBreakdown.data}
+      data={data[framework].totalBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="JavaScript Bytes" style="grid-column: 2; grid-row: 3;">
     <span slot="number">
-      {data[category.text].jsBytesBreakdown.numOrigins.toLocaleString()} urls
+      {data[framework].jsBytesBreakdown.numUrls.toLocaleString()} urls
     </span>
     <span class="icon" slot="icon">{'{ }'}</span>
     <Chart
       graph="doughnut"
-      data={data[category.text].jsBytesBreakdown.data}
+      data={data[framework].jsBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Image Bytes" style="grid-column: 3; grid-row: 3;">
@@ -111,11 +111,11 @@
       <ImageIcon />
     </span>
      <span slot="number">
-      {data[category.text].imgBytesBreakdown.numOrigins.toLocaleString()} urls
+      {data[framework].imgBytesBreakdown.numUrls.toLocaleString()} urls
     </span>
     <Chart
       graph="doughnut"
-      data={data[category.text].imgBytesBreakdown.data}
+      data={data[framework].imgBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
 </div>

@@ -21,8 +21,8 @@ limitations under the License. -->
   import { data } from "../page-data/polymer.js";
 
   let categories = [
-    { id: 1, text: 'Polymer' },
-    { id: 2, text: 'Lit' },
+    { id: 1, framework: 'Polymer', text: 'Polymer' },
+    // { id: 2, text: 'Lit' }, TODO
   ];
 </script>
 

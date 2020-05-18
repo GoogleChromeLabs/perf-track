@@ -21,7 +21,7 @@ limitations under the License. -->
   import { data } from "../page-data/angular.js";
 
   let categories = [
-    { id: 1, text: 'Angular' },
+    { id: 1, framework: 'Angular', text: 'Angular' },
   ];
 </script>
 

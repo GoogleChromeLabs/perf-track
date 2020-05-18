@@ -246,7 +246,7 @@ limitations under the License. -->
   <section>
     <div class="origins-header">
       <p class="number">
-        {data[selectedOption].totalNumOrigins.value} total origins detected
+        {data[selectedOption].totalNumUrls.value} total origins detected
       </p>
       <p class="details">
         For
@@ -258,7 +258,7 @@ limitations under the License. -->
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href={data[selectedOption].totalNumOrigins.query} />
+        href={data[selectedOption].totalNumUrls.query} />
     </div>
   </section>
 
@@ -271,7 +271,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Total bytes (percentiles)</h3>
-      <p>{data[selectedOption].totalBytesPercentile.numOrigins} origins</p>
+      <p>{data[selectedOption].totalBytesPercentile.numUrls} origins</p>
     </div>
 
     <div>
@@ -307,7 +307,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Total bytes (breakdown)</h3>
-      <p>{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
+      <p>{data[selectedOption].totalBytesBreakdown.numUrls} origins</p>
     </div>
 
     <div>
@@ -360,7 +360,7 @@ limitations under the License. -->
           <QueryIcon
             background={primaryColor}
             href={data[selectedOption].totalBytesBreakdown.query} />
-          <p>{data[selectedOption].totalBytesBreakdown.numOrigins} origins</p>
+          <p>{data[selectedOption].totalBytesBreakdown.numUrls} origins</p>
         </div>
       </div>
     </div>
@@ -369,7 +369,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Compressed requests</h3>
-      <p>{data[selectedOption].compressedRequests.numOrigins} origins</p>
+      <p>{data[selectedOption].compressedRequests.numUrls} origins</p>
     </div>
 
     <div>
@@ -404,7 +404,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>JavaScript bytes (percentiles)</h3>
-      <p>{data[selectedOption].jsBytesPercentile.numOrigins} origins</p>
+      <p>{data[selectedOption].jsBytesPercentile.numUrls} origins</p>
     </div>
 
     <div>
@@ -434,7 +434,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>JavaScript bytes (breakdown)</h3>
-      <p>{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
+      <p>{data[selectedOption].jsBytesBreakdown.numUrls} origins</p>
     </div>
 
     <div>
@@ -487,7 +487,7 @@ limitations under the License. -->
           <QueryIcon
             background={primaryColor}
             href={data[selectedOption].jsBytesBreakdown.query} />
-          <p>{data[selectedOption].jsBytesBreakdown.numOrigins} origins</p>
+          <p>{data[selectedOption].jsBytesBreakdown.numUrls} origins</p>
         </div>
       </div>
       <div class="icon-row" />
@@ -502,7 +502,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Image bytes (percentiles)</h3>
-      <p>{data[selectedOption].imgBytesPercentile.numOrigins} origins</p>
+      <p>{data[selectedOption].imgBytesPercentile.numUrls} origins</p>
     </div>
 
     <div>
@@ -532,7 +532,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Image bytes (breakdown)</h3>
-      <p>{data[selectedOption].imgBytesBreakdown.numOrigins} origins</p>
+      <p>{data[selectedOption].imgBytesBreakdown.numUrls} origins</p>
     </div>
 
     <div>
@@ -553,7 +553,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Origins that use optimized images</h3>
-      <p>{data[selectedOption].optimizedImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].optimizedImgOrigins.numUrls} origins</p>
     </div>
 
     <div>
@@ -581,7 +581,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Origins that use responsive images</h3>
-      <p>{data[selectedOption].responsiveImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].responsiveImgOrigins.numUrls} origins</p>
     </div>
 
     <div>
@@ -609,7 +609,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Origins that use next gen images</h3>
-      <p>{data[selectedOption].nextGenImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].nextGenImgOrigins.numUrls} origins</p>
     </div>
 
     <div>
@@ -637,7 +637,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Origins that defer offscreen images</h3>
-      <p>{data[selectedOption].offscreenImgOrigins.numOrigins} origins</p>
+      <p>{data[selectedOption].offscreenImgOrigins.numUrls} origins</p>
     </div>
 
     <div>
@@ -670,7 +670,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>First Contentful Paint (FCP)</h3>
-      <p>{data[selectedOption].firstContentfulPaint.numOrigins} origins</p>
+      <p>{data[selectedOption].firstContentfulPaint.numUrls} origins</p>
     </div>
 
     <p>Measured via Lighthouse's <a href="https://web.dev/first-contentful-paint#how-lighthouse-determines-your-fcp-score">First Contentful Paint</a> audit.</p>
@@ -702,7 +702,7 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>Time to Interactive (TTI)</h3>
-      <p>{data[selectedOption].timeToInteractive.numOrigins} origins</p>
+      <p>{data[selectedOption].timeToInteractive.numUrls} origins</p>
     </div>
 
     <p>Measured via Lighthouse's <a href="https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/interactive.js">Interactive</a> audit.</p>
@@ -734,56 +734,56 @@ limitations under the License. -->
   <section>
     <div class="section-title">
       <h3>First Contentful Paint (FCP) - CrUX</h3>
-      <p>{data[selectedOption].firstContentfulPaintCrux.numOrigins} origins</p>
+      <p>{data[selectedOption].fcpCrux.numUrls} origins</p>
     </div>
 
     <p>All runs on 3G and mobile</p>
 
     <div class="metric-chart-container">
       <MetricChart
-        fast={data[selectedOption].firstContentfulPaintCrux.data[0]}
-        average={data[selectedOption].firstContentfulPaintCrux.data[1]}
-        slow={data[selectedOption].firstContentfulPaintCrux.data[2]}
-        fastTooltip="{data[selectedOption].firstContentfulPaintCrux.data[0]}% of
+        fast={data[selectedOption].fcpCrux.data[0]}
+        average={data[selectedOption].fcpCrux.data[1]}
+        slow={data[selectedOption].fcpCrux.data[2]}
+        fastTooltip="{data[selectedOption].fcpCrux.data[0]}% of
         loads for these origins have a fast (< 1 s) FCP."
-        averageTooltip="{data[selectedOption].firstContentfulPaintCrux.data[1]}% of
+        averageTooltip="{data[selectedOption].fcpCrux.data[1]}% of
         loads for these origins have an average (1 s ~ 2.5 s) FCP."
-        slowTooltip="{data[selectedOption].firstContentfulPaintCrux.data[2]}% of
+        slowTooltip="{data[selectedOption].fcpCrux.data[2]}% of
         loads for these origins have a slow (> 2.5 s) FCP." />
     </div>
 
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href={data[selectedOption].firstContentfulPaintCrux.query} />
+        href={data[selectedOption].fcpCrux.query} />
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <h3>First Input Delay (FID) - CrUX</h3>
-      <p>{data[selectedOption].firstInputDelayCrux.numOrigins} origins</p>
+      <p>{data[selectedOption].fidCrux.numUrls} origins</p>
     </div>
 
     <p>All runs on 3G and mobile</p>
 
     <div class="metric-chart-container">
       <MetricChart
-        fast={data[selectedOption].firstInputDelayCrux.data[0]}
-        average={data[selectedOption].firstInputDelayCrux.data[1]}
-        slow={data[selectedOption].firstInputDelayCrux.data[2]}
-        fastTooltip="{data[selectedOption].firstInputDelayCrux.data[0]}% of loads
+        fast={data[selectedOption].fidCrux.data[0]}
+        average={data[selectedOption].fidCrux.data[1]}
+        slow={data[selectedOption].fidCrux.data[2]}
+        fastTooltip="{data[selectedOption].fidCrux.data[0]}% of loads
         for these origins have a fast (< 50 ms) FID."
-        averageTooltip="{data[selectedOption].firstInputDelayCrux.data[1]}% of loads
+        averageTooltip="{data[selectedOption].fidCrux.data[1]}% of loads
         for these origins have an average (50 ms ~ 250 ms) FID."
-        slowTooltip="{data[selectedOption].firstInputDelayCrux.data[2]}% of loads
+        slowTooltip="{data[selectedOption].fidCrux.data[2]}% of loads
         for these origins have a slow (> 250 ms) FID." />
     </div>
 
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href={data[selectedOption].firstInputDelayCrux.query} />
+        href={data[selectedOption].fidCrux.query} />
     </div>
   </section>
 

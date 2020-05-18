@@ -21,10 +21,10 @@ limitations under the License. -->
   import { data } from "../page-data/react.js";
 
   let categories = [
-    { id: 1, text: 'React' },
-    { id: 2, text: 'Next.js' },
-    { id: 3, text: 'Gatsby' },
-    { id: 4, text: 'Create React App' }
+    { id: 1, framework: 'React', text: 'React' },
+    { id: 2, framework: 'Next.js', text: 'React sites built with Next.js' },
+    { id: 3, framework: 'Gatsby', text: 'React sites built with Gatsby' },
+    { id: 4, framework: 'Create React App', text: 'React sites built with Create React App' }
   ];
 </script>
 

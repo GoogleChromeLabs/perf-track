@@ -5,8 +5,6 @@
 
   import Doughnut from "../graphs/Doughnut.svelte";
   import Pie from "../graphs/Pie.svelte";
-
-  const { datasets, labels } = data;
 </script>
 
 <style>
@@ -56,24 +54,12 @@
     background-color: #34a853;
   }
 
-  .square.light-green {
-    background-color: #93c47d;
-  }
-
   .square.yellow {
     background-color: #fbbc04;
   }
   
-  .square.orange {
-    background-color: #ff6d01;
-  }
-
   .square.red {
     background-color: #ea4335;
-  }
-
-  .square.brown {
-    background-color: #980000;
   }
 
   .legend {
@@ -91,13 +77,13 @@
   </div>
   <ul class="legend">
     {#if graph === 'doughnut'}
-      {#each datasets[0].data as value, i}
+      {#each data.datasets[0].data as value, i}
         <li>
           <div class="info">
-            <span class="square" style="background-color: {datasets[0].backgroundColor[i]}" />
-            {labels[i]}
+            <span class="square" style="background-color: {data.datasets[0].backgroundColor[i]}" />
+            {data.labels[i]}
           </div>
-          <span class="value">{Math.round(value)}%</span>
+          <span class="value">{value.toFixed(1)}%</span>
         </li>
       {/each}
     {:else if graph === 'pie'}
@@ -106,21 +92,21 @@
           <span class="square yellow" />
           Gzip compressed
         </div>
-        <span class="value">{data[0]}%</span>
+        <span class="value">{data[0].toFixed(1)}%</span>
       </li>
       <li>
         <div class="info">
           <span class="square green" />
           Brotli compressed
         </div>
-        <span class="value">{data[1]}%</span>
+        <span class="value">{data[1].toFixed(1)}%</span>
       </li>
       <li>
         <div class="info">
           <span class="square red" />
           Not compressed
         </div>
-        <span class="value">{data[2]}%</span>
+        <span class="value">{data[2].toFixed(1)}%</span>
       </li>
     {/if}
   </ul>

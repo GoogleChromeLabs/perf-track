@@ -1,8 +1,13 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+	
 	export let img = false;
 	export let label;
 	export let data;
 	export let framework;
+	export let selectedFramework = framework;
 
   import frameworkInfo from "../utils/framework-info.json";
 
@@ -10,9 +15,10 @@
 
 	let answer = '';
 
-	function handleSubmit() {
-		alert(`answered question ${selected.id} (${selected.text}) with "${answer}"`);
-	}
+	let currFramework = frameworkInfo[framework];
+	let selectedFrameworkVariation = (selected) => frameworkInfo[framework].variations[selected.framework];
+
+	const changeSelected = () => selectedFramework = selected.framework;
 </script>
 
 <style>
@@ -56,27 +62,27 @@
 </style>
 
 <div class="container">
-	<form on:submit|preventDefault={handleSubmit}>
+	<form>
 		<label>{label}</label>
-		<select bind:value={selected}>
+		<select bind:value={selected} on:change={changeSelected}>
 			{#each data as item}
 				<option value={item}>
-					{item.text}
+						{item.text}
 				</option>
 			{/each}
 		</select>
 	</form>
 	{#if img && selected}
-		{#if frameworkInfo[selected.text]}
-			<img src={frameworkInfo[selected.text].imgSrc}/>
-		{:else if frameworkInfo[framework] && frameworkInfo[framework].variations[selected.text]}
-				{#if img && frameworkInfo[framework].variations[selected.text].standalone}
-				<img src={frameworkInfo[framework].variations[selected.text].imgSrc}/>
+		{#if frameworkInfo[selected.framework]}
+			<img src={currFramework.imgSrc}/>
+		{:else if selectedFrameworkVariation(selected)}
+				{#if img && selectedFrameworkVariation.standalone}
+				<img src={selectedFrameworkVariation(selected).imgSrc}/>
 				{:else }
 				<span class="combined-images">
-					<img src={frameworkInfo[framework].imgSrc}/> 
+					<img src={currFramework.imgSrc}/> 
 					<span class="divider">+</span>
-					<img src={frameworkInfo[framework].variations[selected.text].imgSrc}/>
+					<img src={selectedFrameworkVariation(selected).imgSrc}/>
 				</span>
 			{/if}
 		{/if}

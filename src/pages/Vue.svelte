@@ -21,8 +21,8 @@ limitations under the License. -->
   import { data } from "../page-data/vue.js";
 
   let categories = [
-    { id: 1, text: 'Vue' },
-    { id: 2, text: 'Nuxt.js' },
+    { id: 1, framework: 'Vue', text: 'Vue' },
+    { id: 2, framework: 'Nuxt.js', text: 'Vue sites built with Nuxt.js' },
   ];
 </script>
 

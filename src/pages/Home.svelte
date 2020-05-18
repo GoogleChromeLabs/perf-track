@@ -103,7 +103,6 @@ limitations under the License. -->
       <ButtonRoute name="Vue" />
       <ButtonRoute name="Polymer" />
       <ButtonRoute name="Preact" />
-      <ButtonRoute name="Svelte" />
     </div>
   </div>
 </div>

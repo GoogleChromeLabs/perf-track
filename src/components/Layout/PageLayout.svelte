@@ -23,6 +23,14 @@ limitations under the License. -->
   export let framework;
   export let categories;
   export let versions;
+
+  let selectedFrameworkVariation = framework;
+
+  // function changeFrameworkVariation(event) {
+  //   console.log(selectedFrameworkVariation)
+  //   selectedFrameworkVariation = event.detail
+  //   console.log(selectedFrameworkVariation)
+	// }
 </script>
 
 <style>
@@ -51,7 +59,7 @@ limitations under the License. -->
 
 <div class="header">
   <div class="dropdown-container">
-    <Dropdown {framework} data={categories} label="Category:" img />
+    <Dropdown {framework} bind:selectedFramework={selectedFrameworkVariation} data={categories} label="Category:" img />
     {#if versions}
       <span class="spacer" />
       <Dropdown data={versions} label="Version:" />
@@ -64,7 +72,6 @@ limitations under the License. -->
     <ButtonRoute mini name="Vue" />
     <ButtonRoute mini name="Polymer" />
     <ButtonRoute mini name="Preact" />
-    <ButtonRoute mini name="Svelte" />
   </div>
 </div>
-<CardLayout {data} category={categories[0]} />
+<CardLayout {data} bind:framework={selectedFrameworkVariation} />

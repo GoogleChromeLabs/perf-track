@@ -18,11 +18,10 @@ limitations under the License. -->
   import PageLayout from "../components/Layout/PageLayout.svelte";
   import Footer from "../components/Footer.svelte";
 
-  import { data } from "../page-data/svelte.js";
+  import { data } from "../page-data/preact.js";
 
   let categories = [
-    { id: 1, text: 'Svelte' },
-    { id: 2, text: 'Sapper' },
+    { id: 1, framework: 'Preact', text: 'Preact' },
   ];
 </script>
 
@@ -37,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Svelte" {categories} {data} />
+  <PageLayout framework="Preact" {categories} {data} />
   <Footer />
 </div>

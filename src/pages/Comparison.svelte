@@ -29,10 +29,9 @@ limitations under the License. -->
   import MetricChart from "../components/MetricChart.svelte";
 
   import * as angular from "../page-data/angular.js";
-  import * as gatsby from "../page-data/gatsby.js";
+  // import * as gatsby from "../page-data/gatsby.js";
   import * as polymer from "../page-data/polymer.js";
   import * as react from "../page-data/react.js";
-  import * as svelte  from "../page-data/svelte.js";
   import * as vue from "../page-data/vue.js";
 
   let primaryColor = '#36A2EB';
@@ -313,14 +312,14 @@ limitations under the License. -->
 
   <section>
     <div class="origins-header">
-      <p class="number">{totals.totalNumOrigins.value} total origins detected</p>
+      <p class="number">{totals.totalNumUrls.value} total origins detected</p>
     </div>
 
   <!--
     <div class="icon-container">
       <QueryIcon
         background={primaryColor}
-        href="{data[selectedOption].totalNumOrigins.query}" />
+        href="{data[selectedOption].totalNumUrls.query}" />
     </div>
   -->
   </section>
@@ -342,13 +341,13 @@ limitations under the License. -->
     {#each frameworkDataSets as fw }
       <h5>{fw.name}</h5>
       <MetricChart
-        fast="{fw.data.firstContentfulPaintCrux.data[0]}"
-        average="{fw.data.firstContentfulPaintCrux.data[1]}"
-        slow="{fw.data.firstContentfulPaintCrux.data[2]}"
-        fastTooltip="{fw.data.firstContentfulPaintCrux.data[0]}% of loads for these origins have a fast (< 1 s) FCP."
-        averageTooltip="{fw.data.firstContentfulPaintCrux.data[1]}% of loads for these origins have an average (1 s ~
+        fast="{fw.data.fcpCrux.data[0]}"
+        average="{fw.data.fcpCrux.data[1]}"
+        slow="{fw.data.fcpCrux.data[2]}"
+        fastTooltip="{fw.data.fcpCrux.data[0]}% of loads for these origins have a fast (< 1 s) FCP."
+        averageTooltip="{fw.data.fcpCrux.data[1]}% of loads for these origins have an average (1 s ~
         2.5 s) FCP."
-        slowTooltip="{fw.data.firstContentfulPaintCrux.data[2]}% of loads for these origins have a slow (> 2.5 s) FCP." />
+        slowTooltip="{fw.data.fcpCrux.data[2]}% of loads for these origins have a slow (> 2.5 s) FCP." />
     {/each}
     </div>
   </section>
@@ -364,13 +363,13 @@ limitations under the License. -->
     {#each frameworkDataSets as fw }
       <h5>{fw.name}</h5>
       <MetricChart
-        fast="{fw.data.firstInputDelayCrux.data[0]}"
-        average="{fw.data.firstInputDelayCrux.data[1]}"
-        slow="{fw.data.firstInputDelayCrux.data[2]}"
-        fastTooltip="{fw.data.firstInputDelayCrux.data[0]}% of loads for these origins have a fast (< 50 ms) FID."
-        averageTooltip="{fw.data.firstInputDelayCrux.data[1]}% of loads for these origins have an average (50 ms ~
+        fast="{fw.data.fidCrux.data[0]}"
+        average="{fw.data.fidCrux.data[1]}"
+        slow="{fw.data.fidCrux.data[2]}"
+        fastTooltip="{fw.data.fidCrux.data[0]}% of loads for these origins have a fast (< 50 ms) FID."
+        averageTooltip="{fw.data.fidCrux.data[1]}% of loads for these origins have an average (50 ms ~
         250 ms) FID."
-        slowTooltip="{fw.data.firstInputDelayCrux.data[2]}% of loads for these origins have a slow (> 250 ms) FID." />
+        slowTooltip="{fw.data.fidCrux.data[2]}% of loads for these origins have a slow (> 250 ms) FID." />
     {/each}
     </div>
   </section>
@@ -386,7 +385,7 @@ limitations under the License. -->
       {#each frameworkDataSets as fw }
       <div class="section-title">
         <h4>{fw.name}</h4>
-        <p>{fw.data.firstContentfulPaint.numOrigins} origins</p>
+        <p>{fw.data.firstContentfulPaint.numUrls} origins</p>
       </div>
       <ul class="row">
         <li>
@@ -417,7 +416,7 @@ limitations under the License. -->
       {#each frameworkDataSets as fw }
       <div class="section-title">
         <h4>{fw.name}</h4>
-        <p>{fw.data.firstContentfulPaint.numOrigins} origins</p>
+        <p>{fw.data.firstContentfulPaint.numUrls} origins</p>
       </div>
       <ul class="row">
         <li>
@@ -451,7 +450,7 @@ limitations under the License. -->
       {#each frameworkDataSets as fw }
       <div class="section-title">
         <h4>{fw.name}</h4>
-        <p>{fw.data.jsBytesPercentile.numOrigins} origins</p>
+        <p>{fw.data.jsBytesPercentile.numUrls} origins</p>
       </div>
       <ul class="row">
         <li>
@@ -482,7 +481,7 @@ limitations under the License. -->
       {#each frameworkDataSets as fw }
       <div class="section-title">
         <h4>{fw.name}</h4>
-        <p>{fw.data.jsBytesPercentile.numOrigins} origins</p>
+        <p>{fw.data.jsBytesPercentile.numUrls} origins</p>
       </div>
       <div class="graph">
         <Doughnut data={fw.data.jsBytesBreakdown.data} />
@@ -501,7 +500,7 @@ limitations under the License. -->
       {#each frameworkDataSets as fw }
       <div class="section-title">
         <h4>{fw.name}</h4>
-        <p>{fw.data.jsBytesPercentile.numOrigins} origins</p>
+        <p>{fw.data.jsBytesPercentile.numUrls} origins</p>
       </div>
 
       <!-- guard because Svelte data is missing this -->
