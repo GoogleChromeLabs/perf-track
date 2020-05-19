@@ -47,17 +47,6 @@ limitations under the License. -->
     min-height: 11rem;
   }
 
-  :global(.button-route.mini) {
-    min-width: 8rem;
-    min-height: 7rem;
-    margin-left: 2rem;
-  }
-
-  :global(.button-route.mini img) {
-    max-width: 45px;
-    max-height: 45px;
-  }
-
   :global(.scale-bg) {
     position: relative;
   }
@@ -99,6 +88,19 @@ limitations under the License. -->
     max-height: 80px;
   }
 
+    @media (min-width: 1241px) {
+      :global(.button-route.mini) {
+        min-width: 8rem;
+        min-height: 7rem;
+        margin-left: 2rem;
+      }
+
+      :global(.button-route.mini img) {
+        max-width: 45px;
+        max-height: 45px;
+      }
+    }
+  
   @media (max-width: 1240px) {
     :global(.button-route img) {
       max-width: 70px;
@@ -111,15 +113,15 @@ limitations under the License. -->
     }
   }
 
-  @media (max-width: 620px) {
+  @media (max-width: 715px) {
     :global(.button-route img) {
-      max-width: 50px;
-      max-height: 50px;
+      max-width: 40px;
+      max-height: 40px;
     }
 
     :global(.button-route) {
-      min-width: 7rem;
-      min-height: 6rem;
+      min-width: 6rem;
+      min-height: 5rem;
     }
   }
 </style>

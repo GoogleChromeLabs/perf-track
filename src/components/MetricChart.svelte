@@ -26,6 +26,7 @@ limitations under the License. -->
 	.metric-chart {
     display: flex;
     font-weight: 600;
+    width: 100%;
   }
 
   .bar {
@@ -150,6 +151,12 @@ limitations under the License. -->
 
   .slow .tooltip::after {
     border-color: transparent transparent #fa3a2f transparent;
+  }
+
+  @media (max-width: 715px) {
+    .tooltip {
+      display: none;
+    }
   }
 </style>
 

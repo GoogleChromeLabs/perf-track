@@ -37,7 +37,7 @@ limitations under the License. -->
   }
 
   .heading .number {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 1vw, 2.5rem);
   }
 
 	.title {
@@ -48,9 +48,27 @@ limitations under the License. -->
     margin-top: 0;
     font-size: 2rem;
   }
+
+  @media (max-width: 715px) {
+    section {
+      grid-column: auto;
+      grid-row: auto;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .heading {
+      flex-direction: column;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
 </style>
 
-<section style={style}>
+<section style={window.screen.width >= 1440 ? style : ''}>
   <h2 class="heading">
     <div class="title">
       <span class="icon"><slot name="icon" /></span>

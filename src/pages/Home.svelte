@@ -15,7 +15,6 @@ limitations under the License. -->
 <script>
   import Logo from "../components/icons/Logo.svelte";
   import ButtonRoute from "../components/ButtonRoute.svelte";
-  import QueryIcon from "../components/QueryIcon.svelte";
 </script>
 
 <style>

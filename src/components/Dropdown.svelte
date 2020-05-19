@@ -73,6 +73,22 @@ limitations under the License. -->
 		margin-left: 1rem;
     font-size: 3rem;
 	}
+
+	@media (max-width: 715px) {
+		label {
+			display: none;
+		}
+
+		select {
+			min-width: auto;
+			width: 100%;
+		}
+
+		form {
+			width: 90%;
+		}
+  }
+
 </style>
 
 <div class="container">
@@ -90,7 +106,7 @@ limitations under the License. -->
 		{#if frameworkInfo[selected.framework]}
 			<img src={currFramework.imgSrc}/>
 		{:else if selectedFrameworkVariation(selected)}
-				{#if img && selectedFrameworkVariation.standalone}
+				{#if img && selectedFrameworkVariation.standalone || window.screen.width <= 715}
 				<img src={selectedFrameworkVariation(selected).imgSrc}/>
 				{:else }
 				<span class="combined-images">

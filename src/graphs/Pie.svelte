@@ -19,6 +19,7 @@ limitations under the License. -->
   export let data;
   export let labels = ["Pass (50 - 100)", "Fail (0 - 50)"];
   export let colors = ["#27ae60", "#e74c3c"];
+  export let width = 400;
 
   let canvas;
   let ctx;
@@ -62,4 +63,4 @@ limitations under the License. -->
 	});
 </script>
 
-<canvas class="graph" bind:this={canvas} />
+<canvas class="graph" width={width} bind:this={canvas} />

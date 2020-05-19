@@ -33,7 +33,7 @@ limitations under the License. -->
   .container {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     height: 100%;
   }
@@ -52,10 +52,21 @@ limitations under the License. -->
   }
 
   .number-container p {
-    font-size: 7rem;
+    font-size: clamp(6rem, 4vw, 9rem);
     font-weight: 600;
     margin: 0;
     line-height: 1.2; 
+  }
+
+  @media (max-width: 715px) {
+    .container {
+      margin-top: 20rem;
+      margin-bottom: 10rem;
+    }
+
+    .number-container {
+      margin: 2rem 0;
+    }
   }
 </style>
 

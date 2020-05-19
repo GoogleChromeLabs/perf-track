@@ -38,7 +38,7 @@ limitations under the License. -->
     list-style-type: none;
     margin-left: 5rem;
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   li {
@@ -78,6 +78,29 @@ limitations under the License. -->
 
   .legend {
     flex : 2;
+  }
+
+  @media (min-width: 1800px) {
+    ul {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 715px) {
+    .container {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .chart {
+      max-width: 60%;
+      max-height: auto;
+    }
+
+    ul {
+      margin: 0;
+      width: 100%;
+    }
   }
 </style>
 

@@ -14,7 +14,6 @@ limitations under the License. -->
 
 <script>
   import { Router, Route } from "svelte-routing";
-  import NavBar from "./components/NavBar.svelte";
 
   import Home from "./pages/Home.svelte";
   import Angular from "./pages/Angular.svelte";

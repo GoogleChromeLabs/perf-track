@@ -25,7 +25,6 @@ limitations under the License. -->
   import TimerIcon from "../components/icons/Timer.svelte";
 
   import FrameworkHeader from "../components/FrameworkHeader.svelte";
-  import QueryIcon from "../components/QueryIcon.svelte";
   import MetricChart from "../components/MetricChart.svelte";
 
   import * as angular from "../page-data/angular.js";
@@ -193,11 +192,6 @@ limitations under the License. -->
     font-family: Caveat, sans-serif;
   }
 
-  .origins-header .details {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
   .heading {
     display: flex;
     align-items: center;
@@ -240,57 +234,12 @@ limitations under the License. -->
     justify-content: center;
   }
 
-  .icon-container {
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
-    margin-top: 20px;
-  }
-
-  .icon-row {
-    display: flex;
-    justify-content: space-around;
-    max-width: 500px;
-    align-items: center;
-    margin: 0 55px 0;
-  }
-
-  .icon-row-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50px;
-    text-align: center;
-  }
-
-  .icon-row-item p {
-    font-family: Caveat, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #36A2EB;
-    margin: 15px 0 0;
-  }
-
   .metric-chart-container {
     margin-top: 60px;
-  }
-
-  .faq-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
   }
 </style>
 
 <div class="container">
-  <!-- FAQ button -->
-  <div class="faq-button">
-    <QueryIcon
-      href="about"
-      routeLink
-      background='#6c4cd5'/>
-  </div>
-
   <!-- Header -->
   <div class="header">
     <div class="container">
@@ -314,14 +263,6 @@ limitations under the License. -->
     <div class="origins-header">
       <p class="number">{totals.totalNumUrls.value} total origins detected</p>
     </div>
-
-  <!--
-    <div class="icon-container">
-      <QueryIcon
-        background={primaryColor}
-        href="{data[selectedOption].totalNumUrls.query}" />
-    </div>
-  -->
   </section>
 
   <!-- Content -->

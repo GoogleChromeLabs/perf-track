@@ -49,6 +49,33 @@ limitations under the License. -->
     display: flex;
     justify-content: space-between;
   }
+
+  @media (max-width: 715px) {
+    .header {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      width: 100vw;
+      left: 0;
+      top: 0;
+      min-height: 18rem;
+      background: #fff;
+      z-index: 1;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #888c8d;
+    }
+
+    .dropdown-container {
+      width: 100%;
+    }
+
+    .button-routes {
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
 </style>
 
 <div class="header">

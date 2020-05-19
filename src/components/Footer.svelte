@@ -27,11 +27,19 @@
     font-weight: 600;
   }
 
-  /* @media (max-width: 620px) {
+  @media (max-width: 715px) {
     div {
-      height: 5rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 4rem;
+      background: #fff;
+      padding: 1rem 2rem;
+      width: 100vw;
+      border-top: 1px solid #888c8d;
+      font-size: 1.5rem;
     }
-  } */
+  }
 </style>
 
 <div>

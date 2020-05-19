@@ -72,6 +72,7 @@ limitations under the License. -->
     justify-content: space-around;
     height: 100%;
     padding: 2rem 0 4rem;
+    width: 100%;
   }
 
   .metric {
@@ -82,7 +83,7 @@ limitations under the License. -->
 
   .metric h3 {
     flex: 1;
-    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 1vw, 3rem)
   }
 
   .bars-container {
@@ -98,7 +99,19 @@ limitations under the License. -->
   }
 
   .number {
-    font-size: 1.4rem;
+    font-size: clamp(1.4rem, 1vw, 1.7rem)
+  }
+
+  @media (max-width: 715px) {
+    .metric {
+      flex-direction: column;
+      padding: 2rem 0;
+    }
+
+    .bars-container {
+      width: 100%;
+      margin-top: 1rem;
+    }
   }
 </style>
 
