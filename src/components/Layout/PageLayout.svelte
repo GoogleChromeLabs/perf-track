@@ -25,12 +25,6 @@ limitations under the License. -->
   export let versions;
 
   let selectedFrameworkVariation = framework;
-
-  // function changeFrameworkVariation(event) {
-  //   console.log(selectedFrameworkVariation)
-  //   selectedFrameworkVariation = event.detail
-  //   console.log(selectedFrameworkVariation)
-	// }
 </script>
 
 <style>

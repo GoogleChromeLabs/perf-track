@@ -66,7 +66,7 @@ limitations under the License. -->
     new DataSet(polymer),
     new DataSet(vue),
     new DataSet(angular),
-    new DataSet(gatsby),
+    // new DataSet(gatsby),
     new DataSet(react),
   ];
 
