@@ -20,6 +20,8 @@ limitations under the License. -->
   export let fastTooltip;
   export let averageTooltip;
   export let slowTooltip;
+
+  let barHeight = 'clamp(20px, 1vw, 50px)';
 </script>
 
 <style>
@@ -31,9 +33,9 @@ limitations under the License. -->
 
   .bar {
     display: inline-block;
-    line-height: 20px;
-    height: 20px;
-    font-size: 1.5rem;
+    line-height: clamp(20px, 1vw, 50px);
+    height: var(--bar-height);
+    font-size: clamp(1.5rem, 1vw, 1.8rem);
     text-align: center;
     color: #fff;
     border-radius: 15px 0 0 15px;
@@ -48,7 +50,7 @@ limitations under the License. -->
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1vw, 1.7rem);
     font-weight: 600;
     padding: 10px;
     position: absolute;
@@ -81,7 +83,7 @@ limitations under the License. -->
 
   .bar::after {
     width: 15px;
-    height: 20px;
+    height: var(--bar-height);
     position: absolute;
     right: 15px;
     content: '';
@@ -89,7 +91,7 @@ limitations under the License. -->
 
   .bar::after {
     width: 15px;
-    height: 20px;
+    height: var(--bar-height);
     position: absolute;
     right: 15px;
     content: '';
@@ -97,7 +99,7 @@ limitations under the License. -->
 
   .bar::after {
     width: 15px;
-    height: 20px;
+    height: var(--bar-height);
     position: absolute;
     right: -15px;
     content: '';
@@ -160,7 +162,7 @@ limitations under the License. -->
   }
 </style>
 
-<div class="metric-chart">
+<div class="metric-chart" style="--bar-height: {barHeight}">
   <div class="bar fast" style="flex-grow: { fast };">
     { fast }%
     <span class="tooltip">{ fastTooltip }</span>

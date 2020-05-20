@@ -46,7 +46,7 @@ limitations under the License. -->
             label: function(tooltipItem, data) {
               const dataset = data.datasets[tooltipItem.datasetIndex];
               const currentValue = dataset.data[tooltipItem.index];
-              return ` ${currentValue}%`;
+              return ` ${currentValue.toFixed(1)}%`;
             },
           }
         },
