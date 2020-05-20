@@ -14,78 +14,102 @@ limitations under the License. -->
 
 <script>
   import Logo from "../components/icons/Logo.svelte";
-  import ButtonLink from "../components/ButtonLink.svelte";
-  import QueryIcon from "../components/QueryIcon.svelte";
+  import ButtonRoute from "../components/ButtonRoute.svelte";
 </script>
 
 <style>
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100%;
-  }
-
-  .title {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
-	h1 {
-    font-size: 65px;
-    font-weight: 600;
-    margin: 0;
-    color: #6c4cd5;
-	}
-
-  p {
-    font-size: 1.3rem;
-    font-weight: 400;
-    font-weight: 500;
-    margin: 10px 0 0;
-    color: #333538;
+  header {
+    display: flex;
+    padding-bottom: 4rem;
   }
 
-  .button-container {
+  header h1 {
+    font-weight: 600;
+  }
+
+  .frameworks {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0;
+    padding-top: 5rem;
   }
 
-  .faq-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+  .divider {
+    border: 2px solid #dddddd;
+  }
+
+  @media (max-width: 1240px) {
+    header {
+      flex-direction: column;
+    }
+    
+    .title {
+      text-align: center;
+    }
+
+    .frameworks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center; 
+      grid-row-gap: 5rem;
+      grid-column-gap: 2rem;
+    }
+
+    .divider {
+      width: 600px;
+    }
+  }
+
+  @media (max-width: 715px) {
+    header {
+      padding: 0 2rem 2rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    .frameworks {
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 2rem;
+    }
+
+    .divider {
+      width: 300px;
+      margin: 1rem auto;
+    }
   }
 </style>
 
 <div class="container">
-  <div class="faq-button">
-    <QueryIcon
-      href="about"
-      routeLink
-      background='#6c4cd5'/>
-  </div>
-
-  <div class="title">
-    <Logo />
-    <h1>perf track</h1>
-  </div>
-  <p>Tracking framework performance at scale</p>
-  <div class="button-container">
-    <ButtonLink background="#FF6384" text="Angular" to="angular" />
-    <ButtonLink background="#36A2EB" text="React" to="react" />
-    <ButtonLink background="#4BC0C0" text="Vue" to="vue" />
-    <ButtonLink background="#FF4470" text="Polymer" to="polymer" />
-    <ButtonLink background="#662e9b" text="Gatsby" to="gatsby" />
-    <ButtonLink background="#ff3500" text="Svelte" to="svelte" />
-  </div>
-  <p>Performance Metric Comparison</p>
-  <div class="button-container">
-    <ButtonLink background="#ff3500" text="Compare" to="comparison" />
+  <div class="row">
+    <header>
+      <div class="title">
+        <h1>
+          Perf Track
+        </h1>
+        <h2>
+          Tracking framework performance at scale
+        </h2>
+      </div>
+    </header>
+    <hr class ="divider"/>
+    <div class="frameworks">
+      <ButtonRoute name="Angular" />
+      <ButtonRoute name="React" />
+      <ButtonRoute name="Vue" />
+      <ButtonRoute name="Polymer" />
+      <ButtonRoute name="Preact" />
+    </div>
   </div>
 </div>
-

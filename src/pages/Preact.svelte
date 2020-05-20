@@ -18,11 +18,10 @@ limitations under the License. -->
   import PageLayout from "../components/Layout/PageLayout.svelte";
   import Footer from "../components/Footer.svelte";
 
-  import { data } from "../page-data/vue.js";
+  import { data } from "../page-data/preact.js";
 
   let categories = [
-    { id: 1, framework: 'Vue', text: 'Vue' },
-    { id: 2, framework: 'Nuxt.js', text: 'Vue sites built with Nuxt.js' },
+    { id: 1, framework: 'Preact', text: 'Preact' },
   ];
 </script>
 
@@ -37,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Vue" {categories} {data} />
+  <PageLayout framework="Preact" {categories} {data} />
   <Footer />
 </div>
