@@ -57,7 +57,7 @@ limitations under the License. -->
     z-index: 1;
     width: 220px;
     top: 140%;
-    left: 50%; 
+    left: 3%; 
     margin-left: -110px;
     display: block;
     opacity: 100%;
@@ -115,7 +115,7 @@ limitations under the License. -->
 
   .fast .tooltip {
     background: #00ac47;
-    border: 2px solid #ffffff;
+    border: 2px solid #878c8d;
   }
 
   .fast .tooltip::after {
@@ -148,7 +148,7 @@ limitations under the License. -->
 
   .slow .tooltip {
     background: #fa3a2f;
-    border: 2px solid #ffffff;
+    border: 2px solid #878c8d;
   }
 
   .slow .tooltip::after {

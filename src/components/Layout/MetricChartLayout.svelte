@@ -32,16 +32,16 @@ limitations under the License. -->
         shortName: "FCP",
         data: fcp.data,
         num: fcp.numOrigins,
-        fastThreshold: "2 s",
-        poorThreshold: "4 s"
+        fastThreshold: "2s",
+        poorThreshold: "4s"
       },
       {
         name: "Largest Contentful Paint",
         shortName: "LCP",
         data: lcp.data,
         num: lcp.numOrigins,
-        fastThreshold: "2.5 s",
-        poorThreshold: "4 s"
+        fastThreshold: "2.5s",
+        poorThreshold: "4s"
       },
       {
         name: "Cumulative Layout Shift",
@@ -56,16 +56,16 @@ limitations under the License. -->
         shortName: "FID",
         data: fid.data,
         num: fid.numOrigins,
-        fastThreshold: "100 ms",
-        poorThreshold: "300 ms"
+        fastThreshold: "100ms",
+        poorThreshold: "300ms"
       },
       {
         name: "Time To First Byte",
         shortName: "TTFB",
         data: ttfb.data,
         num: ttfb.numOrigins,
-        fastThreshold: "500 ms",
-        poorThreshold: "1500 ms"
+        fastThreshold: "500ms",
+        poorThreshold: "1500ms"
       }
     ];
   };
@@ -156,10 +156,10 @@ limitations under the License. -->
             fast={metric.data[0]}
             average={metric.data[1]}
             slow={metric.data[2]}
-            fastTooltip="{metric.data[0]}% of page loads have a fast FCP (< {metric.fastThreshold})."
-            averageTooltip="{metric.data[1]}% of page loads need to improve FCP
+            fastTooltip="{metric.data[0]}% of page loads have a good { metric.shortName } (< {metric.fastThreshold})."
+            averageTooltip="{metric.data[1]}% of page loads need to improve { metric.shortName }
             ({metric.fastThreshold} - {metric.poorThreshold})."
-            slowTooltip="{metric.data[2]}% of page loads have a poor FCP (> {metric.poorThreshold})." />
+            slowTooltip="{metric.data[2]}% of page loads have a poor { metric.shortName } (> {metric.poorThreshold})." />
         </div>
       </div>
       <div class="number large">({metric.num.toLocaleString()} origins)</div>

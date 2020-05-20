@@ -22,7 +22,7 @@
     font-weight: 600;
   }
 
-  a:hover, span:hover {
+  p a, a:hover, span:hover {
     text-decoration: none;
     font-weight: 600;
   }
@@ -38,6 +38,7 @@
   <Link to="">
     <span>Perf Track</span>
   </Link>
+  <p>Data from <a href="https://httparchive.org/">HTTP Archive</a> (2020_04_01_mobile) and <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome User Experience Report</a> (202004)</p>
   <a href="https://github.com/GoogleChromeLabs/perf-track">
     GitHub
   </a>
