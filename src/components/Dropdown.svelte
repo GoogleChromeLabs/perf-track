@@ -104,15 +104,15 @@ limitations under the License. -->
 	</form>
 	{#if img && selected}
 		{#if frameworkInfo[selected.framework]}
-			<img src={currFramework.imgSrc}/>
+			<img src={currFramework.imgSrc} alt="{currFramework.imgSrc} logo"/>
 		{:else if selectedFrameworkVariation(selected)}
 				{#if img && selectedFrameworkVariation.standalone || window.screen.width <= 715}
-				<img src={selectedFrameworkVariation(selected).imgSrc}/>
+				<img src={selectedFrameworkVariation(selected).imgSrc} alt="{selectedFrameworkVariation(selected).imgSrc.imgSrc} logo"/>
 				{:else }
 				<span class="combined-images">
-					<img src={currFramework.imgSrc}/> 
+					<img src={currFramework.imgSrc} alt="{currFramework.imgSrc} logo"/> 
 					<span class="divider">+</span>
-					<img src={selectedFrameworkVariation(selected).imgSrc}/>
+					<img src={selectedFrameworkVariation(selected).imgSrc} alt="{selectedFrameworkVariation(selected).imgSrc.imgSrc} logo"/>
 				</span>
 			{/if}
 		{/if}

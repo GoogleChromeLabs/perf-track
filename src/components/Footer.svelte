@@ -27,17 +27,9 @@
     font-weight: 600;
   }
 
-  @media (max-width: 715px) {
+  @media (max-width: 1240px) {
     div {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      height: 4rem;
-      background: #fff;
-      padding: 1rem 2rem;
-      width: 100vw;
-      border-top: 1px solid #888c8d;
-      font-size: 1.5rem;
+      display: none;
     }
   }
 </style>

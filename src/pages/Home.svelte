@@ -66,19 +66,27 @@ limitations under the License. -->
     }
   }
 
-  @media (max-width: 620px) {
+  @media (max-width: 715px) {
     header {
       padding: 0 2rem 2rem;
     }
 
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
     .frameworks {
       grid-template-columns: repeat(2, 1fr);
-      grid-row-gap: 3rem;
       padding-top: 2rem;
     }
 
     .divider {
       width: 300px;
+      margin: 1rem auto;
     }
   }
 </style>

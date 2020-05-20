@@ -100,28 +100,31 @@ limitations under the License. -->
         max-height: 45px;
       }
     }
-  
+
   @media (max-width: 1240px) {
     :global(.button-route img) {
-      max-width: 70px;
-      max-height: 70px;
+      max-width: 45px;
+      max-height: 45px;
     }
 
     :global(.button-route) {
-      min-width: 10rem;
-      min-height: 9rem;
-    }
-  }
-
-  @media (max-width: 715px) {
-    :global(.button-route img) {
-      max-width: 40px;
-      max-height: 40px;
+      min-width: auto;
+      min-height: auto;
+      width: 8rem;
+      height: 8rem;
     }
 
-    :global(.button-route) {
-      min-width: 6rem;
-      min-height: 5rem;
+    :global(.button-route.mini img) {
+      max-width: 30px;
+      max-height: 30px;
+    }
+
+    :global(.button-route.mini) {
+      min-width: auto;
+      min-height: auto;
+      width: 5rem;
+      height: 5rem;
+      box-shadow: #888c8d 0px 1px 6px;
     }
   }
 </style>

@@ -86,7 +86,7 @@ limitations under the License. -->
     }
   }
   
-  @media (max-width: 715px) {
+  @media (max-width: 1240px) {
     .container {
       flex-direction: column;
       width: 100%;

@@ -33,7 +33,7 @@ limitations under the License. -->
   .container {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
     height: 100%;
   }
@@ -51,21 +51,40 @@ limitations under the License. -->
     justify-content: center;
   }
 
-  .number-container p {
+  .number-container .heading {
     font-size: clamp(6rem, 4vw, 9rem);
     font-weight: 600;
     margin: 0;
     line-height: 1.2; 
   }
 
-  @media (max-width: 715px) {
+  .number-container .subheading {
+    font-size: clamp(1.3rem, 1vw, 1.7rem);
+  }
+
+  @media (min-width: 1240px) {
+    .spacer {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1240px) {
     .container {
-      margin-top: 20rem;
-      margin-bottom: 10rem;
+      margin-top: 7rem;
     }
 
     .number-container {
       margin: 2rem 0;
+    }
+
+    .spacer {
+      height: 10rem;
+    }
+  }
+
+  @media (max-width: 715px) {
+    .container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
 </style>
@@ -79,8 +98,8 @@ limitations under the License. -->
       <UsageIcon />
     </span>
     <div class="number-container">
-      <p>{data[framework].sampleSize.framework.toLocaleString()}</p>
-      <span>{((data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100).toFixed(1)}% of all URLs</span>
+      <p class="heading">{data[framework].sampleSize.framework.toLocaleString()}</p>
+      <span class="subheading">{((data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100).toFixed(1)}% of all URLs</span>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">
@@ -88,7 +107,7 @@ limitations under the License. -->
       <LightningIcon />
     </span>
     <MetricChartLayout 
-      fcp={data[framework].fcpCrux} 
+      bind:fcp={data[framework].fcpCrux} 
       lcp={data[framework].lcpCrux} 
       fid={data[framework].fidCrux} 
       cls={data[framework].clsCrux} 
@@ -143,4 +162,5 @@ limitations under the License. -->
       data={data[framework].imgBytesBreakdown.data}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
+  <div class="spacer"></div>
 </div>

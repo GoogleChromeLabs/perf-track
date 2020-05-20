@@ -50,7 +50,7 @@ limitations under the License. -->
     justify-content: space-between;
   }
 
-  @media (max-width: 715px) {
+  @media (max-width: 1240px) {
     .header {
       display: flex;
       flex-direction: column-reverse;
@@ -60,11 +60,22 @@ limitations under the License. -->
       width: 100vw;
       left: 0;
       top: 0;
-      min-height: 18rem;
+      height: 8rem;
       background: #fff;
       z-index: 1;
       padding: 1rem 2rem;
       border-bottom: 4px solid #888c8d;
+    }
+
+    .button-routes {
+      position: fixed;
+      background: #fff;
+      bottom: 0;
+      left: 0;
+      height: 8rem;
+      display: flex;
+      align-items: center;
+      border-top: 4px solid #f1f1f1;
     }
 
     .dropdown-container {

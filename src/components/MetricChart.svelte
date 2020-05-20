@@ -153,8 +153,8 @@ limitations under the License. -->
     border-color: transparent transparent #fa3a2f transparent;
   }
 
-  @media (max-width: 715px) {
-    .tooltip {
+  @media (max-width: 1240px) {
+    .slow .tooltip, .average .tooltip, .fast .tooltip {
       display: none;
     }
   }
