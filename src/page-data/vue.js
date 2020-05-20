@@ -75,7 +75,7 @@ export const data = {
     },
     'clsCrux': {
       numOrigins: 39829,
-      data: [100, 0, 0],
+      data: [70, 9, 21],
     },
     'ttfbCrux': {
       numOrigins: 39960,
@@ -137,7 +137,7 @@ export const data = {
     },
     'clsCrux': {
       numOrigins: 3367,
-      data: [100, 0, 0],
+      data: [71, 8, 21],
     },
     'ttfbCrux': {
       numOrigins: 3386,
