@@ -61,7 +61,7 @@
     "detector": "library-detector"
   },
   "Ember": {
-    "name": "Ember",
+    "name": "Ember.js",
     "color": "#f23e2b",
     "imgSrc": "images/ember-logo.png",
     "route": "ember",

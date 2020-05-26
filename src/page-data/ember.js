@@ -15,7 +15,7 @@
  */
 
 export const category = [
-  'Ember.js'
+  'Ember'
 ];
 
 export const data = {

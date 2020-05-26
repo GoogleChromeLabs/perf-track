@@ -24,7 +24,7 @@ limitations under the License. -->
   export let data;
   export let framework;
   export let categories;
-  export let versions;
+  export let versions = null;
 
   let selectedFrameworkVariation = framework;
 </script>

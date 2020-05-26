@@ -27,6 +27,11 @@ limitations under the License. -->
 
   export let data;
   export let framework;
+
+  const numPercentage = () => {
+    const percent = (data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100;
+    return percent.toFixed(1) === "0.0" ? percent.toFixed(2) : percent.toFixed(1);
+  }
 </script>
 
 <style>
@@ -99,7 +104,7 @@ limitations under the License. -->
     </span>
     <div class="number-container">
       <p class="heading">{data[framework].sampleSize.framework.toLocaleString()}</p>
-      <span class="subheading">{((data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100).toFixed(1)}% of all URLs</span>
+      <span class="subheading">{numPercentage()}% of all URLs</span>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">
