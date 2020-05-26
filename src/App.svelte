@@ -39,6 +39,7 @@ limitations under the License. -->
     font: 400 1.6rem / 1.6 Montserrat, sans-serif;
     padding: 0;
     background: #f1f1f1;
+    overscroll-behavior: none;
 	}
 
   :global(html) {

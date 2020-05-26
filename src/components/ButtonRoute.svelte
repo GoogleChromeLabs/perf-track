@@ -103,26 +103,26 @@ limitations under the License. -->
 
   @media (max-width: 1240px) {
     :global(.button-route img) {
-      max-width: 45px;
-      max-height: 45px;
+      max-width: 40px;
+      max-height: 40px;
     }
 
     :global(.button-route) {
       min-width: auto;
       min-height: auto;
-      width: 8rem;
-      height: 8rem;
+      width: 7rem;
+      height: 7rem;
     }
 
     :global(.button-route.mini img) {
-      max-width: 30px;
-      max-height: 30px;
+      max-width: 22px;
+      max-height: 22px;
     }
 
     :global(.button-route.mini) {
       min-width: auto;
       min-height: auto;
-      width: 5rem;
+      width: 3.5rem;
       height: 5rem;
       box-shadow: #888c8d 0px 1px 6px;
     }

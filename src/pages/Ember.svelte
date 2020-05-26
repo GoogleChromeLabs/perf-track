@@ -27,7 +27,7 @@ limitations under the License. -->
 
 <style>
   .container {
-    padding: 5rem 5rem 0;
+    padding: 4rem 5rem 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

@@ -57,7 +57,7 @@ limitations under the License. -->
   }
 
   .number-container .heading {
-    font-size: clamp(6rem, 4vw, 9rem);
+    font-size: clamp(5rem, 4vw, 9rem);
     font-weight: 600;
     margin: 0;
     line-height: 1.2; 
@@ -65,6 +65,11 @@ limitations under the License. -->
 
   .number-container .subheading {
     font-size: clamp(1.3rem, 1vw, 1.7rem);
+  }
+
+  img.header-logo {
+    max-width: 30px;
+    max-height: 30px;
   }
 
   @media (min-width: 1240px) {
@@ -100,7 +105,7 @@ limitations under the License. -->
     centerHeading
     style="grid-column: 1; grid-row: 1;">
     <span class="icon" slot="icon">
-      <UsageIcon />
+			<img class="header-logo" src={data[framework].detector === 'wappalyzer' ? "images/wappalyzer-logo.jpeg" : "images/library-detector-logo.png"} alt="{data[framework].detector} logo (all detections are from {data[framework].detector})"/>
     </span>
     <div class="number-container">
       <p class="heading">{data[framework].sampleSize.framework.toLocaleString()}</p>

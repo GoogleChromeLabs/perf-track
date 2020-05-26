@@ -38,7 +38,7 @@ limitations under the License. -->
     list-style-type: none;
     margin-left: 5rem;
     padding: 0;
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1vw, 1.5rem);
   }
 
   li {
