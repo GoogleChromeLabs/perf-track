@@ -27,10 +27,10 @@ limitations under the License. -->
   import FrameworkHeader from "../components/FrameworkHeader.svelte";
   import MetricChart from "../components/MetricChart.svelte";
 
-  import { headerOptions, data } from "../page-data/angular.js";
+  import { category, data } from "../page-data/angular.js";
 
   let primaryColor = "#ff6384";
-  let selectedOption = headerOptions[0];
+  let selectedOption = category[0];
 </script>
 
 <style>

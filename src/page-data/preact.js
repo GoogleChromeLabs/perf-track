@@ -14,12 +14,12 @@
  * the License.
  */
 
-export const headerOptions = [
+export const category = [
   'Preact'
 ];
 
 export const data = {
-  [headerOptions[0]]: {
+  [category[0]]: {
     'sampleSize': {
       framework: 101407,
       all: 5775713

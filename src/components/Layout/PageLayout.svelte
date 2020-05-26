@@ -19,6 +19,8 @@ limitations under the License. -->
   import Dropdown from "../Dropdown.svelte";
   import ButtonRoute from "../ButtonRoute.svelte";
 
+  import frameworkInfo from "../../utils/framework-info.json";
+
   export let data;
   export let framework;
   export let categories;
@@ -91,7 +93,12 @@ limitations under the License. -->
 
 <div class="header">
   <div class="dropdown-container">
-    <Dropdown {framework} bind:selectedFramework={selectedFrameworkVariation} data={categories} label="Category:" img />
+    <Dropdown
+      {framework}
+      bind:selectedFramework={selectedFrameworkVariation}
+      data={categories}
+      label="Category:"
+      img />
     {#if versions}
       <span class="spacer" />
       <Dropdown data={versions} label="Version:" />
@@ -99,11 +106,14 @@ limitations under the License. -->
   </div>
 
   <div class="button-routes">
-    <ButtonRoute mini name="Angular" />
-    <ButtonRoute mini name="React" />
-    <ButtonRoute mini name="Vue" />
-    <ButtonRoute mini name="Polymer" />
-    <ButtonRoute mini name="Preact" />
+    {#each Object.keys(frameworkInfo) as framework}
+      <ButtonRoute
+        mini
+        name={frameworkInfo[framework].name}
+        route={frameworkInfo[framework].route}
+        color={frameworkInfo[framework].color}
+        img={frameworkInfo[framework].imgSrc} />
+    {/each}
   </div>
 </div>
 <CardLayout {data} bind:framework={selectedFrameworkVariation} />

@@ -37,7 +37,7 @@ limitations under the License. -->
 
   class DataSet {
     constructor(module) {
-      this.opts = module.headerOptions;
+      this.opts = module.category;
       this.data = module.data;
     }
 
@@ -248,7 +248,7 @@ limitations under the License. -->
       </a>
       <!--
       <div class="toggles">
-        {#each headerOptions as option}
+        {#each category as option}
           <label class="toggle">
             <input type=radio bind:group={selectedOption} value={option}>
             {option}

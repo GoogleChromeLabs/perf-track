@@ -4,22 +4,26 @@
     "color": "#FF6384",
     "imgSrc": "images/angular-logo.png",
     "route": "angular",
-    "variations": []
+    "detector": "wappalyzer"
   },
   "React": {
     "name": "React",
     "color": "#36A2EB",
     "imgSrc": "images/react-logo.png",
     "route": "react",
+    "detector": "library-detector",
     "variations": {
       "Next.js": {
-        "imgSrc": "images/nextjs-logo.png"
+        "imgSrc": "images/nextjs-logo.png",
+        "detector": "wappalyzer"
       },
       "Gatsby": {
-        "imgSrc": "images/gatsby-logo.png"
+        "imgSrc": "images/gatsby-logo.png",
+        "detector": "wappalyzer"
       },
       "Create React App": {
-        "imgSrc": "images/cra-logo.png"
+        "imgSrc": "images/cra-logo.png",
+        "detector": "library-detector"
       }
     }
   },
@@ -28,9 +32,11 @@
     "color": "#4BC0C0",
     "imgSrc": "images/vue-logo.png",
     "route": "vue",
+    "detector": "wappalyzer",
     "variations": {
       "Nuxt.js": {
-        "imgSrc": "images/nuxtjs-logo.png"
+        "imgSrc": "images/nuxtjs-logo.png",
+        "detector": "wappalyzer"
       }
     }
   },
@@ -39,6 +45,7 @@
     "color": "#FF4470",
     "imgSrc": "images/polymer-logo.png",
     "route": "polymer",
+    "detector": "wappalyzer",
     "variations": {
       "Lit": {
         "imgSrc": "images/lithtml-logo.png",
@@ -50,17 +57,34 @@
     "name": "Preact",
     "color": "#6f31bf",
     "imgSrc": "images/preact-logo.png",
-    "route": "preact"
+    "route": "preact",
+    "detector": "library-detector"
+  },
+  "Ember": {
+    "name": "Ember",
+    "color": "#f23e2b",
+    "imgSrc": "images/ember-logo.png",
+    "route": "ember",
+    "detector": "wappalyzer"
   },
   "Svelte": {
     "name": "Svelte",
     "color": "#ff3500",
     "imgSrc": "images/svelte-logo.png",
     "route": "svelte",
+    "detector": "wappalyzer",
     "variations": {
       "Sapper": {
-        "imgSrc": "images/sapper-logo.png"
+        "imgSrc": "images/sapper-logo.png",
+        "detector": "wappalyzer"
       }
     }
+  },
+  "AMP": {
+    "name": "AMP",
+    "color": "#005af0",
+    "imgSrc": "images/amp-logo.png",
+    "route": "amp",
+    "detector": "wappalyzer"
   }
 }
