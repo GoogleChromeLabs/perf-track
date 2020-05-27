@@ -14,7 +14,7 @@
  * the License.
  */
 
-export const headerOptions = [
+export const category = [
   'React',
   'Next.js',
   'Gatsby',
@@ -22,7 +22,7 @@ export const headerOptions = [
 ];
 
 export const data = {
-  [headerOptions[0]]: {
+  [category[0]]: {
     'sampleSize': {
       framework: 305898,
       all: 5775713
@@ -84,72 +84,72 @@ export const data = {
       data: [34, 33, 33],
     },
   },
-  [headerOptions[1]]: {
+  [category[1]]: {
     'sampleSize': {
-      framework: 11056,
-      all: 5775713
+      framework: 11394,
+      all: 5789440
     },
     'compressedRequests': {
-      numUrls: 4597,
-      numRequests: 183968,
+      numUrls: 4657,
+      numRequests: 186308,
       gzipCompressedPercent: 60.1,
       brotliCompressedPercent: 22.5
     },
     'totalBytesBreakdown': {
-      numUrls: 11056,
+      numUrls: 11394,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [0.35, 1.70, 3.61, 4.86, 6.67, 82.81]
+          "data": [0.28, 1.66, 3.60, 4.84, 6.70, 82.93]
         }]
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 11056,
+      numUrls: 11394,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [3.63, 9.82, 18.21, 12.26, 28.36, 27.73]
+          "data": [3.50, 9.65, 17.74, 12.15, 29.63, 27.33]
         }]
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 11056,
+      numUrls: 11394,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [28.73, 14.96, 10.49, 7.12, 4.45, 34.25]
+          "data": [29.13, 15.03, 10.54, 7.14, 4.44, 33.73]
         }]
       },
     },
     'fcpCrux': {
-      numOrigins: 5077,
+      numOrigins: 5209,
       data: [41, 28, 31],
     },
     'lcpCrux': {
-      numOrigins: 4910,
+      numOrigins: 5035,
       data: [35, 18, 47],
     },
     'fidCrux': {
-      numOrigins: 4172,
+      numOrigins: 4286,
       data: [84, 10, 6],
     },
     'clsCrux': {
-      numOrigins: 5044,
-      data: [59, 13, 29],
+      numOrigins: 5175,
+      data: [58, 13, 29],
     },
     'ttfbCrux': {
-      numOrigins: 5075,
-      data: [31, 28, 40],
+      numOrigins: 5206,
+      data: [32, 28, 41],
     },
   },
-  [headerOptions[2]]: {
+  [category[2]]: {
     'sampleSize': {
-      framework: 4787,
-      all: 5775713
+      framework: 4788,
+      all: 5789440
     },
     'compressedRequests': {
       numUrls: 68620,
@@ -158,7 +158,7 @@ export const data = {
       brotliCompressedPercent: 17.5
     },
     'totalBytesBreakdown': {
-      numUrls: 4787,
+      numUrls: 4788,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
@@ -168,7 +168,7 @@ export const data = {
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 4787,
+      numUrls: 4788,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
@@ -178,7 +178,7 @@ export const data = {
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 4787,
+      numUrls: 4788,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
@@ -193,10 +193,10 @@ export const data = {
     },
     'lcpCrux': {
       numOrigins: 1823,
-      data: [45, 19, 35],
+      data: [45, 19, 36],
     },
     'fidCrux': {
-      numOrigins: 1367,
+      numOrigins: 1369,
       data: [85, 10, 5],
     },
     'clsCrux': {
@@ -208,7 +208,7 @@ export const data = {
       data: [37, 32, 31],
     },
   },
-  [headerOptions[3]]: {
+  [category[3]]: {
     'sampleSize': {
       framework: 11152,
       all: 5775713

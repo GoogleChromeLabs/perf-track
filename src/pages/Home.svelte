@@ -15,6 +15,8 @@ limitations under the License. -->
 <script>
   import Logo from "../components/icons/Logo.svelte";
   import ButtonRoute from "../components/ButtonRoute.svelte";
+  
+  import frameworkInfo from "../utils/framework-info.json";
 </script>
 
 <style>
@@ -57,7 +59,7 @@ limitations under the License. -->
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center; 
-      grid-row-gap: 5rem;
+      grid-row-gap: 3rem;
       grid-column-gap: 2rem;
     }
 
@@ -105,11 +107,13 @@ limitations under the License. -->
     </header>
     <hr class ="divider"/>
     <div class="frameworks">
-      <ButtonRoute name="Angular" />
-      <ButtonRoute name="React" />
-      <ButtonRoute name="Vue" />
-      <ButtonRoute name="Polymer" />
-      <ButtonRoute name="Preact" />
+      {#each Object.keys(frameworkInfo) as framework}
+        <ButtonRoute
+          name={frameworkInfo[framework].name}
+          route={frameworkInfo[framework].route}
+          color={frameworkInfo[framework].color}
+          img={frameworkInfo[framework].imgSrc} />
+      {/each}
     </div>
   </div>
 </div>

@@ -50,12 +50,14 @@ limitations under the License. -->
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    font-size: clamp(1.5rem, 1vw, 1.7rem);
+    font-size: clamp(1.5rem, 1vw, 1.6rem);
     font-weight: 600;
     padding: 10px;
     position: absolute;
     z-index: 1;
-    width: 220px;
+    width: auto;
+    max-width: 220px;
+    min-width: 210px;
     top: 140%;
     left: 3%; 
     margin-left: -110px;
@@ -72,7 +74,7 @@ limitations under the License. -->
     position: absolute;
     bottom: 100%;  /* At the top of the tooltip */
     left: 50%;
-    margin-left: -5px;
+    margin-left: 15px;
     border-width: 5px;
     border-style: solid;
   }

@@ -38,7 +38,7 @@ limitations under the License. -->
     list-style-type: none;
     margin-left: 5rem;
     padding: 0;
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1vw, 1.5rem);
   }
 
   li {
@@ -143,7 +143,7 @@ limitations under the License. -->
           <span class="square red" />
           Not compressed
         </div>
-        <span class="value">{data[2].toFixed(1)}%</span>
+        <span class="value">{(100 - (data[0] + data[1])).toFixed(1)}%</span>
       </li>
     {/if}
   </ul>

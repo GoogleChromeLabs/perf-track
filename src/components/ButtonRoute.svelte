@@ -17,9 +17,9 @@ limitations under the License. -->
 
   export let mini = false;
   export let name;
-
-  import frameworkInfo from "../utils/framework-info.json";
-  const { imgSrc, route, color } = frameworkInfo[name];
+  export let img;
+  export let route;
+  export let color;
 
   function getProps({ location, href, isPartiallyCurrent, isCurrent }) {
     const isActive = href === "/" ? isCurrent : isPartiallyCurrent || isCurrent;
@@ -43,8 +43,8 @@ limitations under the License. -->
     border-radius: 2rem;
     cursor: pointer;
     transition: all .1s ease-in-out;
-    min-width: 12rem;
-    min-height: 11rem;
+    min-width: 10rem;
+    min-height: 9rem;
   }
 
   :global(.scale-bg) {
@@ -84,45 +84,45 @@ limitations under the License. -->
   }
 
   :global(.button-route img) {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 60px;
+    max-height: 60px;
   }
 
     @media (min-width: 1241px) {
       :global(.button-route.mini) {
-        min-width: 8rem;
-        min-height: 7rem;
+        min-width: 7rem;
+        min-height: 6rem;
         margin-left: 2rem;
       }
 
       :global(.button-route.mini img) {
-        max-width: 45px;
-        max-height: 45px;
+        max-width: 40px;
+        max-height: 40px;
       }
     }
 
   @media (max-width: 1240px) {
     :global(.button-route img) {
-      max-width: 45px;
-      max-height: 45px;
+      max-width: 40px;
+      max-height: 40px;
     }
 
     :global(.button-route) {
       min-width: auto;
       min-height: auto;
-      width: 8rem;
-      height: 8rem;
+      width: 7rem;
+      height: 7rem;
     }
 
     :global(.button-route.mini img) {
-      max-width: 30px;
-      max-height: 30px;
+      max-width: 22px;
+      max-height: 22px;
     }
 
     :global(.button-route.mini) {
       min-width: auto;
       min-height: auto;
-      width: 5rem;
+      width: 3.5rem;
       height: 5rem;
       box-shadow: #888c8d 0px 1px 6px;
     }
@@ -130,5 +130,5 @@ limitations under the License. -->
 </style>
 
 <Link to="{route}" getProps="{getProps}">
-  <img src={imgSrc} alt="{name} logo">
+  <img src={img} alt="{name} logo">
 </Link>
