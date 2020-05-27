@@ -40,11 +40,6 @@ limitations under the License. -->
     font-size: clamp(1.3rem, 1vw, 2.5rem);
   }
 
-  .heading .number .img {
-    max-width: 100px;
-    max-height: 100px;
-  }
-
 	.title {
     display: flex;
     align-items: center;

@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License. -->
 
 <script>
+  import { beforeUpdate } from "svelte";
+
   import Card from "../Card.svelte";
   import Chart from "../Chart.svelte";
 
@@ -25,13 +27,23 @@ limitations under the License. -->
   import WeightIcon from "../icons/Weight.svelte";
   import GaugeIcon from "../icons/Gauge.svelte";
 
+  import frameworkInfo from "../../utils/framework-info.json";
+
   export let data;
+  export let topLevelFramework;
   export let framework;
 
-  const numPercentage = () => {
-    const percent = (data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100;
-    return percent.toFixed(1) === "0.0" ? percent.toFixed(2) : percent.toFixed(1);
+  let percent;
+  let detectorIcon;
+
+  const updateData = () => {
+    percent = (data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100;
+
+    const frameworkObj = frameworkInfo[framework] || frameworkInfo[topLevelFramework].variations[framework];
+    detectorIcon = frameworkObj.detector === 'wappalyzer' ? "images/wappalyzer-logo.jpeg" : "images/library-detector-logo.png";
   }
+
+  beforeUpdate(() => updateData());
 </script>
 
 <style>
@@ -105,11 +117,11 @@ limitations under the License. -->
     centerHeading
     style="grid-column: 1; grid-row: 1;">
     <span class="icon" slot="icon">
-			<img class="header-logo" src={data[framework].detector === 'wappalyzer' ? "images/wappalyzer-logo.jpeg" : "images/library-detector-logo.png"} alt="{data[framework].detector} logo (all detections are from {data[framework].detector})"/>
+			<img class="header-logo" src={detectorIcon} alt="{data[framework].detector} logo (all detections are from {data[framework].detector})"/>
     </span>
     <div class="number-container">
       <p class="heading">{data[framework].sampleSize.framework.toLocaleString()}</p>
-      <span class="subheading">{numPercentage()}% of all URLs</span>
+      <span class="subheading">{percent.toFixed(1) === "0.0" ? percent.toFixed(2) : percent.toFixed(1)}% of all URLs</span>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">

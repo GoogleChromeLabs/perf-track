@@ -116,4 +116,4 @@ limitations under the License. -->
     {/each}
   </div>
 </div>
-<CardLayout {data} bind:framework={selectedFrameworkVariation} />
+<CardLayout {data} topLevelFramework={framework} bind:framework={selectedFrameworkVariation} />
