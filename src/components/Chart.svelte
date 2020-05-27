@@ -143,7 +143,7 @@ limitations under the License. -->
           <span class="square red" />
           Not compressed
         </div>
-        <span class="value">{data[2].toFixed(1)}%</span>
+        <span class="value">{(100 - (data[0] + data[1])).toFixed(1)}%</span>
       </li>
     {/if}
   </ul>
