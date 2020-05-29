@@ -40,10 +40,16 @@ limitations under the License. -->
     padding: 0;
     background: #f1f1f1;
     overscroll-behavior: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
 	}
 
   :global(html) {
-		font-size: 59.5%;
+    font-size: 59.5%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 	}
 
   :global(.row) {
@@ -71,9 +77,9 @@ limitations under the License. -->
     line-height: 1.2;
   }
 
-  @media (max-width: 620px) {
+  @media (max-width: 715px) {
     :global(h1) {
-      font-size: 5rem;
+      font-size: 4.5rem;
     }
 
     :global(h2) {

@@ -40,7 +40,7 @@ limitations under the License. -->
     percent = (data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100;
 
     const frameworkObj = frameworkInfo[framework] || frameworkInfo[topLevelFramework].variations[framework];
-    detectorIcon = frameworkObj.detector === 'wappalyzer' ? "images/wappalyzer-logo.jpeg" : "images/library-detector-logo.png";
+    detectorIcon = frameworkObj.detector === 'wappalyzer' ? "/images/wappalyzer-logo.jpeg" : "/images/library-detector-logo.png";
   }
 
   beforeUpdate(() => updateData());

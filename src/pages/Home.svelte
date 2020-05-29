@@ -31,8 +31,15 @@ limitations under the License. -->
     padding-bottom: 4rem;
   }
 
-  header h1 {
+  h1 {
     font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  h1 img {
+    max-height: 55px;
+    margin-left: 2.5rem;
   }
 
   .frameworks {
@@ -51,6 +58,10 @@ limitations under the License. -->
       flex-direction: column;
     }
     
+    h1 {
+      justify-content: center;
+    }
+
     .title {
       text-align: center;
     }
@@ -65,6 +76,7 @@ limitations under the License. -->
 
     .divider {
       width: 600px;
+      margin: 0 auto;
     }
   }
 
@@ -75,6 +87,10 @@ limitations under the License. -->
 
     h1 {
       margin-bottom: 1rem;
+    }
+
+    h1 img {
+      max-height: 35px;
     }
 
     h2 {
@@ -99,6 +115,7 @@ limitations under the License. -->
       <div class="title">
         <h1>
           Perf Track
+          <img src="/images/perf-track-logo.png" alt="Flame logo" />
         </h1>
         <h2>
           Tracking framework performance at scale
