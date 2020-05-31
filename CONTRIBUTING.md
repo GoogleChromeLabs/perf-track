@@ -10,4 +10,4 @@ You generally only need to submit a CLA once, so if you've already submitted one
 
 ## What should I contribute?
 
-Once you've submitted a CLA, please feel free to put up a PR adding any third-party tools to the `src/tools/index.json` file. If you would like to modify anything else with the site (including adding newer tool categories), please put up an issue first so we can chat about it!
+Once you've submitted a CLA, please submit a PR or take a look at the [issues list](/issues) to find out ways to help! If you have new ideas that you would like to see, create a new issue so we can discuss.

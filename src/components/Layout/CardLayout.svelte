@@ -150,7 +150,7 @@ limitations under the License. -->
       graph="pie"
       colors={['#fbbc04', '#34a853', '#e74c3c']}
       labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
-      data={[data[framework].compressedRequests.gzipCompressedPercent, data[framework].compressedRequests.brotliCompressedPercent, 100 - data[framework].compressedRequests.gzipCompressedPercent + data[framework].compressedRequests.brotliCompressedPercent]}
+      data={[data[framework].compressedRequests.gzipCompressedPercent, data[framework].compressedRequests.brotliCompressedPercent, 100 - (data[framework].compressedRequests.gzipCompressedPercent + data[framework].compressedRequests.brotliCompressedPercent)]}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Total Bytes" style="grid-column: 1; grid-row: 3;">

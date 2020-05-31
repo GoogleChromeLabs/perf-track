@@ -24,7 +24,7 @@ limitations under the License. -->
   let canvas;
   let ctx;
   let PieChart;
-
+  
   beforeUpdate(() => {
     if (PieChart) {
       PieChart.data.datasets[0].data = data;
