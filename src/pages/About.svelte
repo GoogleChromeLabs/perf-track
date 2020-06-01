@@ -187,6 +187,10 @@ License. -->
       <li>Page-level information through WebPageTest (such as the total, image, and JavaScript bytes delivered). These results are <strong>page-specific</strong> and do not directly tell us how well a web page performs, but still provide useful insight.</li>
       <li>Real-world user experiences in terms of performance metrics through Chrome UX Report (such as First Contentful Paint, Largest Contentful Paint, etc...). These are <strong>origin-specific</strong>, which means that values are grouped by the entire origin and not just the home page.</li>
     </ol>
+
+    <p>
+      All the results on this site are queryable on BigQuery and can be reproduced. Take a look at the full <a href="https://bigquery.cloud.google.com/savedquery/832467901690:827388adbbdf42e38830a9379b6a3152">list of queries</a> to run it for yourself, but keep in mind that some of these queries are large (> 500GB) and can be <a href="https://cloud.google.com/bigquery/pricing#on_demand_pricing">expensive</a> to run.
+    </p>
   </section>
 
   <section>

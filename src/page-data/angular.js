@@ -62,7 +62,7 @@ export const data = {
     },
     'fcpCrux': {
       numOrigins: 9819,
-      data: [35, 26, 39],
+      data: [32, 18, 50],
     },
     'lcpCrux': {
       numOrigins: 9490,

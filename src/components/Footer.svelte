@@ -30,7 +30,7 @@
     font-weight: 600;
   }
 
-  p a, a:hover, span:hover {
+  p a, a:hover, span:hover, .about-link span:hover {
     text-decoration: none;
     font-weight: 600;
   }
@@ -39,6 +39,10 @@
     display: flex;
     align-items: center;
     padding: 0;
+  }
+
+  .about-link span {
+    font-weight: 500;
   }
 
   @media (max-width: 1240px) {

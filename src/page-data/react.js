@@ -127,7 +127,7 @@ export const data = {
     },
     'fcpCrux': {
       numOrigins: 5209,
-      data: [41, 28, 31],
+      data: [31, 19, 50],
     },
     'lcpCrux': {
       numOrigins: 5035,
@@ -189,7 +189,7 @@ export const data = {
     },
     'fcpCrux': {
       numOrigins: 1877,
-      data: [48, 27, 25],
+      data: [36, 21, 43],
     },
     'lcpCrux': {
       numOrigins: 1823,
