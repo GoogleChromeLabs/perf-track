@@ -2,6 +2,14 @@
 node_modules
 public/*
 !public/index.html
+!public/angular
+!public/amp
+!public/ember
+!public/polymer
+!public/preact
+!public/react
+!public/svelte
+!public/vue
 !public/favicon.png
 stats.html
 .firebase

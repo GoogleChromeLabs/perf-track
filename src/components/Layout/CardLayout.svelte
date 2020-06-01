@@ -40,7 +40,7 @@ limitations under the License. -->
     percent = (data[framework].sampleSize.framework / data[framework].sampleSize.all) * 100;
 
     const frameworkObj = frameworkInfo[framework] || frameworkInfo[topLevelFramework].variations[framework];
-    detectorIcon = frameworkObj.detector === 'wappalyzer' ? "images/wappalyzer-logo.jpeg" : "images/library-detector-logo.png";
+    detectorIcon = frameworkObj.detector === 'wappalyzer' ? "/images/wappalyzer-logo.jpeg" : "/images/library-detector-logo.png";
   }
 
   beforeUpdate(() => updateData());
@@ -150,7 +150,7 @@ limitations under the License. -->
       graph="pie"
       colors={['#fbbc04', '#34a853', '#e74c3c']}
       labels={['Gzip compressed', 'Brotli compressed', 'Not compressed with Gzip or Brotli']}
-      data={[data[framework].compressedRequests.gzipCompressedPercent, data[framework].compressedRequests.brotliCompressedPercent, 100 - data[framework].compressedRequests.gzipCompressedPercent + data[framework].compressedRequests.brotliCompressedPercent]}
+      data={[data[framework].compressedRequests.gzipCompressedPercent, data[framework].compressedRequests.brotliCompressedPercent, 100 - (data[framework].compressedRequests.gzipCompressedPercent + data[framework].compressedRequests.brotliCompressedPercent)]}
       containerHeight="calc(100% - 2rem - 2rem)" />
   </Card>
   <Card heading="Total Bytes" style="grid-column: 1; grid-row: 3;">

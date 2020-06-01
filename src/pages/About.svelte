@@ -1,16 +1,14 @@
 <!-- Copyright 2020 Google LLC
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in
+compliance with the License. You may obtain a copy of the License at
 
     https://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License. -->
+Unless required by applicable law or agreed to in writing, software distributed under the License is
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing permissions and limitations under the
+License. -->
 
 <script>
   import { link } from "svelte-routing";
@@ -34,44 +32,22 @@ limitations under the License. -->
 </script>
 
 <style>
-  .header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #6c4cd5;
-    margin-bottom: 20px;
-    height: 80px;
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.49);
-    z-index: 3;
-  }
-
-  .header .logo {
-    margin-right: 10px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .header .logo:hover {
-    margin-right: 10px;
-    transform: scale(1.1);
-  }
-
-  .header .container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-    max-width: 100%;
+  h1 {
+    font-weight: 600;
   }
 
   .container {
     max-width: 800px;
-    margin: 150px auto;
+    margin: 0 auto;
+  }
+  
+  .back-link {
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+    font-weight: 600;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   section {
@@ -79,124 +55,149 @@ limitations under the License. -->
     border-bottom: 3px solid silver;
   }
 
+  section p {
+    margin: 4rem 0 0;
+  }
+
   section h2 {
     font-size: 28px;
     font-weight: 700;
-    color: #6c4cd5;
-    margin: 0 0 40px;
+    display: inline-block;
   }
 
-  section p {
+  .title {
+    display: flex;
+    align-items: center;
+    padding-top: 20rem;
+  }
+
+  .title img {
+    max-height: 60px;
+    margin-left: 2rem;
+  }
+
+  section {
     font-size: 18px;
     line-height: 1.7;
   }
+
+  section ul, ol {
+    margin: 3rem 3rem 0;
+  }
+
+  @media (max-width: 715px) {
+    .container {
+      margin: 0 3rem;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+    }
+
+    .title {
+      padding-top: 14rem;
+    }
+  }
 </style>
 
+<p class="back-link" on:click={() => window.history.back()}>&lt; Back</p>
 <div class="container">
-  <!-- Header -->
-  <div class="header">
-    <div class="container">
-      <a href="/" use:link class="logo">
-        <Logo width="80" height="80" />
-      </a>
-    </div>
+  <div class="title">
+    <h1>Perf Track</h1>
+    <img src="/images/perf-track-logo.png" alt="Flame logo" />
   </div>
+  <section>
+    <p>
+      <strong>Perf Track</strong> is a project that aims to track and measure the performance of sites that use popular JavaScript frameworks and libraries. It is not an exercise to compare the performance of frameworks against each other.
+    </p>
+    <p><strong>Correlation does not imply causation.</strong></p>
+  </section>
 
   <section>
-    <h2>What is this?</h2>
+    <h2>Frameworks and performance</h2>
 
     <p>
-      An app that displays results from many queries using
-      <a href="https://httparchive.org/">HTTPArchive</a>
-      to find out how well websites that use popular JavaScript frameworks and
-      libraries perform.
+      Perf Track aggregates results for certain frameworks. Conclusions cannot be drawn on the performance of a particular framework just by using this data.
+    </p>
+
+    <p>
+      In other words, a statement like "50% of sites that use Framework X have slow paint times, so Framework X must be a bad choice!" is false and misleading. There are too many variables that need to be considered in order to properly gauge how well a framework performs, and Perf Track only scratches the surface.
+    </p>
+
+    <p>
+      However, Perf Track was built to provide useful insight to both framework authors and developers. If common patterns can be found, we can work together to improve the underlying framework that sites use to make the web better.
     </p>
   </section>
 
   <section>
-    <h2>What dataset is all this data from?</h2>
+    <h2>About the data</h2>
 
     <p>
-      Every query on the site uses the
-      <strong>2019_05_01_mobile</strong>
-      dataset. Every query used in this site are from this mobile dataset -
-      there are none included here for desktop.
+      All data on this site is sourced from <a href="https://httparchive.org/">HTTP Archive</a>, a project that crawls, analyzes, and stores data of millions of URLs every month using a number of testing tools. This includes:
     </p>
+
+    <ul>
+      <li><a href="https://www.webpagetest.org/">WebPageTest</a></li>
+      <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a></li>
+      <li><a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome UX Report</a></li>
+    </ul>
+
+    <p>
+      Some important points regarding the data used for Perf Track: 
+    </p>
+
+    <ul>
+      <li>HTTP Archive updates with new data monthly, but all the results on this site were obtained from the <strong>April 2020</strong> crawl.</li>
+      <li>There are <strong>5,789,440</strong> URLs in the entire dataset, and every query used for Perf Track only analyzes a subset of this data. The number of URLs measured against for each query on this site is included.</li>
+      <li>HTTP Archive sources all its URLs from the <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome UX Report</a>. Only the mobile subset of data from HTTP Archive was queried for this site.</li>
+      <li>Due to resource limitations, only home page URLs are included in the Chrome UX Report. Many sites that use a JavaScript framework and require a log-in can have completely different home page and logged-in experiences, which is important to note (for example: facebook.com).</li>
+    </ul>
   </section>
 
   <section>
-    <h2>How are JavaScript frameworks/libraries detected on a site?</h2>
+    <h2>Detecting frameworks</h2>
 
     <p>
-      With the
-      <a
-        href="https://github.com/johnmichel/Library-Detector-for-Chrome/blob/master/library/libraries.js">
-        Library-Detector-for-Chrome
-      </a>
-      extension. This extension is integrated into Lighthouse which means it can
-      be queried directly through any HTTPArchive run.
+     Analyzing framework usage and performance at scale is possible with the help of third-party projects that have been integrated into the testing tools used by HTTP Archive.
     </p>
+    <ul>
+      <li>WebPageTest added support for <a href="https://www.wappalyzer.com/">Wappalyzer</a> in March 2018, and HTTP Archive runs the latest version of Wappalyzer for all web pages.</li>
+      <li> HTTP Archive runs the latest version of Lighthouse for all of its mobile web pages, which also detects certain JavaScript technologies through a separate library (<a href="https://github.com/johnmichel/Library-Detector-for-Chrome">Library Detector For Chrome</a>).</li>
+    </ul>
+
+    <p>For most of the frameworks in Perf Track, Wappalyzer is used to filter for all URLs that use it on their site. Like any detection tool however, there are limitations, and some of the frameworks analyzed are either not yet detected by Wappalyzer or need to be improved. Until valid detections are in place for those (I'm working on it), Library Detector for Chrome has been used as a suitable alternative.</p>
   </section>
 
   <section>
-    <h2>What does this data tell me?</h2>
+    <h2>Understanding the results</h2>
 
     <p>
-      This is not an exercise to compare the performance of frameworks or sites
-      directly against each other.
-      <strong>Correlation does not mean causation.</strong>
+      Perf Track displays two types of aggregated results for every framework:
     </p>
 
-    <p>
-      However, this can give us some useful insight on what a lot of sites that
-      use a particular tool might be doing well or lacking. How many React sites
-      are compressing their resources? How many Angular sites also use jQuery?
-      Are many Vue sites optimizing their images? Etc, etc...
-    </p>
+    <ol>
+      <li>Page-level information through WebPageTest (such as the total, image, and JavaScript bytes delivered). These results are <strong>page-specific</strong> and do not directly tell us how well a web page performs, but still provide useful insight.</li>
+      <li>Real-world user experiences in terms of performance metrics through Chrome UX Report (such as First Contentful Paint, Largest Contentful Paint, etc...). These are <strong>origin-specific</strong>, which means that values are grouped by the entire origin and not just the home page.</li>
+    </ol>
   </section>
 
   <section>
-    <h2>What other frameworks will this app eventually include?</h2>
-
-    <p>Svelte, Preact and Ember to name a few.</p>
-  </section>
-
-  <section>
-    <h2>What's next for this app?</h2>
+    <h2>Contributing</h2>
 
     <p>
-      Writing queries for each framework and their sub-conditions (React + Next
-      for example) can be quite tedious. The next version of this app will
-      instead leverage the
-      <a href="https://cloud.google.com/bigquery/docs/reference/rest/">
-        BigQuery API
-      </a>
-      to allow anybody to select a framework/library and then select a dataset
-      from HTTP Archive to automatically run all the queries for their specific
-      choice.
+      We would love all kinds of contributions! Some high priority items at the moment:
     </p>
-  </section>
 
-  <section>
-    <h2>Some query results look incorrect. Who do I reach out to?</h2>
-
-    <p>
-      Reach out to Houssein (
-      <strong>hdjirdeh</strong>
-      )!
-    </p>
-  </section>
-
-  <section>
-    <h2>
-      I would love to see a new query that does " ... ". Who do I reach out to?
-    </h2>
+    <ul>
+      <li>Using BigQuery's API to fetch previously queried results instead of locally storing them in JSON files</li>
+      <li>Improving how Wappalyzer detects frameworks and libraries</li>
+      <li>Including more data that can be useful</li>
+    </ul>
 
     <p>
-      Reach out to Houssein (
-      <strong>hdjirdeh</strong>
-      )! He'll work with you to try and include that query for all the
-      frameworks in this app.
+      Please take a look at <a href="https://github.com/GoogleChromeLabs/perf-track/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> and the <a href="https://github.com/GoogleChromeLabs/perf-track/issues">list of issues</a> to find out ways to help.
     </p>
   </section>
 </div>
