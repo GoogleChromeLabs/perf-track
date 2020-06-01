@@ -11,7 +11,7 @@ implied. See the License for the specific language governing permissions and lim
 License. -->
 
 <script>
-  import { link } from "svelte-routing";
+  import { Link } from "svelte-routing";
 
   import StackedBar from "../graphs/StackedBar.svelte";
   import Doughnut from "../graphs/Doughnut.svelte";
@@ -29,6 +29,8 @@ License. -->
 
   let primaryColor = "#ff6384";
   let selectedOption = category[0];
+
+  const getProps = () => ({ "style": 'text-decoration: none; color: #000' });
 </script>
 
 <style>
@@ -102,7 +104,11 @@ License. -->
   }
 </style>
 
-<p class="back-link" on:click={() => window.history.back()}>&lt; Back</p>
+<p class="back-link">
+  <Link getProps="{getProps}" to="angular">
+  &lt; Back
+  </Link>
+</p>
 <div class="container">
   <div class="title">
     <h1>Perf Track</h1>
