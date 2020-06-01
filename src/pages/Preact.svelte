@@ -36,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Preact" {categories} {data} />
+  <PageLayout framework="Preact" route="preact" {categories} {data} />
   <Footer />
 </div>

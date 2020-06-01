@@ -36,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Ember" {categories} {data} />
+  <PageLayout framework="Ember" route="ember" {categories} {data} />
   <Footer />
 </div>

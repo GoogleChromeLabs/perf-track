@@ -37,6 +37,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Polymer" {categories} {data} />
+  <PageLayout framework="Polymer" route="polymer" {categories} {data} />
   <Footer />
 </div>

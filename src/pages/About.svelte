@@ -11,6 +11,7 @@ implied. See the License for the specific language governing permissions and lim
 License. -->
 
 <script>
+  import { onMount } from 'svelte';
   import { Link } from "svelte-routing";
 
   import StackedBar from "../graphs/StackedBar.svelte";
@@ -31,6 +32,17 @@ License. -->
   let selectedOption = category[0];
 
   const getProps = () => ({ "style": 'text-decoration: none; color: #000' });
+
+  onMount(() => {
+    window.ga =
+      window.ga ||
+      function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+
+		window.ga('set', 'page', window.location.pathname);
+    window.ga('send', 'pageview');
+	});
 </script>
 
 <style>

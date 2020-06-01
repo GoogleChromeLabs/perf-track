@@ -36,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Angular" {categories} {data} />
+  <PageLayout framework="Angular" route="angular" {categories} {data} />
   <Footer />
 </div>

@@ -39,6 +39,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="React"  {categories} {data} />
+  <PageLayout framework="React" route="react" {categories} {data} />
   <Footer />
 </div>

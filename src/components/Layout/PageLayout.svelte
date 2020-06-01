@@ -13,6 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License. -->
 
 <script>
+  import { onMount } from 'svelte';
   import { link } from "svelte-routing";
 
   import CardLayout from "./CardLayout.svelte";
@@ -22,11 +23,23 @@ limitations under the License. -->
   import frameworkInfo from "../../utils/framework-info.json";
 
   export let data;
+  export let route;
   export let framework;
   export let categories;
   export let versions = null;
 
   let selectedFrameworkVariation = framework;
+
+  onMount(() => {
+    window.ga =
+      window.ga ||
+      function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+
+		window.ga('set', 'page', window.location.pathname);
+    window.ga('send', 'pageview');
+	});
 </script>
 
 <style>

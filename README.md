@@ -1,11 +1,7 @@
 <p align="center">
   <a href="">
-    <img alt="Perf Track" title="Perf Track" src="https://i.imgur.com/Yl8UEWJ.png" width="600">
+    <img alt="Perf Track" title="Perf Track" src="https://i.imgur.com/Yl8UEWJ.png" width="400">
   </a>
-</p>
-
-<p align="center">
-  <a href="">View App</a>
 </p>
 
 **Perf Track** is a project that aims to track and measure the performance of sites that use popular JavaScript frameworks and libraries. It is not an exercise to compare the performance of frameworks against each other.
@@ -18,13 +14,13 @@
 
 **Can this data tell me which frameworks are faster and more performant than others?**
 
-Perf Track aggregates results for certain frameworks. Conclusions cannot be drawn on the performance of a particular framework just by using this data.
+Perf Track aggregates results for certain frameworks. Conclusions **cannot** be drawn on the performance of a particular framework just by using this data.
 
-**Where should I look to try and understand this data better?**
+**How can I understand this data better?**
 
-Take a look at the ["About"](https://perf-track.web.app/about) page, which goes into a lot more detail about the methodology and data of Perf Track.
+Take a look at the ["About"](https://perf-track.web.app/about) page, which goes into more detail about the methodology and data behind Perf Track.
 
-**Something looks wrong in the data. Can I open an issue?**
+**Something looks wrong, can I open an issue?**
 
 Yes please!
 
@@ -36,4 +32,4 @@ We would love all kinds of contributions! Some high priority items at the moment
 * Improving how Wappalyzer detects frameworks and libraries
 * Including more data that can be useful
 
-Please take a look at [CONTRIBUTING](./CONTRIBUTING.md).
+Please take a look at [CONTRIBUTING.md](./CONTRIBUTING.md).

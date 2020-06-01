@@ -37,6 +37,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Svelte" {categories} {data} />
+  <PageLayout framework="Svelte" route="svelte" {categories} {data} />
   <Footer />
 </div>

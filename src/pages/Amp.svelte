@@ -36,6 +36,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="AMP" {categories} {data} />
+  <PageLayout framework="AMP" route="amp" {categories} {data} />
   <Footer />
 </div>

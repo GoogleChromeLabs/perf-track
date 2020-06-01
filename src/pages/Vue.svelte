@@ -37,6 +37,6 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-  <PageLayout framework="Vue" {categories} {data} />
+  <PageLayout framework="Vue" route="vue" {categories} {data} />
   <Footer />
 </div>
