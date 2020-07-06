@@ -52,7 +52,7 @@ limitations under the License. -->
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
-    height: 100%;
+    min-height: 100%;
   }
 
   .icon {
