@@ -15,7 +15,8 @@ limitations under the License. -->
 <script>
   import Logo from "../components/icons/Logo.svelte";
   import ButtonRoute from "../components/ButtonRoute.svelte";
-  
+  import Footer from "../components/Footer.svelte";
+
   import frameworkInfo from "../utils/framework-info.json";
 </script>
 
@@ -24,6 +25,14 @@ limitations under the License. -->
     height: 100%;
     display: flex;
     align-items: center;
+  }
+
+  .page-container {
+    padding: 4rem 5rem 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
   }
 
   header {
@@ -109,28 +118,31 @@ limitations under the License. -->
   }
 </style>
 
-<div class="container">
-  <div class="row">
-    <header>
-      <div class="title">
-        <h1>
-          Perf Track
-          <img src="/images/perf-track-logo.png" alt="Flame logo" />
-        </h1>
-        <h2>
-          Tracking framework performance at scale
-        </h2>
+<div class="page-container">
+  <div class="container">
+    <div class="row">
+      <header>
+        <div class="title">
+          <h1>
+            Perf Track
+            <img src="/images/perf-track-logo.png" alt="Flame logo" />
+          </h1>
+          <h2>
+            Tracking framework performance at scale
+          </h2>
+        </div>
+      </header>
+      <hr class ="divider"/>
+      <div class="frameworks">
+        {#each Object.keys(frameworkInfo) as framework}
+          <ButtonRoute
+            name={frameworkInfo[framework].name}
+            route={frameworkInfo[framework].route}
+            color={frameworkInfo[framework].color}
+            img={frameworkInfo[framework].imgSrc} />
+        {/each}
       </div>
-    </header>
-    <hr class ="divider"/>
-    <div class="frameworks">
-      {#each Object.keys(frameworkInfo) as framework}
-        <ButtonRoute
-          name={frameworkInfo[framework].name}
-          route={frameworkInfo[framework].route}
-          color={frameworkInfo[framework].color}
-          img={frameworkInfo[framework].imgSrc} />
-      {/each}
     </div>
   </div>
+  <Footer hideDescription />
 </div>

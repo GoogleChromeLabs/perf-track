@@ -52,7 +52,7 @@ limitations under the License. -->
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
-    min-height: 100%;
+    height: 100%;
   }
 
   .icon {
@@ -80,8 +80,8 @@ limitations under the License. -->
   }
 
   img.header-logo {
-    max-width: 30px;
-    max-height: 30px;
+    width: 30px;
+    height: 30px;
   }
 
   @media (min-width: 1240px) {
@@ -121,7 +121,7 @@ limitations under the License. -->
     </span>
     <div class="number-container">
       <p class="heading">{data[framework].sampleSize.framework.toLocaleString()}</p>
-      <span class="subheading">{percent.toFixed(1) === "0.0" ? percent.toFixed(2) : percent.toFixed(1)}% of all URLs</span>
+      <span class="subheading"><strong>{percent.toFixed(1) === "0.0" ? percent.toFixed(2) : percent.toFixed(1)}%</strong> of all {data[framework].sampleSize.all.toLocaleString()} URLs</span>
     </div>
   </Card>
   <Card heading="Web Vitals" style="grid-column: 2 / 4; grid-row: 1 / 3;">

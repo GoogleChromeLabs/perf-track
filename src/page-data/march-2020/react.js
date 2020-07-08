@@ -65,7 +65,7 @@ export const data = {
     },
     'fcpCrux': {
       numOrigins: 116835,
-      data: [43, 28, 29],
+      data: [32, 21, 48],
     },
     'lcpCrux': {
       numOrigins: 113226,
@@ -152,8 +152,8 @@ export const data = {
       all: 5789440
     },
     'compressedRequests': {
-      numUrls: 68620,
-      numRequests: 2872,
+      numUrls: 2874,
+      numRequests: 68628,
       gzipCompressedPercent: 66.3,
       brotliCompressedPercent: 17.5
     },
@@ -214,8 +214,8 @@ export const data = {
       all: 5775713
     },
     'compressedRequests': {
-      numUrls: 156887,
-      numRequests: 6871,
+      numUrls: 6871,
+      numRequests: 156887,
       gzipCompressedPercent: 57.9,
       brotliCompressedPercent: 19.4
     },
@@ -251,7 +251,7 @@ export const data = {
     },
     'fcpCrux': {
       numOrigins: 4832,
-      data: [37, 26, 36],
+      data: [27, 18, 54],
     },
     'lcpCrux': {
       numOrigins: 4644,

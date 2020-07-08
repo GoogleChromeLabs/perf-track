@@ -21,11 +21,9 @@ limitations under the License. -->
   import Vue from "./pages/Vue.svelte";
   import Svelte from "./pages/Svelte.svelte";
   import Ember from "./pages/Ember.svelte";
-  import Amp from "./pages/AMP.svelte";
   import About from "./pages/About.svelte";
   import Polymer from "./pages/Polymer.svelte";
   import Preact from "./pages/Preact.svelte";
-  import Comparison from "./pages/Comparison.svelte";
 </script>
 
 <style>
@@ -94,11 +92,9 @@ limitations under the License. -->
   <Route path="vue" component="{Vue}" />
   <Route path="polymer" component="{Polymer}" />
   <Route path="preact" component="{Preact}" />
-  <Route path="amp" component="{Amp}" />
   <Route path="svelte" component="{Svelte}" />
   <Route path="ember" component="{Ember}" />
   <Route path="about" component="{About}" />
   <Route path="/" component="{Home}" />
-  <Route path="comparison" component="{Comparison}" />
 </Router>
 

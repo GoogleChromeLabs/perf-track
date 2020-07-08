@@ -1,6 +1,7 @@
 <script>
   import { Link } from "svelte-routing";
 
+  export let hideDescription = false;
   const getProps = () => ({ "style": 'display: flex; align-items: center; text-decoration: none;' });
 </script>
 
@@ -21,17 +22,18 @@
 
   a, span {
     color: #333333;
-    font-weight: 500;
+    font-weight: 600;
     transition: all .1s ease-in-out;
     text-decoration: none;
   }
 
-  span {
+  p a:hover, a:hover, span:hover, .about-link span:hover {
+    text-decoration: none;
+    color: #ff6168;
     font-weight: 600;
   }
-
-  p a, a:hover, span:hover, .about-link span:hover {
-    text-decoration: none;
+  
+  p a {
     font-weight: 600;
   }
 
@@ -42,7 +44,7 @@
   }
 
   .about-link span {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   @media (max-width: 1240px) {
@@ -59,7 +61,11 @@
       <span>About</span>
     </div>
   </Link>
-  <p>Data from <a href="https://httparchive.org/">HTTP Archive</a> (2020_04_01_mobile) and <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome User Experience Report</a> (202004)</p>
+  <p>
+    {#if !hideDescription}
+    Data from <a href="https://httparchive.org/">HTTP Archive</a> and <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome User Experience Report</a>
+    {/if}
+  </p>
   <a href="https://github.com/GoogleChromeLabs/perf-track">
     GitHub
   </a>
