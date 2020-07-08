@@ -2,6 +2,7 @@
 node_modules
 public/*
 !public/index.html
+!public/images
 !public/angular
 !public/amp
 !public/ember
