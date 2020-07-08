@@ -13,24 +13,7 @@ License. -->
 <script>
   import { onMount } from "svelte";
   import { Link } from "svelte-routing";
-
-  import StackedBar from "../graphs/StackedBar.svelte";
-  import Doughnut from "../graphs/Doughnut.svelte";
-  import Pie from "../graphs/Pie.svelte";
-
-  import Logo from "../components/icons/Logo.svelte";
-  import AccessibilityIcon from "../components/icons/Accessibility.svelte";
-  import ImageIcon from "../components/icons/Image.svelte";
-  import TimerIcon from "../components/icons/Timer.svelte";
-
-  import FrameworkHeader from "../components/FrameworkHeader.svelte";
-  import MetricChart from "../components/MetricChart.svelte";
-
-  import { category, data } from "../page-data/angular.js";
-
-  let primaryColor = "#ff6384";
-  let selectedOption = category[0];
-
+  
   const getProps = () => ({ style: "text-decoration: none; color: #000" });
 
   onMount(() => {
@@ -261,15 +244,14 @@ License. -->
 
     <ul>
       <li>
-        HTTP Archive and Chrome UX Report both update with new data monthly, but
+        HTTP Archive and Chrome UX Report both update with new data monthly, and
         all the results on this site were obtained from the
-        <b>April 2020</b>
-        crawls.
+        <b>March and April</b> crawls (2020).
       </li>
       <li>
         There are
         <b>5,789,440</b>
-        origins in the entire dataset. The number of origins measured against
+        origins in the March dataset, and <b>5,349,874</b> origins in April. The number of origins measured against
         for each query on this site is included.
       </li>
       <li>
@@ -303,7 +285,7 @@ License. -->
           <i>all</i>
         </b>
         sites that use frameworks is not a goal of Perf Track. The data only
-        contains information for ~5.7M home pages and nothing more.
+        contains information for 5.3~5.7M home pages and nothing more.
       </p>
     </aside>
   </section>
@@ -424,11 +406,6 @@ License. -->
           <td>Wappalyzer</td>
           <td />
         </tr>
-        <tr>
-          <td>AMP</td>
-          <td>Wappalyzer</td>
-          <td />
-        </tr>
       </tbody>
     </table>
 
@@ -529,5 +506,5 @@ License. -->
     </p>
   </section>
 
-  <footer>With thanks to Ilya Grigorik and Rick Viscomi for their reviews.</footer>
+  <footer>With thanks to <a href="https://mobile.twitter.com/igrigorik">Ilya Grigorik</a> and <a href="https://mobile.twitter.com/rick_viscomi">Rick Viscomi</a> for their reviews.</footer>
 </div>

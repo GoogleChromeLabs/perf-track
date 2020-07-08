@@ -18,7 +18,7 @@ limitations under the License. -->
   import PageLayout from "../components/Layout/PageLayout.svelte";
   import Footer from "../components/Footer.svelte";
 
-  import { data } from "../page-data/react.js";
+  import { data } from "../page-data";
 
   let categories = [
     { id: 1, framework: 'React', text: 'React' },

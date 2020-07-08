@@ -26,9 +26,16 @@ limitations under the License. -->
   export let route;
   export let framework;
   export let categories;
-  export let versions = null;
+  
+  let datasets = ['March', 'April'];
+  let selectedDataset;
 
+  if (!selectedDataset) {
+    selectedDataset = datasets[datasets.length - 1]; // Default to the latest dataset
+  }
   let selectedFrameworkVariation = framework;
+  
+  const changeDataset = () => selectedDataset = selected.framework;
 
   onMount(() => {
     window.ga =
@@ -50,13 +57,13 @@ limitations under the License. -->
     justify-content: space-between;
   }
 
-  .dropdown-container {
+  form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  .dropdown-container .spacer {
+  form .spacer {
     margin-top: 2rem;
   }
 
@@ -93,8 +100,13 @@ limitations under the License. -->
       border-top: 4px solid #f1f1f1;
     }
 
-    .dropdown-container {
+    form {
       width: 100%;
+    }
+
+    select {
+      margin: 0;
+      min-width: 38rem;
     }
 
     .button-routes {
@@ -102,21 +114,63 @@ limitations under the License. -->
       width: 100%;
     }
   }
+
+  label {
+		font-weight: 600;
+		margin-right: 1rem;
+	}
+
+  .dropdown-container {
+    display: flex;
+		align-items: center;
+    justify-content: space-between;
+		max-width: 47rem;
+  }
+
+  select {
+    min-width: 38rem;
+  }
+  
+  @media (max-width: 715px) {
+		label {
+			display: none;
+		}
+
+		select {
+			min-width: auto;
+			width: 75%;
+		}
+
+		form {
+			width: 90%;
+		}
+
+    form .spacer {
+      margin-top: 1rem;
+    }
+  }
 </style>
 
 <div class="header">
-  <div class="dropdown-container">
+  <form>
     <Dropdown
       {framework}
       bind:selectedFramework={selectedFrameworkVariation}
       data={categories}
       label="Category:"
       img />
-    {#if versions}
-      <span class="spacer" />
-      <Dropdown data={versions} label="Version:" />
-    {/if}
-  </div>
+    <span class="spacer" />
+    <div class="dropdown-container">
+      <label>Dataset:</label>
+      <select bind:value={selectedDataset}>
+        {#each datasets as dataset}
+          <option value={dataset}>
+            {dataset}
+          </option>
+        {/each}
+      </select>
+    </div>
+  </form>
 
   <div class="button-routes">
     {#each Object.keys(frameworkInfo) as framework}
@@ -129,4 +183,4 @@ limitations under the License. -->
     {/each}
   </div>
 </div>
-<CardLayout {data} topLevelFramework={framework} bind:framework={selectedFrameworkVariation} />
+<CardLayout data={data[selectedDataset][framework]} topLevelFramework={framework} bind:framework={selectedFrameworkVariation} />

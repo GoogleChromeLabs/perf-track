@@ -122,8 +122,8 @@ limitations under the License. -->
     :global(.button-route.mini) {
       min-width: auto;
       min-height: auto;
-      width: 3.5rem;
-      height: 5rem;
+      width: 4.5rem;
+      height: 4.5rem;
       box-shadow: #888c8d 0px 1px 6px;
     }
   }

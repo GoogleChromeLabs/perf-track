@@ -79,12 +79,5 @@
         "detector": "wappalyzer"
       }
     }
-  },
-  "AMP": {
-    "name": "AMP",
-    "color": "#005af0",
-    "imgSrc": "/images/amp-logo.png",
-    "route": "amp",
-    "detector": "wappalyzer"
   }
 }

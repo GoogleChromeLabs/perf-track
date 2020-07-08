@@ -30,7 +30,8 @@ limitations under the License. -->
 	let answer = '';
 
 	let currFramework = frameworkInfo[framework];
-	let selectedFrameworkVariation = (selected) => frameworkInfo[framework].variations[selected.framework];
+
+	let selectedFrameworkVariation = (selected) => frameworkInfo[framework].variations && frameworkInfo[framework].variations[selected.framework];
 
 	const changeSelected = () => selectedFramework = selected.framework;
 </script>
@@ -40,13 +41,6 @@ limitations under the License. -->
     margin: 0;
 		min-width: 38rem;
   }
-
-	form {
-		display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-	}
 
 	img {
 		max-height: 30px;
@@ -61,6 +55,7 @@ limitations under the License. -->
 	.container {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		max-width: 47rem;
 	}
 
@@ -72,45 +67,41 @@ limitations under the License. -->
 	.combined-images .divider {
 		margin-left: 1rem;
     font-size: 3rem;
+		line-height: 0;
 	}
 
 	@media (max-width: 715px) {
+		.container {
+			justify-content: initial;
+		}
+
 		label {
 			display: none;
 		}
 
 		select {
 			min-width: auto;
-			width: 100%;
-		}
-
-		form {
-			width: 90%;
+			width: 75%;
 		}
   }
-
 </style>
 
 <div class="container">
-	<form>
-		<label>{label}</label>
-		<select bind:value={selected} on:change={changeSelected}>
-			{#each data as item}
-				<option value={item}>
-						{item.text}
-				</option>
-			{/each}
-		</select>
-	</form>
+	<label>{label}</label>
+	<select bind:value={selected} on:change={changeSelected}>
+		{#each data as item}
+			<option value={item}>
+					{item.text}
+			</option>
+		{/each}
+	</select>
 	{#if img && selected}
-		{#if frameworkInfo[selected.framework]}
-			<img src={currFramework.imgSrc} alt="{currFramework.imgSrc} logo"/>
-		{:else if selectedFrameworkVariation(selected)}
+		<img src={currFramework.imgSrc} alt="{currFramework.imgSrc} logo"/>
+		{#if selectedFrameworkVariation(selected)}
 				{#if img && selectedFrameworkVariation.standalone || window.screen.width <= 715}
 				<img src={selectedFrameworkVariation(selected).imgSrc} alt="{selectedFrameworkVariation(selected).imgSrc.imgSrc} logo"/>
 				{:else }
-				<span class="combined-images">
-					<img src={currFramework.imgSrc} alt="{currFramework.imgSrc} logo"/> 
+				<span class="combined-images">					
 					<span class="divider">+</span>
 					<img src={selectedFrameworkVariation(selected).imgSrc} alt="{selectedFrameworkVariation(selected).imgSrc.imgSrc} logo"/>
 				</span>

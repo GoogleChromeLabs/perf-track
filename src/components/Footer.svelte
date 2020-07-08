@@ -59,7 +59,7 @@
       <span>About</span>
     </div>
   </Link>
-  <p>Data from <a href="https://httparchive.org/">HTTP Archive</a> (2020_04_01_mobile) and <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome User Experience Report</a> (202004)</p>
+  <p>Data from <a href="https://httparchive.org/">HTTP Archive</a> and <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome User Experience Report</a></p>
   <a href="https://github.com/GoogleChromeLabs/perf-track">
     GitHub
   </a>
