@@ -32,6 +32,7 @@ limitations under the License. -->
     flex-direction: column;
     box-sizing: border-box;
     height: 100%;
+    justify-content: space-between;
   }
 </style>
 

@@ -13,11 +13,23 @@ See the License for the specific language governing permissions and
 limitations under the License. -->
 
 <script>
-  import Logo from "../components/icons/Logo.svelte";
+  import { onMount } from 'svelte';
+
   import ButtonRoute from "../components/ButtonRoute.svelte";
   import Footer from "../components/Footer.svelte";
 
   import frameworkInfo from "../utils/framework-info.json";
+
+  onMount(() => {
+    window.ga =
+      window.ga ||
+      function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+
+		window.ga('set', 'page', window.location.pathname);
+    window.ga('send', 'pageview');
+	});
 </script>
 
 <style>
@@ -73,6 +85,10 @@ limitations under the License. -->
 
     .title {
       text-align: center;
+    }
+
+    .page-container {
+      padding: 0;
     }
 
     .frameworks {

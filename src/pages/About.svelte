@@ -12,10 +12,7 @@ License. -->
 
 <script>
   import { onMount } from "svelte";
-  import { Link } from "svelte-routing";
   
-  const getProps = () => ({ style: "text-decoration: none; color: #000" });
-
   onMount(() => {
     window.ga =
       window.ga ||
@@ -45,6 +42,11 @@ License. -->
     font-weight: 600;
     font-size: 2rem;
     cursor: pointer;
+  }
+
+  .back-link a {
+    text-decoration: none; 
+    color: #000;
   }
 
   section {
@@ -145,7 +147,7 @@ License. -->
 </style>
 
 <p class="back-link">
-  <Link {getProps} to="angular">&lt; Back</Link>
+  <a href="javascript:history.back()">&lt; Back</a>
 </p>
 <div class="container">
   <div class="title">
