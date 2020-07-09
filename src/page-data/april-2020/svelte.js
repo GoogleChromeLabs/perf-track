@@ -22,126 +22,126 @@ export const category = [
 export const data = {
   [category[0]]: {
     'sampleSize': {
-      framework: 387,
-      all: 5349874
+      framework: 377,
+      all: 5789440
     },
     'compressedRequests': {
-      numUrls: 327,
-      numRequests: 11464,
-      gzipCompressedPercent: 59.6,
-      brotliCompressedPercent: 24.3
+      numUrls: 226,
+      numRequests: 9318,
+      gzipCompressedPercent: 58.5,
+      brotliCompressedPercent: 18.7
     },
     'totalBytesBreakdown': {
-      numUrls: 387,
+      numUrls: 377,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [4.13, 9.04, 6.98, 7.49, 3.88, 68.48]
+          "data": [2.12, 6.63, 6.37, 6.37, 5.57, 72.94]
         }]
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 387,
+      numUrls: 377,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [20.41, 21.96, 11.89, 16.80, 6.72, 22.22]
+          "data": [16.71, 23.34, 9.81, 15.38, 9.28, 25.46]
         }]
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 387,
+      numUrls: 377,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [32.56, 11.63, 5.43, 4.91, 3.62, 41.86]
+          "data": [27.32, 15.92, 4.24, 6.10, 3.98, 42.44]
         }]
       },
     },
     'fcpCrux': {
-      numOrigins: 185,
-      data: [40, 20, 39],
+      numOrigins: 171,
+      data: [38, 20, 42],
     },
     'lcpCrux': {
-      numOrigins: 184,
-      data: [46, 18, 36],
+      numOrigins: 170,
+      data: [43, 19, 39],
     },
     'fidCrux': {
-      numOrigins: 151,
-      data: [86, 10, 4],
+      numOrigins: 146,
+      data: [83, 12, 4],
     },
     'clsCrux': {
-      numOrigins: 185,
-      data: [74, 9, 17],
+      numOrigins: 171,
+      data: [71, 8, 21],
     },
     'ttfbCrux': {
-      numOrigins: 185,
-      data: [40, 32, 28]
+      numOrigins: 171,
+      data: [38, 32, 30]
     },
   },
   [category[1]]: {
     'sampleSize': {
-      framework: 88,
-      all: 5349874
+      framework: 79,
+      all: 5789440
     },
     'compressedRequests': {
-      numUrls: 78,
-      numRequests: 1385,
-      gzipCompressedPercent: 69.0,
-      brotliCompressedPercent: 22.3
+      numUrls: 54,
+      numRequests: 935,
+      gzipCompressedPercent: 75.6,
+      brotliCompressedPercent: 17.1
     },
     'totalBytesBreakdown': {
-      numUrls: 88,
+      numUrls: 79,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [6.82, 4.55, 13.64, 7.95, 2.27, 64.77]
+          "data": [3.80, 5.06, 11.39, 5.06, 6.33, 68.35]
         }]
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 88,
+      numUrls: 79,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [40.91, 20.45, 10.23, 9.09, 6.82, 12.50]
+          "data": [34.18, 25.32, 11.39, 13.92, 5.06, 10.13]
         }]
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 88,
+      numUrls: 79,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [30.68, 7.95, 5.68, 4.55, 2.27, 48.86]
+          "data": [26.58, 11.39, 3.80, 5.06, 2.53, 50.63]
         }]
       },
     },
     'fcpCrux': {
-      numOrigins: 38,
-      data: [50, 20, 30],
+      numOrigins: 29,
+      data: [49, 21, 31],
     },
     'lcpCrux': {
-      numOrigins: 37,
-      data: [51, 20, 29],
+      numOrigins: 29,
+      data: [50, 19, 30],
     },
     'fidCrux': {
-      numOrigins: 27,
-      data: [90, 8, 2],
+      numOrigins: 24,
+      data: [86, 12, 2],
     },
     'clsCrux': {
-      numOrigins: 38,
-      data: [77, 8, 15],
+      numOrigins: 29,
+      data: [76, 10, 14],
     },
     'ttfbCrux': {
-      numOrigins: 38,
-      data: [45, 33, 22]
+      numOrigins: 29,
+      data: [45, 32, 23]
     },
   }
 }

@@ -248,12 +248,12 @@ License. -->
       <li>
         HTTP Archive and Chrome UX Report both update with new data monthly, and
         all the results on this site were obtained from the
-        <b>March and April</b> crawls (2020).
+        <b>April and May</b> crawls (2020).
       </li>
       <li>
         There are
         <b>5,789,440</b>
-        origins in the March dataset, and <b>5,349,874</b> origins in April. The number of origins measured against
+        origins in the April dataset, and <b>5,349,874</b> origins in May. The number of origins measured against
         for each query on this site is included.
       </li>
       <li>

@@ -21,64 +21,64 @@ export const category = [
 export const data = {
   [category[0]]: {
     'sampleSize': {
-      framework: 9860,
-      all: 5349874
+      framework: 9840,
+      all: 5789440
     },
     'compressedRequests': {
-      numUrls: 6718,
-      numRequests: 112012,
-      gzipCompressedPercent: 31.6,
-      brotliCompressedPercent: 58.3
+      numUrls: 4539,
+      numRequests: 75089,
+      gzipCompressedPercent: 32.5,
+      brotliCompressedPercent: 57.9
     },
     'totalBytesBreakdown': {
-      numUrls: 9860,
+      numUrls: 9840,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [4.10, 16.99, 18.85, 16.15, 10.97, 32.94]
+          "data": [4.09, 16.29, 18.17, 17.02, 10.87, 33.56]
         }]
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 9860,
+      numUrls: 9840,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [37.29, 42.84, 8.63, 4.84, 2.35, 4.05]
+          "data": [38.94, 41.21, 8.78, 4.72, 2.45, 3.90]
         }]
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 9860,
+      numUrls: 9840,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [49.17, 18.59, 8.22, 5.40, 3.37, 15.26]
+          "data": [48.40, 18.73, 8.55, 5.29, 3.32, 15.70]
         }]
       },
     },
     'fcpCrux': {
-      numOrigins: 5632,
-      data: [34, 20, 46],
+      numOrigins: 5400,
+      data: [34, 20, 47],
     },
     'lcpCrux': {
-      numOrigins: 5494,
-      data: [43, 19, 38],
+      numOrigins: 5288,
+      data: [43, 18, 39],
     },
     'fidCrux': {
-      numOrigins: 3790,
+      numOrigins: 3646,
       data: [84, 13, 3],
     },
     'clsCrux': {
-      numOrigins: 5578,
+      numOrigins: 5345,
       data: [84, 5, 11],
     },
     'ttfbCrux': {
-      numOrigins: 5619,
-      data: [31, 32, 37]
+      numOrigins: 5395,
+      data: [31, 31, 38]
     },
   }
 }

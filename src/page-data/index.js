@@ -1,11 +1,11 @@
-import * as march_data from "./march-2020";
 import * as april_data from "./april-2020";
+import * as may_data from "./may-2020";
 
 export const data = {
-  'March': {
-    ...march_data,
-  },
-  'April': {
+  'April 1st - Mobile': {
     ...april_data,
+  },
+  'May 1st - Mobile': {
+    ...may_data,
   }
 }

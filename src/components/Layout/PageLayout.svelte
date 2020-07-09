@@ -27,15 +27,12 @@ limitations under the License. -->
   export let framework;
   export let categories;
   
-  let datasets = ['March', 'April'];
+  let datasets = ['April 1st - Mobile', 'May 1st - Mobile'];
   let selectedDataset;
 
-  if (!selectedDataset) {
-    selectedDataset = datasets[datasets.length - 1]; // Default to the latest dataset
-  }
+  if (!selectedDataset) selectedDataset = datasets[datasets.length - 1]; // Default to the latest dataset
+
   let selectedFrameworkVariation = framework;
-  
-  const changeDataset = () => selectedDataset = selected.framework;
 
   onMount(() => {
     window.ga =
