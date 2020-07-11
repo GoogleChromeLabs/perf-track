@@ -37,6 +37,11 @@ limitations under the License. -->
     height: 100%;
     justify-content: space-between;
   }
+  @media (min-width: 1241px) {
+    .container {
+      height: auto;
+    }
+  }
 </style>
 
 <div class="container">
