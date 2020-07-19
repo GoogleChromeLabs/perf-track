@@ -18,6 +18,7 @@ limitations under the License. -->
 	const dispatch = createEventDispatcher();
 	
 	export let img = false;
+	export let id;
 	export let label;
 	export let data;
 	export let framework;
@@ -87,8 +88,8 @@ limitations under the License. -->
 </style>
 
 <div class="container">
-	<label>{label}</label>
-	<select bind:value={selected} on:change={changeSelected}>
+	<label for={id}>{label}</label>
+	<select id={id} bind:value={selected} on:change={changeSelected}>
 		{#each data as item}
 			<option value={item}>
 					{item.text}
