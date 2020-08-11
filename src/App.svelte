@@ -16,6 +16,7 @@ limitations under the License. -->
   import { Router, Route } from "svelte-routing";
 
   import Home from "./pages/Home.svelte";
+  import Amp from "./pages/Amp.svelte";
   import Angular from "./pages/Angular.svelte";
   import React from "./pages/React.svelte";
   import Vue from "./pages/Vue.svelte";
@@ -87,6 +88,7 @@ limitations under the License. -->
 </style>
 
 <Router>
+  <Route path="amp" component="{Amp}" />
   <Route path="angular" component="{Angular}" />
   <Route path="react" component="{React}" />
   <Route path="vue" component="{Vue}" />
