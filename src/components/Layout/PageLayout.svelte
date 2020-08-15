@@ -27,10 +27,16 @@ limitations under the License. -->
   export let framework;
   export let categories;
   
-  let datasets = ['April 1st - Mobile', 'May 1st - Mobile'];
+  let datasets = ['April 1st - Mobile', 'May 1st - Mobile', 'June 1st - Mobile'];
   let selectedDataset;
 
-  if (!selectedDataset) selectedDataset = datasets[datasets.length - 1]; // Default to the latest dataset
+  while (!selectedDataset || !data[selectedDataset][framework]) {
+    if (!selectedDataset) {
+      selectedDataset = datasets[datasets.length - 1]; // Default to the latest dataset
+    } else if (!data[selectedDataset][framework]) {
+      selectedDataset = datasets[datasets.indexOf(selectedDataset) - 1]; // Default to the latest available dataset
+    }
+  }
 
   let selectedFrameworkVariation = framework;
 
