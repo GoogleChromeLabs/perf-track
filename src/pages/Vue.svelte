@@ -1,3 +1,33 @@
+<script>
+  import { link } from "svelte-routing";
+
+  import PageLayout from "../components/Layout/PageLayout.svelte";
+  import Footer from "../components/Footer.svelte";
+
+  import { data } from "../page-data";
+
+  let categories = [
+    { id: 1, framework: "Vue", text: "Vue" },
+    { id: 2, framework: "Nuxt.js", text: "Vue sites built with Nuxt.js" }
+  ];
+</script>
+
+<style>
+  .container {
+    padding: 4rem 5rem 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: space-between;
+  }
+  @media (min-width: 1241px) and (max-width: 1919px) {
+    .container {
+      height: auto;
+    }
+  }
+</style>
+
 <!-- Copyright 2020 Google LLC
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,32 +41,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. -->
-
-<script>
-  import { link } from "svelte-routing";
-
-  import PageLayout from "../components/Layout/PageLayout.svelte";
-  import Footer from "../components/Footer.svelte";
-
-  import { data } from "../page-data";
-
-  let categories = [
-    { id: 1, framework: 'Vue', text: 'Vue' },
-    { id: 2, framework: 'Nuxt.js', text: 'Vue sites built with Nuxt.js' },
-  ];
-</script>
-
-<style>
-  .container {
-    padding: 4rem 5rem 0;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    height: 100%;
-    justify-content: space-between;
-  }
-</style>
-
 <div class="container">
   <PageLayout framework="Vue" route="vue" {categories} {data} />
   <Footer />
