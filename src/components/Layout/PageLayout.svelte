@@ -160,12 +160,13 @@ limitations under the License. -->
       {framework}
       bind:selectedFramework={selectedFrameworkVariation}
       data={categories}
+      id="category-select"
       label="Category:"
       img />
     <span class="spacer" />
     <div class="dropdown-container">
-      <label>Dataset:</label>
-      <select bind:value={selectedDataset}>
+      <label for="dataset-select">Dataset:</label>
+      <select id="dataset-select" bind:value={selectedDataset}>
         {#each datasets as dataset}
           <option value={dataset}>
             {dataset}
