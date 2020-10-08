@@ -24,6 +24,7 @@ limitations under the License. -->
   import Ember from "./pages/Ember.svelte";
   import About from "./pages/About.svelte";
   import Polymer from "./pages/Polymer.svelte";
+  import LitElement from "./pages/LitElement.svelte";
   import Preact from "./pages/Preact.svelte";
 </script>
 
@@ -93,6 +94,7 @@ limitations under the License. -->
   <Route path="react" component="{React}" />
   <Route path="vue" component="{Vue}" />
   <Route path="polymer" component="{Polymer}" />
+  <Route path="litelement" component="{LitElement}" />
   <Route path="preact" component="{Preact}" />
   <Route path="svelte" component="{Svelte}" />
   <Route path="ember" component="{Ember}" />
