@@ -14,4 +14,4 @@
  * the License.
  */
 
-export { data as AMP } from './amp';
+export { data as AMP } from './amp.js';
