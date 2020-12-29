@@ -14,11 +14,11 @@
  * the License.
  */
 
-export { data as AMP } from './amp';
-export { data as Angular } from './angular';
-export { data as Ember } from './ember';
-export { data as Polymer } from './polymer';
-export { data as Preact } from './preact';
-export { data as React } from './react';
-export { data as Svelte } from './svelte';
-export { data as Vue } from './vue';
+export { data as AMP } from './amp.js';
+export { data as Angular } from './angular.js';
+export { data as Ember } from './ember.js';
+export { data as Polymer } from './polymer.js';
+export { data as Preact } from './preact.js';
+export { data as React } from './react.js';
+export { data as Svelte } from './svelte.js';
+export { data as Vue } from './vue.js';
