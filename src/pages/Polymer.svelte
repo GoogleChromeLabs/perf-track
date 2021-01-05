@@ -21,11 +21,6 @@
     height: 100%;
     justify-content: space-between;
   }
-  @media (min-width: 1241px) and (max-width: 1919px) {
-    .container {
-      height: auto;
-    }
-  }
 </style>
 
 <!-- Copyright 2020 Google LLC

@@ -129,7 +129,7 @@ limitations under the License. -->
       <LightningIcon />
     </span>
     <span slot="number">
-      Origin-aggregated (3G + mobile)
+      Origin-aggregated
     </span>
     <MetricChartLayout 
       bind:fcp={data[framework].fcpCrux} 

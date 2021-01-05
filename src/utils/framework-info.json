@@ -1,11 +1,4 @@
 {
-  "AMP": {
-    "name": "AMP",
-    "color": "#005AF0",
-    "imgSrc": "/images/amp-logo.png",
-    "route": "amp",
-    "detector": "wappalyzer"
-  },
   "Angular": {
     "name": "Angular",
     "color": "#FF6384",
@@ -86,5 +79,12 @@
         "detector": "wappalyzer"
       }
     }
+  },
+  "AMP": {
+    "name": "AMP",
+    "color": "#005AF0",
+    "imgSrc": "/images/amp-logo.png",
+    "route": "amp",
+    "detector": "wappalyzer"
   }
 }

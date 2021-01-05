@@ -14,6 +14,7 @@
  * the License.
  */
 
+export { data as AMP } from './amp';
 export { data as Angular } from './angular';
 export { data as Ember } from './ember';
 export { data as Polymer } from './polymer';
