@@ -27,7 +27,7 @@ limitations under the License. -->
   export let framework;
   export let categories;
   
-  let datasets = ['April 1st - Mobile', 'May 1st - Mobile', 'June 1st - Mobile'];
+  let datasets = ['November 1st - Mobile'];
   let selectedDataset;
 
   while (!selectedDataset || !data[selectedDataset][framework]) {
