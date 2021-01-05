@@ -11,7 +11,7 @@
     "color": "#36A2EB",
     "imgSrc": "/images/react-logo.png",
     "route": "react",
-    "detector": "library-detector",
+    "detector": "wappalyzer",
     "variations": {
       "Next.js": {
         "imgSrc": "/images/nextjs-logo.png",

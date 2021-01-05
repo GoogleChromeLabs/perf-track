@@ -1,18 +1,6 @@
-<!-- Copyright 2020 Google LLC
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in
-compliance with the License. You may obtain a copy of the License at
-
-    https://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is
-distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-implied. See the License for the specific language governing permissions and limitations under the
-License. -->
-
 <script>
   import { onMount } from "svelte";
-  
+
   onMount(() => {
     window.ga =
       window.ga ||
@@ -45,7 +33,7 @@ License. -->
   }
 
   .back-link a {
-    text-decoration: none; 
+    text-decoration: none;
     color: #000;
   }
 
@@ -146,6 +134,17 @@ License. -->
   }
 </style>
 
+<!-- Copyright 2020 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in
+compliance with the License. You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing permissions and limitations under the
+License. -->
 <p class="back-link">
   <a href="javascript:history.back()">&lt; Back</a>
 </p>
@@ -192,12 +191,15 @@ License. -->
     </p>
 
     <p>
-      In other words, a statement like "50% of sites that use Framework X have
-      slow paint times, so Framework X must be a bad choice!" is false and
-      misleading. If many sites that use Framework X have notably better
-      performance - that may be attributable to better DX that helps developers
-      stay on track, but it may also be because developers that choose Framework
-      X pay closer attention to performance.
+      In other words, a statement like
+      <i>
+        "50% of sites that use Framework X have slow paint times, so Framework X
+        must be a bad choice"
+      </i>
+      is false and misleading. If many sites that use Framework X have notably
+      better performance - that may be attributable to better DX that helps
+      developers stay on track, but it may also be because developers that
+      choose Framework X pay closer attention to performance.
     </p>
 
     <p>
@@ -248,13 +250,14 @@ License. -->
       <li>
         HTTP Archive and Chrome UX Report both update with new data monthly, and
         all the results on this site were obtained from the
-        <b>April and May</b> crawls (2020).
+        <b>October 2020</b>
+        crawl.
       </li>
       <li>
         There are
-        <b>5,789,440</b>
-        origins in the April dataset, and <b>5,349,874</b> origins in May. The number of origins measured against
-        for each query on this site is included.
+        <b>6,971,970</b>
+        origins in the dataset. The number of origins measured against for each
+        query on this site is included.
       </li>
       <li>
         HTTP Archive sources all its URLs from the
@@ -269,14 +272,19 @@ License. -->
         Due to resource limitations, only home page URLs are included in HTTP
         Archive. Many sites that use a JavaScript framework and require a log-in
         can have completely different home page and logged-in experiences, which
-        is important to note (for example: facebook.com).
+        is important to note (for example:
+        <a href="https://www.facebook.com/">facebook.com</a>
+        ).
       </li>
       <li>
         For the “Web Vitals” section in Perf Track, URLs from HTTP Archive are
         joined with origins from Chrome UX Report. If a URL is the home page of
-        an origin (for example: https://www.example.com/ for the origin
-        https://www.example.com), the aggregated results for the entire origin
-        are included even if the framework is only used on the home page.
+        an origin (for example:
+        <i>https://www.example.com/</i>
+        for the origin
+        <i>https://www.example.com)</i>
+        , the aggregated results for the entire origin are included even if the
+        framework is only used on the home page.
       </li>
     </ul>
 
@@ -287,7 +295,7 @@ License. -->
           <i>all</i>
         </b>
         sites that use frameworks is not a goal of Perf Track. The data only
-        contains information for 5.3~5.7M home pages and nothing more.
+        contains information for ~7M home pages and nothing more.
       </p>
     </aside>
   </section>
@@ -346,16 +354,8 @@ License. -->
         </tr>
         <tr>
           <td>React</td>
-          <td>Library Detector</td>
-          <td>
-            Wappalyzer detection has false positives (
-            <a href="https://github.com/AliasIO/wappalyzer/pull/3047">fixed</a>
-            but will show in a future crawl) and false negatives (
-            <a href="https://github.com/AliasIO/wappalyzer/issues/2450">
-              issue
-            </a>
-            ).
-          </td>
+          <td>Wappalyzer</td>
+          <td />
         </tr>
         <tr>
           <td>Next.js</td>
@@ -463,12 +463,17 @@ License. -->
 
     <p>
       All the results on this site are queryable on BigQuery and can be
-      reproduced. Take a look at the full
+      reproduced. Take a look at the full list of queries (
       <a
-        href="https://bigquery.cloud.google.com/savedquery/832467901690:827388adbbdf42e38830a9379b6a3152">
-        list of queries
+        href="https://console.cloud.google.com/bigquery?sq=832467901690:85a79d3e313943bdbe0a747559e0754a">
+        Wappalyzer
       </a>
-      to run it for yourself, but keep in mind that some of these queries are
+      and
+      <a
+        href="https://console.cloud.google.com/bigquery?sq=832467901690:b942284f2a97472ba38f20f553caebd5">
+        Lighthouse
+      </a>
+      ) to run it for yourself, but keep in mind that some of these queries are
       large (> 500GB) and can be
       <a href="https://cloud.google.com/bigquery/pricing#on_demand_pricing">
         expensive
@@ -508,5 +513,11 @@ License. -->
     </p>
   </section>
 
-  <footer>With thanks to <a href="https://mobile.twitter.com/igrigorik">Ilya Grigorik</a> and <a href="https://mobile.twitter.com/rick_viscomi">Rick Viscomi</a> for their reviews.</footer>
+  <footer>
+    With thanks to
+    <a href="https://mobile.twitter.com/igrigorik">Ilya Grigorik</a>
+    and
+    <a href="https://mobile.twitter.com/rick_viscomi">Rick Viscomi</a>
+    for their reviews.
+  </footer>
 </div>
