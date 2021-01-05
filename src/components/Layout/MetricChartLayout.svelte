@@ -32,8 +32,8 @@ limitations under the License. -->
         shortName: "FCP",
         data: fcp.data,
         num: fcp.numOrigins,
-        fastThreshold: "1.5s",
-        poorThreshold: "2.5s"
+        fastThreshold: "1.8s",
+        poorThreshold: "3s"
       },
       {
         name: "Largest Contentful Paint",

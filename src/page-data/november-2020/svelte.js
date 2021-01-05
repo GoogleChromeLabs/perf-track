@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,133 +15,133 @@
  */
 
 export const category = [
-  'Vue',
-  'Nuxt.js'
+  'Svelte',
+  'Sapper'
 ];
 
 export const data = {
   [category[0]]: {
     'sampleSize': {
-      framework: 92110,
-      all: 5349874
+      framework: 1119,
+      all: 6971970
     },
     'compressedRequests': {
-      numUrls: 79951,
-      numRequests: 3455425,
-      gzipCompressedPercent: 66.4,
-      brotliCompressedPercent: 17.9
+      numUrls: 941,
+      numRequests: 40386,
+      gzipCompressedPercent: 57.4,
+      brotliCompressedPercent: 22.9
     },
     'totalBytesBreakdown': {
-      numUrls: 92110,
+      numUrls: 1119,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [0.33, 1.38, 2.98, 3.69, 4.70, 86.92]
+          "data": [3.40, 5.45, 5.45, 6.08, 6.61, 73.01]
         }]
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 92110,
+      numUrls: 1119,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [5.66, 17.02, 16.91, 14.66, 14.01, 31.74]
+          "data": [16.35, 23.24, 15.01, 13.32, 8.49, 23.59]
         }]
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 92110,
+      numUrls: 1119,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [14.81, 10.49, 8.67, 7.51, 6.05, 52.48]
+          "data": [22.97, 11.17, 9.12, 5.09, 4.11, 47.54]
         }]
       },
     },
     'fcpCrux': {
-      numOrigins: 46585,
-      data: [36, 19, 44],
+      numOrigins: 840,
+      data: [55, 23, 22],
     },
     'lcpCrux': {
-      numOrigins: 45081,
-      data: [44, 18, 38],
+      numOrigins: 832,
+      data: [54, 22, 24],
     },
     'fidCrux': {
-      numOrigins: 35727,
-      data: [83, 12, 4],
+      numOrigins: 724,
+      data: [86, 10, 4],
     },
     'clsCrux': {
-      numOrigins: 46376,
-      data: [70, 9, 21],
+      numOrigins: 828,
+      data: [73, 8, 20],
     },
     'ttfbCrux': {
-      numOrigins: 46535,
-      data: [36, 32, 32]
+      numOrigins: 834,
+      data: [45, 35, 20]
     },
   },
   [category[1]]: {
     'sampleSize': {
-      framework: 7637,
-      all: 5349874
+      framework: 236,
+      all: 6971970
     },
     'compressedRequests': {
-      numUrls: 6300,
-      numRequests: 206124,
-      gzipCompressedPercent: 65.9,
-      brotliCompressedPercent: 20.4
+      numUrls: 199,
+      numRequests: 4043,
+      gzipCompressedPercent: 55.4,
+      brotliCompressedPercent: 26.3
     },
     'totalBytesBreakdown': {
-      numUrls: 7637,
+      numUrls: 236,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [0.85, 2.37, 5.15, 5.24, 6.51, 79.89]
+          "data": [11.02, 9.75, 6.36, 8.05, 5.93, 58.90]
         }]
       }
     },
     'jsBytesBreakdown': {
-      numUrls: 7637,
+      numUrls: 236,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [5.81, 16.25, 17.73, 16.28, 13.88, 30.05]
+          "data": [38.14, 25.00, 13.98, 8.90, 4.24, 9.75]
         }]
       },
     },
     'imgBytesBreakdown': {
-      numUrls: 7637,
+      numUrls: 236,
       data: {
         "labels": ["< 200 KB", "200 KB - 400 KB", "400 KB - 600 KB", "600 KB - 800 KB", "800 KB - 1MB", "> 1 MB"],
         "datasets": [{
           "backgroundColor": ["#34a853", "#93c47d", "#fbbc04", "#ff6d01", "#ea4335", "#980000"],
-          "data": [26.02, 12.47, 7.83, 6.81, 6.21, 40.67]
+          "data": [30.93, 9.32, 7.20, 3.39, 4.24, 44.92]
         }]
       },
     },
     'fcpCrux': {
-      numOrigins: 3960,
-      data: [29, 22, 49],
+      numOrigins: 177,
+      data: [64, 20, 16],
     },
     'lcpCrux': {
-      numOrigins: 3844,
-      data: [36, 21, 43],
+      numOrigins: 176,
+      data: [59, 21, 20],
     },
     'fidCrux': {
-      numOrigins: 3220,
-      data: [83, 11, 6],
+      numOrigins: 147,
+      data: [91, 7, 2],
     },
     'clsCrux': {
-      numOrigins: 3934,
-      data: [70, 8, 21],
+      numOrigins: 174,
+      data: [76, 5, 19],
     },
     'ttfbCrux': {
-      numOrigins: 3957,
-      data: [31, 33, 36],
+      numOrigins: 175,
+      data: [50, 34, 16]
     },
   }
 }

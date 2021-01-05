@@ -13,31 +13,30 @@ See the License for the specific language governing permissions and
 limitations under the License. -->
 
 <script>
-    import { link } from "svelte-routing";
-  
-    import PageLayout from "../components/Layout/PageLayout.svelte";
-    import Footer from "../components/Footer.svelte";
-  
-    import { data } from "../page-data";
-  
-    let categories = [
-      { id: 1, framework: 'AMP', text: 'AMP' },
-    ];
-  </script>
-  
-  <style>
-    .container {
-      padding: 4rem 5rem 0;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      height: 100%;
-      justify-content: space-between;
-    }
-  </style>
-  
-  <div class="container">
-    <PageLayout framework="AMP" route="amp" {categories} {data} />
-    <Footer />
-  </div>
-  
+  import { link } from "svelte-routing";
+
+  import PageLayout from "../components/Layout/PageLayout.svelte";
+  import Footer from "../components/Footer.svelte";
+
+  import { data } from "../page-data";
+
+  let categories = [
+    { id: 1, framework: 'AMP', text: 'AMP' },
+  ];
+</script>
+
+<style>
+  .container {
+    padding: 4rem 5rem 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: space-between;
+  }
+</style>
+
+<div class="container">
+  <PageLayout framework="AMP" route="amp" {categories} {data} />
+  <Footer />
+</div>
