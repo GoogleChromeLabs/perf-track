@@ -388,6 +388,11 @@ License. -->
           <td />
         </tr>
         <tr>
+          <td>LitElement</td>
+          <td>Wappalyzer</td>
+          <td />
+        </tr>
+        <tr>
           <td>Preact</td>
           <td>Library Detector</td>
           <td>

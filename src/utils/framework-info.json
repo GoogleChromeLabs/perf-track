@@ -53,6 +53,13 @@
       }
     }
   },
+  "LitElement": {
+    "name": "LitElement",
+    "color": "#FF4470",
+    "imgSrc": "/images/lithtml-logo.png",
+    "route": "litelement",
+    "detector": "wappalyzer"
+  },
   "Preact": {
     "name": "Preact",
     "color": "#6f31bf",
